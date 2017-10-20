@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title> Capsid Constructors</title>
+
+	<!-- IE Edge Meta Tag -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- Viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap 4 Minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/styles.css">
+	
+	<!-- Page Icon -->
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+
+</head>
+
+<body>
+
+	<!-- Navigation bar placeholder-->
+	<div id="nav-placeholder"></div>
+	
+	<!--Container to wrap page content-->
+	<div class="container">
+		
+		<!--Hero Image-->
+		<div class="text-center">
+			<img id="heroimage" class="img-fluid" src="images/heroimage.gif" />
+		</div>
+		
+		<!--Welcome-->
+		<h3>Who Are We?</h3>
+
+		<p>We are the Capsid Constructors, a group of undergraduates from UNSW Sydney competing in the annual <a href="http://biomod.net" target="_blank">BIOMOD Competition</a>. This short animation is a summary of the months of hard work which have gone into our entry for the 2017 Jamboree at the University of California, San Francisco.</p>
+
+		<h3>The Project</h3>
+		
+		<p>Our project is a fundamental investigation into the spontaneous construction of the Human Immunodeficiency Virus (HIV) in living systems. Because it is simply too complicated to try and observe how the entire virus builds itself in a living host, we are trying to rebuild one very important component of HIV in a laboratory environment. Specifically, we are trying to recreate the way that the HIV viral capsid, which surrounds and protects the genetic material of the virus, undergoes self assembly.</p> 
+
+		<p>The viral capsid is made of somewhere between 1000 and 1500 copies of a single building block called capsid protein. The proteins first form groups of five (called pentamers) and six (called hexamers) before assembling into the complex three-dimensional lattice of the viral capsid. We have used DNA Origami to synthesise a novel biological template, which has been functionalised with strands of DNA capable of binding to HIV capsid protein. This allows us to immobilise many copies of the capsid protein onto a surface, where they interact and form larger structures. By watching this process in real time and working out the important steps, we can gain a greater understanding of HIV and the process of self-assembly in general.</p>
+
+		<p>Over the past few months, we have been busy manufacturing protein, bolting together DNA, gluing things together with chemistry, shooting things with lasers, X-rays and electrons and of course checking the designs with mathematical magic. All of our work is right here just for you, our lucky reader, and your reading pleasure! So please enjoy our website, take your time to look around, and don't hesitate to <a href="mailto:biomodaustralia@gmail.com">get in touch</a> and <a href="https://www.facebook.com/BIOMODAustralia/">like us on Facebook.</a></p>
+
+		<!--Project video-->
+		<div id="video" class="embed-responsive embed-responsive-16by9">
+			<video class="embed-responsive-item" controls allowfullscreen onclick="this.paused ? this.play() : this.pause();">
+				<source src="video/video.mp4" type="video/mp4"/>
+			</video>
+		</div>
+	</div>
+
+
+	<!--Page footer-->
+	<footer class="footer">
+		<div class="container">
+			<p>&copy; <strong>UNSW BIOMOD 2017 - Capsid Constructors.</strong></p>
+		</div>
+	</footer>
+
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+	<!-- Tether -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+	<!-- Bootstrap Minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	
+	<!-- Custom JavaScript, including navbar load -->
+	<script type="text/javascript" src="js/scripts.js"></script>
+	
+</body>
+
+
+
+</html>

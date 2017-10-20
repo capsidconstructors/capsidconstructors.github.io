@@ -1,0 +1,156 @@
+@font-face {
+	font-family: "Bebas Neue";
+	src: url('fonts/BebasNeue.otf') format('opentype');
+}
+
+@font-face {
+	font-family: "Avenir Condensed";
+	src: url('fonts/AvenirCondensed.otf') format('opentype');
+}
+
+nav {
+	border: 1.5px solid black;
+	border-left: none;
+	border-right: none;
+	font-family: "Bebas Neue", sans-serif;
+	background: white;
+}
+
+.nav-link {
+	color: black;
+	margin: 20px;
+	transition: color 0.75s;
+}
+
+.nav-link:hover {
+	color: #C03F2E;
+}
+
+.collapse {
+	margin-left: 50px;
+}
+
+a.active {
+	color: #C03F2E;
+}
+
+.navbar-nav {
+	font-family: "Bebas Neue", sans-serif;
+	font-size: 25px;
+	color: black;
+}
+
+.navbar {
+	padding: 0px;
+}
+
+.navbar-brand {
+	padding: 0px;
+	padding-bottom: 1.5px;
+	margin-left: 100px;
+}
+
+.dropdown-menu {
+	background: rgba(255, 255, 255, 0.95);
+}
+
+#logosmall {
+	margin-top: 20px;
+	border: 2px outset gray;
+	border-radius: 5px;
+}
+
+#logosmall:hover {
+	background-color: gray;
+}
+
+h3 {
+	font-family: "Bebas Neue";
+	border-left: 3px solid #AB242E;
+	border-bottom: 3px solid #AB242E;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	padding: 5px;
+	padding-left: 10px;
+	margin-top: 10px;	
+}
+
+p {
+	font-family: "Avenir Condensed", sans-serif;
+	font-size: 18px;
+}
+
+p>a {
+	color: #AA242E;
+	text-decoration: underline;
+}
+
+.gutter {
+	margin-top: 20%;
+}
+
+.footer {
+	padding: 10px;
+}
+
+polygon {
+	fill: #C1272D;
+	fill-opacity: 0.0;
+	transition: 0.6s fill-opacity;
+}
+
+text {
+	font-size: 28px;
+	transition: 0.6s font-size;
+}
+
+#heroimage {
+	width: 80%;
+}
+
+#mathematical-modelling:hover>polygon, #saxs:hover>polygon, #protein-production:hover>polygon, #dna-origami:hover>polygon, #spr:hover>polygon, #conjugation-chemistry:hover>polygon, #imaging:hover>polygon {
+	fill-opacity: 0.6;
+}
+
+#mathematical-modelling:hover>text, #saxs:hover>text, #protein-production:hover>text, #dna-origami:hover>text, #spr:hover>text, #conjugation-chemistry:hover>text, #imaging:hover>text {
+	font-size: 35px;
+	fill: #C1272D;
+}
+
+#easter-egg {
+	transition: 0.6s fill-opacity;
+}
+
+#easter-egg:hover {
+	fill-opacity: 0.2;
+}
+
+#leelab {
+	width: 75%;
+	height: auto;
+}
+
+#sponsors {
+	padding-right: 10%;
+}
+
+#video {
+	border: 1.5px solid black;
+}
+
+@media (max-width:768px) {
+	.navbar-brand {
+		margin-left: -100px;
+	}
+	
+	.nav-link {
+		margin: 0px;
+		margin-left: -50px;
+	}
+}
+
+@media (min-width: 768px) {
+  ul.navbar-nav > li.dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+}
