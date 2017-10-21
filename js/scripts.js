@@ -1,11 +1,11 @@
-var $doc = $(document);
-var $nav = $('#nav-placeholder');
-
-//Navbar loading
-$doc.ready(() => {
-	$.get( 'navigation.html', function ( data ) {
-				$nav.html( data );
-			});
+$(document).ready(function () {
+	
+	//Identify placeholder for navbar 
+	var $nav = $('#nav-placeholder');
+	
+	//Request navbar html and insert into placeholder
+	$nav.load('navigation.html');
+	
 });
 
 

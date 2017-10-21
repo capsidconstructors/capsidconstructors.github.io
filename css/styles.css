@@ -16,6 +16,10 @@ nav {
 	background: white;
 }
 
+a.active {
+	color: #AB242E;
+}
+
 .nav-link {
 	color: black;
 	margin: 20px;
@@ -28,10 +32,6 @@ nav {
 
 .collapse {
 	margin-left: 50px;
-}
-
-a.active {
-	color: #C03F2E;
 }
 
 .navbar-nav {
