@@ -4,7 +4,7 @@ $(document).ready(function () {
 	var $nav = $('#nav-placeholder');
 	
 	//Request navbar html and insert into placeholder
-	$nav.load('navigation.html');
+	$nav.load('/navigation.html');
 	
 });
 

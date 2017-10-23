@@ -1,3 +1,5 @@
+/* Loads custom fonts */
+
 @font-face {
 	font-family: "Bebas Neue";
 	src: url('fonts/BebasNeue.otf') format('opentype');
@@ -8,16 +10,14 @@
 	src: url('fonts/AvenirCondensed.otf') format('opentype');
 }
 
+/* Styles navbar, including active link */
+
 nav {
 	border: 1.5px solid black;
 	border-left: none;
 	border-right: none;
 	font-family: "Bebas Neue", sans-serif;
 	background: white;
-}
-
-a.active {
-	color: #AB242E;
 }
 
 .nav-link {
@@ -30,8 +30,8 @@ a.active {
 	color: #C03F2E;
 }
 
-.collapse {
-	margin-left: 50px;
+.nav-link.active {
+	color: #AB242E;
 }
 
 .navbar-nav {
@@ -44,15 +44,19 @@ a.active {
 	padding: 0px;
 }
 
+/* Overrides default properties for Bootstrap collapse and navbar brand */
+
 .navbar-brand {
 	padding: 0px;
 	padding-bottom: 1.5px;
 	margin-left: 100px;
 }
 
-.dropdown-menu {
-	background: rgba(255, 255, 255, 0.95);
+.collapse {
+	margin-left: 50px;
 }
+
+/* Small logo in collapsed navbar */
 
 #logosmall {
 	margin-top: 20px;
@@ -64,8 +68,17 @@ a.active {
 	background-color: gray;
 }
 
-h3 {
+/* Dropdowns */
+
+.dropdown-menu {
+	background: rgba(255, 255, 255, 0.95);
+}
+
+/* Multiple level heading scheme */
+
+h1, h2, h3 {
 	font-family: "Bebas Neue";
+	font-size: 36px;
 	border-left: 3px solid #AB242E;
 	border-bottom: 3px solid #AB242E;
 	border-bottom-left-radius: 10px;
@@ -74,6 +87,17 @@ h3 {
 	padding-left: 10px;
 	margin-top: 10px;	
 }
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 24px;
+	border: none;
+}
+
+/* Styles paragraph text and hyperlinks */
 
 p {
 	font-family: "Avenir Condensed", sans-serif;
@@ -85,13 +109,42 @@ p>a {
 	text-decoration: underline;
 }
 
-.gutter {
-	margin-top: 20%;
+/* Image and video on landing page */
+
+#heroimage {
+	width: 80%;
 }
+
+#video {
+	border: 1.5px solid black;
+}
+
+/* Styles lists in sidebar navigation */
+
+.sidenav {
+	margin-top: 10px;
+}
+
+ul {
+	font-family: "Avenir Condensed", sans-serif;
+	margin-left: 0px;
+	padding-left: 0px;
+	list-style-image: url('/images/bullet.png');
+}
+
+/* Sets relative indentation for each new list level */
+
+ul li ul {
+	margin-left: 15px;		
+}
+
+/* Styles page footer */
 
 .footer {
 	padding: 10px;
 }
+
+/* Interactive project map */
 
 polygon {
 	fill: #C1272D;
@@ -102,10 +155,6 @@ polygon {
 text {
 	font-size: 28px;
 	transition: 0.6s font-size;
-}
-
-#heroimage {
-	width: 80%;
 }
 
 #mathematical-modelling:hover>polygon, #saxs:hover>polygon, #protein-production:hover>polygon, #dna-origami:hover>polygon, #spr:hover>polygon, #conjugation-chemistry:hover>polygon, #imaging:hover>polygon {
@@ -125,18 +174,24 @@ text {
 	fill-opacity: 0.2;
 }
 
+/* Team page */
+
+.gutter {
+	margin-top: 20%;
+}
+
 #leelab {
 	width: 75%;
 	height: auto;
 }
 
+/* Sponsors page */
+
 #sponsors {
 	padding-right: 10%;
 }
 
-#video {
-	border: 1.5px solid black;
-}
+/* Media queries overriding Bootstrap default */
 
 @media (max-width:768px) {
 	.navbar-brand {
@@ -148,6 +203,8 @@ text {
 		margin-left: -50px;
 	}
 }
+
+/* Activates dropdown on hover, instead of click */
 
 @media (min-width: 768px) {
   ul.navbar-nav > li.dropdown:hover > .dropdown-menu {
