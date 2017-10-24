@@ -23,7 +23,7 @@ nav {
 .nav-link {
 	color: black;
 	margin: 20px;
-	transition: color 0.75s;
+	transition: color 0.5s;
 }
 
 .nav-link:hover {
@@ -56,6 +56,17 @@ nav {
 	margin-left: 50px;
 }
 
+/* Multi-level dropdown */
+
+.dropdown-submenu {
+	position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+	top: 0px;
+	left: 100%;
+}
+
 /* Small logo in collapsed navbar */
 
 #logosmall {
@@ -70,7 +81,7 @@ nav {
 
 /* Dropdowns */
 
-.dropdown-menu {
+.dropdown-menu, dropdown-submenu {
 	background: rgba(255, 255, 255, 0.95);
 }
 
@@ -85,7 +96,7 @@ h1, h2, h3 {
 	border-top-left-radius: 10px;
 	padding: 5px;
 	padding-left: 10px;
-	margin-top: 10px;	
+	margin-top: 5px;	
 }
 
 h2 {
@@ -102,9 +113,10 @@ h3 {
 p {
 	font-family: "Avenir Condensed", sans-serif;
 	font-size: 18px;
+	padding-left: 10px;
 }
 
-p>a {
+container p>a {
 	color: #AA242E;
 	text-decoration: underline;
 }
@@ -122,20 +134,38 @@ p>a {
 /* Styles lists in sidebar navigation */
 
 .sidenav {
-	margin-top: 10px;
+	position: sticky;
+	top: 0;
 }
 
 ul {
 	font-family: "Avenir Condensed", sans-serif;
-	margin-left: 0px;
-	padding-left: 0px;
+	margin-left: 8px;
+	padding-left: 8px;
 	list-style-image: url('/images/bullet.png');
 }
+
+.sidenav a {
+	color: #AA242E;
+}
+
+.sidenavtracks {
+	border-left: solid 2px black;
+	border-right: solid 2px black;
+	border-bottom: solid 2px black;
+}
+
 
 /* Sets relative indentation for each new list level */
 
 ul li ul {
-	margin-left: 15px;		
+	margin-left: 4px;		
+}
+
+/* Formats active sidebar link */
+
+.scroll.active {
+	font-weight: bold; 
 }
 
 /* Styles page footer */
@@ -210,4 +240,12 @@ text {
   ul.navbar-nav > li.dropdown:hover > .dropdown-menu {
     display: block;
   }
+}
+
+/* Hides side navigation on smaller screens */
+
+@media (max-width:1200px) {
+	.sidenavtracks {
+		display: none;
+	}
 }
