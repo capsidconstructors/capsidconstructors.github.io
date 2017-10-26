@@ -158,6 +158,12 @@ table.center {
     margin-right: auto;
 }
 
+img.math {
+	width: auto;
+	max-width: 50%;
+	height: auto;
+}
+
 /* Image and video on landing page */
 
 #heroimage {
@@ -258,6 +264,26 @@ svg a g:hover text {
 
 #easter-egg:hover {
 	fill-opacity: 0.2;
+}
+
+/* Interactivity for tables */
+
+td.sol {
+	text-align: center;
+	font-family: 'Avenir Condensed';
+	cursor: default;
+}
+
+td.sol:hover {
+	background-color: #AA242E;	
+}
+
+.plotholder {
+	width: 100%;
+	height: 70vh;
+	border: 1px solid black;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 /* Team page */

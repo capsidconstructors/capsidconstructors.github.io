@@ -55,4 +55,42 @@ $(window).scroll(function() {
 	})
 })
 
+//Interactive table/plot thing
+	
+$('td#sol1').hover(function() {
+		$('.plotholder').css("background", "center no-repeat url('/images/modellingsol1.png')");
+	})
+	
+	.mouseleave(function() {
+		$('.plotholder').css("background", "none");
+	});
+	
+	$('td#sol2').hover(function() {
+		$('.plotholder').css("background", "center no-repeat url('/images/modellingsol2.png')");
+	})
+	
+	.mouseleave(function() {
+		$('.plotholder').css("background", "none");
+	});
+	
+	$('td#sol3').hover(function() {
+		$('.plotholder').css("background", "center no-repeat url('/images/modellingsol3.png')");
+	})
+	
+	.mouseleave(function() {
+		$('.plotholder').css("background", "none");
+	});
+	
+	$('td#sol4').hover(function() {
+		$('.plotholder').css("background", "center no-repeat url('/images/modellingsol4.png')");
+	})
+	
+	.mouseleave(function() {
+		$('.plotholder').css("background", "none");
+	});
+	
 });
+
+
+
+

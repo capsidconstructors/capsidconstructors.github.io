@@ -41,8 +41,9 @@
 								<li><a href="#introduction" class="scroll">Introduction</a>
 									<li><a href="#aims" class="scroll">Aims</a></li>
 									<li><a href="#methodology" class="scroll">Methodology</a>
-									<li><a href="#results" class="scroll">Results</a></li>
-
+									<li><a href="#resultsI" class="scroll">Results Pt I</a></li>
+									<li><a href="#resultsII" class="scroll">Results Pt II</a></li>
+									<li><a href="#conclusion">Conclusion</a></li>
 							</ul>
 							</li>
 					</ul>
@@ -150,43 +151,269 @@
 
 				<h3>Naming Conventions</h3>
 				<p>To remove ambiguity in our descriptions, a relevant naming convention must be established. Each step (ie. Association and dissociation in the context of a zero, one or two-neighbour solution) involves a single protein changing states. Thus, the convention relates to the possible binding combinations of such a protein. Each template-protein binding configuration is characterised by the descriptor `S_{n, t, p}`. The first term, `n` , describes how many proteins are attached to the template binding site. The second term, `t` , describes whether the &lsquo;additional&rsquo; protein is attached to the template. The final term, `p` , describes whether the additional protein is attached to other surrounding proteins.</p>
-				
-				<div id="results">
+
+				<div id="resultsI">
 					<h2>Results: Zero, one and two-neighbour Solutions</h2>
 				</div>
-				
+
 				<p>By breaking down the formation of pentamers and hexamers into zero, one and two-neighbour solutions, the process of analysis simplifies greatly.</p>
-				
+
 				<h3>Zero-neighbour case</h3>
-				
+
 				<p>The zero-neighbour case involves a protein binding to a location of the template that has neither adjacent sides occupied. From the two-neighbour assumption, we can simplify the depiction of these states. Rather than represent the racquet as hexameric, we can represent the template as a platform with three binding sites.</p>
-				
+
 				<img class="img-fluid" src="/images/modelling-9.png" />
-				
+
 				<p class="caption">Figure 8: Protein (Red) binding to the racquet backbone (Black) through conjugation chemistry (Yellow)</p>
-				
-				<p>The above diagram displays all possible states in the zero-neighbour case. We can use the mass action principle to determine the rate of change of the state `S_{0,0,0}`. First, we look to the arrow travelling from the initial state (`S_{0,0,0}`) to the final state (`S_{1,1,0}). This is the binding event of a protein to the template, and so it has associated rate constant `k_+^T`. As it is a binding event, it is concentration dependent. Thus, we multiple the rate constant by the concentration of proteins, and the concentration of empty template binding site (the two things involved in the interaction).</p>
-				
-				<p>The minus sign is an indication of the directionality of the transition. When the first state transitions to the second, it’s concentration will decrease.</p>
-				
+
+				<p>The above diagram displays all possible states in the zero-neighbour case. We can use the mass action principle to determine the rate of change of the state `S_{0,0,0}`. First, we look to the arrow travelling from the initial state (`S_{0,0,0}`) to the final state (`S_{1,1,0}`). This is the binding event of a protein to the template, and so it has associated rate constant `k_+^T`. As it is a binding event, it is concentration dependent. Thus, we multiple the rate constant by the concentration of proteins, and the concentration of empty template binding site (the two things involved in the interaction).</p>
+
+				<img class="math" src="/images/modelling-10.png" />
+
+				<p>The minus sign is an indication of the directionality of the transition. When the first state transitions to the second, its concentration will decrease.</p>
+
 				<p>Secondly, we look to the arrow travelling from the final state (`S_{1,1,0}`) to the initial state (`S_{0,0,0}`). This is the unbinding event of a protein to the template, and so has associated rate constant `k_-^T`. As it is an unbinding event, the protein concentration is no longer relevant.</p>
-				
+
+				<img class="math" src="/images/modelling-11.png" />
+
 				<p>This transition is positive, as when the second state transitions back to the first, the concentration of the first state will increase. Overall, we can describe the rate of change of the first state as an ordinary differential equation.</p>
+
+				<img class="math" src="/images/modelling-12.png" />
+
+				<p>Similarly, we can identify the differential equation describing the rate of change of the second state.</p>
+
+				<img class="math" src="/images/modelling-13.png" />
+
+				<p>An important check is whether the two rates add to zero. As the only allowed transitions have been pre-determined, the ‘net’ rate of change (ie. `(dS_{0,0,0})/dt+(dS_{1,1,0})/dt`) should be equal to zero.</p>
+
+				<p>We may represent this system of equations more easily in a matrix form.</p>
+
+				<img class="math" src="/images/modelling-14.png" />
+
+				<p>Matrixes are a simply way to represent multiple equations containing the same or similar variables. They also allows us to see whether there are any nice patterns forming in the mathematics!</p>
+
+				<img class="math" src="/images/modelling-15.png" />
+
+				<p>Generally, solutions to complex sets of equations such as these have a numerical solution. A numerical solution is an approximation; programs are able to ‘fit’ a graph or a function to a set of equations as best as it can. However, this particular set of equations have an exact solution. Exact solutions are mathematically exact solutions to differential equations.</p>
+
+				<p>The exact solutions to the zero-neighbour case are</p>
+
+				<img class="math" src="/images/modelling-16.png" />
+
+				<p>We can plot these curves for a number of binding and un-binding constants. By comparing these theoretical graphs to any experimental results obtained, we can quantify the real binding constants associated with our capsid proteins!</p>
+
+				<table class="center">
+					<tbody>
+						<tr>
+							<td>`m_f=20×10^(-6) M`</td>
+							<td>`k_+^T=10×10^5`</td>
+							<td>`k_+^T=10×10^3`</td>
+						</tr>
+						<tr>
+							<td>`k_-^T=10×10^(-3)`</td>
+							<td class="sol" id="sol1">Apple</td>
+							<td class="sol" id="sol2">Banana</td>
+						</tr>
+						<tr>
+							<td>`k_-^T=10×10^(-2)`</td>
+							<td class="sol" id="sol3">Carrot</td>
+							<td class="sol" id="sol4">Dandelion</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<p>Hover over the cells above to see the corresponding solution appear below.</p>
+
+				<div class="plotholder"></div>
+
+				<h3>One-Neighbour Case</h3>
+
+				<p>The one-neighbour case involves a protein binding to a location on the template that has one adjacent side occupied.</p>
+
+				<img class="img-fluid" src="/images/modelling-17.png" />
+
+				<p class="caption">Figure 9: Close up of the binding pathways in the one-neighbour case. The binding sites (yellow) physically represent the conjugation chemistry on the DNA racquets.</p>
+
+				<p>The above diagram displays all possible states in the one-neighbour case. Again, we can use physical principles to derive a set of ordinary differential equations to describe the system.</p>
+
+				<img class="math" src="/images/modelling-18.png" />
+
+				<h3>Two-Neighbour Case</h3>
+
+				<p>In the two- neighbour case, there are a number of symmetrical states. For example, the following two states are identical.</p>
+
+				<img class="img-fluid" src="/images/modelling-19.png" />
+
+				<p class="caption">Figure 10: Two symmetrical states which, for the purpose of this model, will be treated as identical</p>
+
+				<p>However, a transition to the above state will be twice as likely, as there are two possible avenues through which to arrive at it. As such, the pathway relevant to any transition to this state has the number &lsquo;2&rsquo; attached to it. This coefficient is reflected in the differential equations derived for this system.</p>
+
+				<img class="img-fluid" src="/images/modelling-20.png" />
+
+				<p class="caption">Figure 11: The possible binding pathways in the two-neighbour case. The three binding sites represent adjacent strings of conjugation chemistry onto which the proteins may bind.</p>
+
+				<p>The differential equations describing this system are:</p>
+
+				<img class="img-fluid" src="/images/modelling-21.png" />
+
+				<h3>Extracting rate constants</h3>
+
+				<p>The above description of binding and unbinding events are useful as they allow as to extract &lsquo;virtual&rsquo; rate constants for the rate of subunit binding to a template with zero, one or two occupied neighbouring sites. As will be seen, this data would allow us to accurately describe the process by which pentamer and hexamer protein structures are formed. </p>
+				<p>Where Surface Plasmon Resonance data is taken, we can use a number of methods to extract the relevant rate constants. We will look at only one of them here. </p>
+				<p>Recall our zero-neighbour ordinary differential equation,</p>
+
+				<img class="math" src="/images/modelling-22.png" />
+
+				<p>This equation describes the rate of change of a protein bound to the template. If the reaction is assumed the be one-to-one (eg. by using a racquet scaffold with only one functionalised site), we can manipulate this relationship to get to</p>
+
+				<img class="math" src="/images/modelling-23.png" />
+
+				<p>Where `R` are the response units of the SPR output, `R_max` is the maximum change in response units during the kinetic experiment, and `k_s=k_+ m_f+k_-`.</p>
+
+				<p>Next, we plot `ln⁡(d(R)/dt)` against time for a number of protein concentrations. By selecting the linear portion of such a graph, we can extract and plot `k_s` against the protein concentration, and thus extract `k_+` as the slope.</p>
+
+				<img class="img-fluid" src="/images/modelling-24.png" />
+
+				<p>We may also extract the dissociation constant using the unbinding phase of the SPR data. To do this, we plot `ln⁡(R_0/R_t )` against `(t-t_0)`, where `R_0` is the response units at `t_0`. The resulting linear function will have slope `k_-`.</p>
+
+				<img class="img-fluid" src="/images/modelling-25.png" />
+
+				<p>Ideally, when dealing with cases more complex than the zero-neighbour case (ie. Where multiple rate constants may be variable), we will have previously extracted solutions to the most simple case. From there, we can use the methodology above to produce a &lsquo;virtual&rsquo; rate constant for the particular experiment. By factoring in the relevant binding constants that are involved in the overall &lsquo;virtual&rsquo; rate constant we may be able to identify values for higher neighbour solutions.</p>
+				<p>Alternatively, we may run a MatLab simulation designed to alter the various input rate constants, and fit the output curve to experimental data. By scanning through each a range for each rate constant, and plotting the constant versus the root mean square of the discrepancy between the experimental and theoretical data, we can find a global minima that best fits the data set. Thus, we can identify the best-suited rate constant for a particular experiment. By repeating this process for multiple concentrations, and several experimental designs, we can accurately extract the rate constants sought.</p>
+
+				<div id="resultsII">
+					<h2>Results: Pentamer and hexamer formation</h2>
+				</div>
+
+				<p>With an understanding of the zero, one and two-neighbour binding solutions, we can begin to approach the problem of pentamer and hexamer formation. By breaking down each binding/unbinding event into a neighbour solution, we can write out the equations governing self-assembly in a similar manner to those equations derived above.</p>
+
+				<p>In the equations derived below, `k_(a->b)` indicates the rate constant relevant to a particular neighbour solution.</p>
+
+				<table class="center">
+					<tbody>
+						<tr>
+							<td>
+								<p><strong>Rate constant</strong></p>
+							</td>
+							<td>
+								<p><strong>Neighbour solution</strong></p>
+							</td>
+							<td>
+								<p><strong>Binding/un-binding</strong></p>
+							</td>
+						</tr>
+						<tr>
+							<td>`k_(1→0)`</td>
+							<td>
+								<p>Zero-neighbour</p>
+							</td>
+							<td>
+								<p>Binding</p>
+							</td>
+						</tr>
+						<tr>
+							<td>`k_(0→1)`</td>
+							<td>
+								<p>Zero-neighbour</p>
+							</td>
+							<td>
+								<p>Un-binding</p>
+							</td>
+						</tr>
+						<tr>
+							<td>`k_(1→2)`</td>
+							<td>
+								<p>One-neighbour</p>
+							</td>
+							<td>
+								<p>Binding</p>
+							</td>
+						</tr>
+						<tr>
+							<td>`k_(2→1)`</td>
+							<td>
+								<p>One-neighbour</p>
+							</td>
+							<td>
+								<p>Un-binding</p>
+							</td>
+						</tr>
+						<tr>
+							<td>`k_(2→3)`</td>
+							<td>
+								<p>Two-neighbours</p>
+							</td>
+							<td>
+								<p>Binding</p>
+							</td>
+						</tr>
+						<tr>
+							<td>`k_(3→2)`</td>
+							<td>
+								<p>Two-neighbours </p>
+							</td>
+							<td>
+								<p>Un-binding</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h3>Pentamer</h3>
+
+				<img class="img-fluid" src="/images/modelling-26.png" />
+
+				<div class="text-center">
+					<p> `\frac{d[1]}{dt}=-5k_{0\rightarrow 1}m[1]+k_{1\rightarrow 0}[2]`</p>
+					<p> `\frac{d[2]}{dt}=-k_{1\rightarrow 0}[2]+5k_{0\rightarrow 1}m[1]-2k_{1\rightarrow 2}m[2]+2k_{2\rightarrow 1}[3]-2k_{0\rightarrow 1}m [2]+2k_{1\rightarrow 0}[4]`</p>
+					<p> `\frac{d[3]}{dt}=-2k_{2\rightarrow 1}[3]+2k_{1\rightarrow 2}m[2]-2k_{1\rightarrow 2}m[3]+2k_{2\rightarrow 1}[6]-k_{0\rightarrow 1}m[3]+k_{1\rightarrow 0}[5]`</p>
+					<p> `\frac{d[4]}{dt}=-2k_{1\rightarrow 0}[4]+2k_{0\rightarrow 1}m[2]-2k_{1\rightarrow 2}m[4]+2k_{2\rightarrow 1}[5]-k_{2\rightarrow 3}m[4]+k_{3\rightarrow 2}[6]`</p>
+					<p> `\frac{d[5]}{dt}=-k_{1\rightarrow 0}[5]+k_{0\rightarrow 1}m[3]-2k_{2\rightarrow 1}[5]+2k_{1\rightarrow 2}m[4]-2k_{2\rightarrow 3}m[5]+2k_{3\rightarrow 2}[7]`</p>
+					<p> `\frac{d[6]}{dt}=-2k_{2\rightarrow 1}[6]+2k_{1\rightarrow 2}m[3]-k_{3\rightarrow 2}[6]+k_{2\rightarrow 3}m[4]-2k_{1\rightarrow 2}m[6]+2k_{2\rightarrow 1}[7]`</p>
+					<p> `\frac{d[7]}{dt}=-2k_{3\rightarrow 2}[7]+2k_{2\rightarrow 3}m[5]-2k_{2\rightarrow 1}[7]+2k_{1\rightarrow 2}m[6]-k_{2\rightarrow 3}m[7]+5k_{3\rightarrow 2}[8]`</p>
+					<p> `\frac{d[8]}{dt}=-5k_{3\rightarrow 2}[8]+k_{2\rightarrow 3}m[7]`</p>
+				</div>
+
+				<h3>Hexamer</h3>
+
+				<img class="img-fluid" src="/images/modelling-27.png" />
+
+				<div class="text-center">
+					<p>`\frac{d\[1]}{dt}=-6k_{0\rightarrow1}m\[1]+k_{1\rightarrow0}\[2]`</p>
+					<p>`\frac{d\[2]}{dt}=-k_{1\rightarrow0}\[2]+6k_{0\rightarrow1}m\[1]-k_{0\rightarrow1}m\[2]+2k_{1\rightarrow0}\[3]-2k_{0\rightarrow1}m\[2]+2k_{1\rightarrow0}\[4]-2k_{1\rightarrow2}m\[2]+2k_{2\rightarrow1}[5]`</p>
+					<p>`\frac{d\[3]}{dt}=-2k_{1\rightarrow0}\[3]+k_{0\rightarrow1}m\[2]-4k_{1\rightarrow2}m\[3]+k_{2\rightarrow1}[7]`</p>
+					<p>`\frac{d\[4]}{dt}=-2k_{1\rightarrow0}\[4]+2k_{0\rightarrow1}m\[2]-k_{0\rightarrow1}m\[4]+3k_{1\rightarrow0}\[6]-2k_{1\rightarrow2}m\[4]+k_{2\rightarrow1}\[7]-k_{2\rightarrow3}m\[4]+k_{3\rightarrow2}[8]`</p>
+					<p>`\frac{d\[5]}{dt}=-2k_{2\rightarrow1}\[5]+2k_{1\rightarrow2}m\[2]-2k_{0\rightarrow1}m\[5]+k_{1\rightarrow0}\[7]-2k_{1\rightarrow2}m\[5]+2k_{2\rightarrow1}[8]`</p>
+					<p>`\frac{d\[6]}{dt}=-3k_{1\rightarrow0}\[6]+k_{0\rightarrow1}m\[4]-3k_{2\rightarrow3}m\[6]+k_{3\rightarrow2}[10]`</p>
+					<p>`\frac{d\[7]}{dt}=-k_{2\rightarrow1}\[7]+3k_{1\rightarrow2}m\[3]-k_{2\rightarrow1}\[7]+2k_{1\rightarrow2}m\[4]-k_{1\rightarrow0}\[7]+2k_{0\rightarrow1}m\[5]-k_{2\rightarrow3}m\[7]+2k_{3\rightarrow2}\[11]-k_{1\rightarrow2}m\[7]+2k_{2\rightarrow1}\[10]-k_{1\rightarrow2}m\[7]+4k_{2\rightarrow1}[9]`</p>
+					<p>`\frac{d\[8]}{dt}=-k_{3\rightarrow2}\[8]+k_{2\rightarrow3}m\[4]-2k_{2\rightarrow1}\[8]+2k_{1\rightarrow2}m\[5]-2k_{1\rightarrow2}m\[8]+2k_{2\rightarrow1}\[11]-k_{0\rightarrow1}m\[8]+k_{1\rightarrow0}[10]`</p>
+					<p>`\frac{d\[9]}{dt}=-4k_{2\rightarrow1}\[9]+k_{1\rightarrow2}m\[7]-2k_{2\rightarrow3}m\[9]+k_{3\rightarrow2}[12]`</p>
+					<p>`\frac{d\[10]}{dt}=-k_{3\rightarrow2}\[10]+3k_{2\rightarrow3}m\[6]-2k_{2\rightarrow1}\[10]+k_{1\rightarrow2}m\[7]-k_{1\rightarrow0}\[10]+k_{0\rightarrow1}m\[8]-2k_{2\rightarrow3}m\[10]+2k_{3\rightarrow2}[12]`</p>
+					<p>`\frac{d\[11]}{dt}=-2k_{3\rightarrow2}\[11]+k_{2\rightarrow3}m\[7]-2k_{2\rightarrow1}\[11]+2k_{1\rightarrow2}m\[8]-2k_{1\rightarrow2}m\[11]+2k_{2\rightarrow1}[12]`</p>
+					<p>`\frac{d\[12]}{dt}=-k_{3\rightarrow2}\[12]+2k_{2\rightarrow3}m\[9]-2k_{3\rightarrow2}\[12]+2k_{2\rightarrow3}m\[10]-2k_{2\rightarrow1}\[12]+2k_{1\rightarrow2}m\[11]-k_{2\rightarrow3}m\[12]+6k_{3\rightarrow2}[13]`</p>
+					<p>`\frac{d\[13]}{dt}=-6k_{3\rightarrow2}\[13]+k_{2\rightarrow3}m[12]`</p>
+				</div>
+
+				<p>Whilst time constraints precluded us from extensively measuring the various neighbour-cases experimentally, and thus determining the above binding constants, future work could allow extraction of these constants. By inputting them into the above equation, we can theoretically predict the self-assembly of hexamers!</p>
+
+				<p>The below plot was extracted by inputting rate constants of `k_(1→0)/k_(0→1) =10^(-5) M`, `k_(2→1)/k_(1→2) =10^(-5) M` and `k_(3→2)/k_(2→3) =10^(-5) M`. The concentration of protein was taken as `20mM`, and the initial concentration of empty templates as `20μM`. This information corresponds with binding events that do not depend on neighbouring protein subunits. This would be consistent with a very small interaction strength between neighbouring subunits.</p>
+
+				<img class="img-fluid" src="/images/modelling-28.png" />
+
+				<p class="caption">Figure 12: An example output of the Hexamer simulation. The red line is the overall hexamer formation, whilst the black lines represent the transitional states. By inputting rate constants for the zero, one and two-neighbour case, we can view changes in the output plot at thus predict the behaviour of capsid self-assembly</p>
+
+				<p>The red curve indicates the increase of full hexamer templates over time. As we can see, the concentration of full templates approaches the initial concentration of empty templates (described from the line that is initially non-zero). As such, we note that the equilibrium position of this function is such that the templates fill up completely. This best facilitates hexamerisation. Additionally, we can observe the prominent intermediate states.</p>
+
+				<div id="conclusion">
+					<h2>Conclusion</h2>
+				</div>
+
+				<p>We have successfully built, from the ground up, a model accounting for the self-assembly of capsid proteins. This model allows us, firstly, to develop experiments which test the zero, one and two neighbour cases outlined above, and extract the binding constants associated with each of these states. From this information alone, we can construct a theoretical binding curve for pentamer and hexamer formation, which may be compared with experimentally measured data. </p>
+				<p>Of particular merit is the ease of use, and flexibility of application, involved in this model. By simply changing a number of inputs, including effective and solution concentration, and approximations of kinetic constants, we can output curves which can be compared with SPR and BLItz data. Thus, prior to any in-depth analysis of our experimental results, we can assess the likely cause of particular experimental outcomes. In particular, we notice the standard sigmoidal curve shape apparent in the majority of outputted graphs. However, there are cases where the equilibrium does not result in all templates become full, or causes the templates to shed proteins over long periods of time. As such, we can qualitatively compare graph forms with experimental data prior to any quantitative analysis. This will give a general idea of the mechanism of assembly of capsid proteins in solution. </p>
+				<p>In addition, by considering self-assembly of proteins as a pathway of binding events, we can created a structure within which to build a model for any similar system. By identifying discrete bound states, and observing the interaction between these states, a set of differential equations may be set up and solved.</p>
+				<p>As the output of this model is not just the overall binding curve observed on SPR, but also the intermediate states required to get to a final hexamer/pentamer structure, we can easily visualise the likely pathways of formation. This gives us insight into the in vivo formation of pentamer and hexamer structures, and may suggest particular environments within which self-assembly is best facilitated. </p>
+				<p>This model could further be developed by adding layers of complexity previously not considered. For example, the wild-type capsid protein readily dimerizes in solution. Whilst we have shown, using SAXS, that the crystal monomer structure is almost identical to the solution monomer structure, it would appear that the dimer is a much more complicated beast. It is possible that, to form a hexamer or other self-assembled aggregate, the dimer must undergo a conformational change before binding with it&rsquo;s neighbour. As such, an additional &lsquo;unfurling&rsquo; term would need to be incorporated into the model, and could explain why pentamer and hexamer structures are rarely observed in solution at low concentrations. </p>
 				
-				<p>\[$\frac{d[1]}{dt}=-5k_{0\rightarrow 1}m[1]+k_{1\rightarrow 0}[2]$\\
-$\frac{d[2]}{dt}=-k_{1\rightarrow 0}[2]+5k_{0\rightarrow 1}m[1]-2k_{1\rightarrow 2}m[2]+2k_{2\rightarrow 1}[3]-2k_{0\rightarrow 1}m [2]+2k_{1\rightarrow 0}[4]$\\
-$\frac{d[3]}{dt}=-2k_{2\rightarrow 1}[3]+2k_{1\rightarrow 2}m[2]-2k_{1\rightarrow 2}m[3]+2k_{2\rightarrow 1}[6]-k_{0\rightarrow 1}m[3]+k_{1\rightarrow 0}[5]$\\
-$\frac{d[4]}{dt}=-2k_{1\rightarrow 0}[4]+2k_{0\rightarrow 1}m[2]-2k_{1\rightarrow 2}m[4]+2k_{2\rightarrow 1}[5]-k_{2\rightarrow 3}m[4]+k_{3\rightarrow 2}[6]$\\
-$\frac{d[5]}{dt}=-k_{1\rightarrow 0}[5]+k_{0\rightarrow 1}m[3]-2k_{2\rightarrow 1}[5]+2k_{1\rightarrow 2}m[4]-2k_{2\rightarrow 3}m[5]+2k_{3\rightarrow 2}[7]$\\
-$\frac{d[6]}{dt}=-2k_{2\rightarrow 1}[6]+2k_{1\rightarrow 2}m[3]-k_{3\rightarrow 2}[6]+k_{2\rightarrow 3}m[4]-2k_{1\rightarrow 2}m[6]+2k_{2\rightarrow 1}[7]$\\
-$\frac{d[7]}{dt}=-2k_{3\rightarrow 2}[7]+2k_{2\rightarrow 3}m[5]-2k_{2\rightarrow 1}[7]+2k_{1\rightarrow 2}m[6]-k_{2\rightarrow 3}m[7]+5k_{3\rightarrow 2}[8]$\\
-$\frac{d[8]}{dt}=-5k_{3\rightarrow 2}[8]+k_{2\rightarrow 3}m[7]$\\]\
-</p>
-
-
-
-
-
 			</div>
 		</div>
 	</div>
