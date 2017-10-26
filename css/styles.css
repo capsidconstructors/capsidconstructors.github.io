@@ -143,6 +143,7 @@ table.center {
 
 .tblhead {
 	font-weight: bolder;
+	text-decoration: underline;
 }
 
 /*Manuscript images */

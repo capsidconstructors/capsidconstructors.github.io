@@ -41,6 +41,7 @@
 								<li><a href="#introduction" class="scroll">Introduction</a>
 									<li><a href="#aims" class="scroll">Aims</a></li>
 									<li><a href="#methodology" class="scroll">Methodology</a>
+									<li><a href="#results" class="scroll">Results</a></li>
 
 							</ul>
 							</li>
@@ -85,11 +86,11 @@
 
 				<p class="caption">Figure 1: Through the use of conjugation chemistry (Yellow), we were able to bind our proteins to a DNA template. The racquet template was built in two sizes; as a hexamer (Left) and as the pentamer (Right). Functionalised DNA (Red) was annealed onto the template backbone (Black)</p>
 
-				<h2>Experimental limitations</h2>
+				<h3>Experimental limitations</h3>
 
 				<p>SPR and BLItz detect small changes in mass over time. Thus, many &lsquo;different&rsquo; states under this model will be measured as identical and indistinguishable. Experiments must either be carefully designed to test particular interactions and exclude unwanted binding events, or data must be deliberately analysed in consideration of the complex binding phenomena occurring at the nano-scale. Alternatively, single molecule experimentation may serve to increase the resolution of our binding experiments, overcoming inherent ambiguity in bulk measurements.</p>
 
-				<h2>Pentamer and hexamer formation</h2>
+				<h3>Pentamer and hexamer formation</h3>
 
 				<p>We can visualise the binding pathways for the formation of pentamer and hexamer protein aggregates by creating a branching tree (<em>Figure 2</em> and <em>3</em> respectively).</p>
 
@@ -104,9 +105,9 @@
 				<p>From the above pathways, we can see the formation of pentamers and hexamers from an empty DNA template. It assumes binding events are discrete, and rotationally symmetrical. The number allocated to each binding event is dependent on the number of variations a particular transition encompasses which would still reach the same final state.</p>
 				<p>When looking to the above binding pathways, each step may be characterised in one of three ways. Firstly, a protein may bind to a template at a location that has neither adjacent sides occupied. Secondly, a protein may bind to a template at a location that has one adjacent side occupied. Thirdly, a protein may bind to a template at a location that has both adjacent sides occupied. Thus, we can break the problem down into a zero-neighbour, and one-neighbour, and a two-neighbour case.</p>
 
-				<h2>Mass action</h2>
+				<h3>Mass action</h3>
 				<p>Protein self-assembly will be made up of binding and un-binding events. In order to mathematically describe these events, in the context of differential equations, it is important to utilise the mass action principle. This principle states that a binding event is dependent on the concentration of the monomers which are involved in binding. Conversely, an un-binding event is independent of the concentration of monomers. </p>
-				<h2>Assumptions</h2>
+				<h3>Assumptions</h3>
 				<p>As in all models, it is crucial to outline the assumptions made in order to assess the strength of the theoretical description of a physical system. The key assumptions made are outlined below.</p>
 
 				<ol>
@@ -131,9 +132,9 @@
 					<li>Two-neighbours</li>
 				</ol>
 				<p>The assembly of proteins into pentamer and hexamer forms can be broken down into a series of zero, one and two-neighbour cases. The assumption is supported by the geometry of the DNA structure, which is hexameric/pentameric in nature. </p>
-				
-				<img class="img-fluid" src="/images/modelling-7.png"/>
-				
+
+				<img class="img-fluid" src="/images/modelling-7.png" />
+
 				<p class="caption">Figure 6: Hexameric DNA racquet (Black) annealing with functionalised DNA (Red). Proteins (Red) bind to the template through conjugation chemistry (Yellow) to form aggregates such as hexamers.</p>
 
 				<p>However, as the backbone of the racquet template consists of single-stranded DNA, it is possible that the inherent flexibility leads to a breakdown in this assumption. Instead, proteins may be able to bind to other subunits opposite it on a particular template. This may be remedied if the `k_-^P` is very high (and thus proteins regularly un-bind), or if the distance between the subunits decreases the likelihood of a binding event to occur. </p>
@@ -142,10 +143,45 @@
 					<li>Effective concentration</li>
 				</ol>
 				<p>As already described, association is dependent on the concentration of monomers. However, by increasing the local concentration of proteins in the vicinity of the template through protein-template binding events, the relevant concentration is no longer the easily identified solution concentration (`m_f`). Instead, an &lsquo;effective&rsquo; concentration (`m_f`) must be established, calculated with reference to the geometry of the system and the length of any conjugation chemistry.</p>
-				
-				<img class="img-fluid" src="/images/modelling-8.png"/>
-				
+
+				<img class="img-fluid" src="/images/modelling-8.png" />
+
 				<p class="caption">Figure 7: Two possible pathways through which Protein-Protein binding may occur. Evidently, the concentration in Panel B) is higher than in Panel A). Due to the increase in local concentration, the second case is more likely than the first. As such, we introduce the term ‘effective concentration’ to quantify this increase in probability.</p>
+
+				<h3>Naming Conventions</h3>
+				<p>To remove ambiguity in our descriptions, a relevant naming convention must be established. Each step (ie. Association and dissociation in the context of a zero, one or two-neighbour solution) involves a single protein changing states. Thus, the convention relates to the possible binding combinations of such a protein. Each template-protein binding configuration is characterised by the descriptor `S_{n, t, p}`. The first term, `n` , describes how many proteins are attached to the template binding site. The second term, `t` , describes whether the &lsquo;additional&rsquo; protein is attached to the template. The final term, `p` , describes whether the additional protein is attached to other surrounding proteins.</p>
+				
+				<div id="results">
+					<h2>Results: Zero, one and two-neighbour Solutions</h2>
+				</div>
+				
+				<p>By breaking down the formation of pentamers and hexamers into zero, one and two-neighbour solutions, the process of analysis simplifies greatly.</p>
+				
+				<h3>Zero-neighbour case</h3>
+				
+				<p>The zero-neighbour case involves a protein binding to a location of the template that has neither adjacent sides occupied. From the two-neighbour assumption, we can simplify the depiction of these states. Rather than represent the racquet as hexameric, we can represent the template as a platform with three binding sites.</p>
+				
+				<img class="img-fluid" src="/images/modelling-9.png" />
+				
+				<p class="caption">Figure 8: Protein (Red) binding to the racquet backbone (Black) through conjugation chemistry (Yellow)</p>
+				
+				<p>The above diagram displays all possible states in the zero-neighbour case. We can use the mass action principle to determine the rate of change of the state `S_{0,0,0}`. First, we look to the arrow travelling from the initial state (`S_{0,0,0}`) to the final state (`S_{1,1,0}). This is the binding event of a protein to the template, and so it has associated rate constant `k_+^T`. As it is a binding event, it is concentration dependent. Thus, we multiple the rate constant by the concentration of proteins, and the concentration of empty template binding site (the two things involved in the interaction).</p>
+				
+				<p>The minus sign is an indication of the directionality of the transition. When the first state transitions to the second, it’s concentration will decrease.</p>
+				
+				<p>Secondly, we look to the arrow travelling from the final state (`S_{1,1,0}`) to the initial state (`S_{0,0,0}`). This is the unbinding event of a protein to the template, and so has associated rate constant `k_-^T`. As it is an unbinding event, the protein concentration is no longer relevant.</p>
+				
+				<p>This transition is positive, as when the second state transitions back to the first, the concentration of the first state will increase. Overall, we can describe the rate of change of the first state as an ordinary differential equation.</p>
+				
+				<p>\[$\frac{d[1]}{dt}=-5k_{0\rightarrow 1}m[1]+k_{1\rightarrow 0}[2]$\\
+$\frac{d[2]}{dt}=-k_{1\rightarrow 0}[2]+5k_{0\rightarrow 1}m[1]-2k_{1\rightarrow 2}m[2]+2k_{2\rightarrow 1}[3]-2k_{0\rightarrow 1}m [2]+2k_{1\rightarrow 0}[4]$\\
+$\frac{d[3]}{dt}=-2k_{2\rightarrow 1}[3]+2k_{1\rightarrow 2}m[2]-2k_{1\rightarrow 2}m[3]+2k_{2\rightarrow 1}[6]-k_{0\rightarrow 1}m[3]+k_{1\rightarrow 0}[5]$\\
+$\frac{d[4]}{dt}=-2k_{1\rightarrow 0}[4]+2k_{0\rightarrow 1}m[2]-2k_{1\rightarrow 2}m[4]+2k_{2\rightarrow 1}[5]-k_{2\rightarrow 3}m[4]+k_{3\rightarrow 2}[6]$\\
+$\frac{d[5]}{dt}=-k_{1\rightarrow 0}[5]+k_{0\rightarrow 1}m[3]-2k_{2\rightarrow 1}[5]+2k_{1\rightarrow 2}m[4]-2k_{2\rightarrow 3}m[5]+2k_{3\rightarrow 2}[7]$\\
+$\frac{d[6]}{dt}=-2k_{2\rightarrow 1}[6]+2k_{1\rightarrow 2}m[3]-k_{3\rightarrow 2}[6]+k_{2\rightarrow 3}m[4]-2k_{1\rightarrow 2}m[6]+2k_{2\rightarrow 1}[7]$\\
+$\frac{d[7]}{dt}=-2k_{3\rightarrow 2}[7]+2k_{2\rightarrow 3}m[5]-2k_{2\rightarrow 1}[7]+2k_{1\rightarrow 2}m[6]-k_{2\rightarrow 3}m[7]+5k_{3\rightarrow 2}[8]$\\
+$\frac{d[8]}{dt}=-5k_{3\rightarrow 2}[8]+k_{2\rightarrow 3}m[7]$\\]\
+</p>
 
 
 
