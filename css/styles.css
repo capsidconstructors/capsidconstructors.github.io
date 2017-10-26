@@ -141,9 +141,9 @@ table.center {
     margin-right:auto;
 }
 
-/*General images */
+/*Manuscript images */
 
-img {
+.col-xl-10>img {
 	width: auto;
 	height: auto;
 	max-width: 100%;
