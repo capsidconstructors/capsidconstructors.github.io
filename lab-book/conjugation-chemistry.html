@@ -15,10 +15,10 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
 	<!-- Custom CSS -->
-	<link rel="stylesheet" href="../css/styles.css">
+	<link rel="stylesheet" href="/css/styles.css">
 
 	<!-- Page Icon -->
-	<link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
 
 </head>
 
@@ -29,9 +29,361 @@
 
 	<!--Container to wrap page content-->
 	<div class="container">
-	
-	<!--Interactive Project Map-->
-	
+
+		<div class="row">
+			<div class="col-xl-2 sidenavtracks">
+				<div class="sidenav">
+					<ul>
+						<li><a href="#conjchemistry" class="scroll">Conjugation Chemistry</a>
+							<ul>
+								<li><a href="#abstract" class="scroll">Abstract</a></li>
+								<li><a href="#introduction" class="scroll">Introduction</a>
+									<ul>
+										<li><a href="#conjtechniques" class="scroll">Conjugation Techniques</a></li>
+										<li><a href="#selection" class="scroll">Selection</a></li>
+									</ul>
+								</li>
+								<li><a href="#aims" class="scroll">Aims</a></li>
+								<li><a href="#results" class="scroll">Results/Discussion</a>
+									<ul>
+										<li><a href="#methodone" class="scroll">Method 1</a></li>
+										<li><a href="#methodtwo" class="scroll">Method 2</a></li>
+										<li><a href="#methodthree" class="scroll">Method 3</a></li>
+									</ul>
+								</li>
+								<li><a href="#conclusions" class="scroll">Conclusions</a></li>
+								<li><a href="#methods" class="scroll">Materials &amp; Methods</a></li>
+								<li><a href="#references" class="scroll">References</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-xl-10">
+
+				<div id="conjchemistry">
+					<h1>Conjugation Chemistry</h1>
+				</div>
+
+				<div id="abstract">
+					<h2>Abstract</h2>
+				</div>
+
+				<p>The effective use of our <a href="dna-origami.html">DNA templates</a> for multimeric protein assembly depends upon our ability to reliably conjugate protein to DNA. This project has investigated and selectively optimised three distinct chemical methods of modifying DNA for the purposes of protein conjugation, providing the ability to practically and effectively functionalise the DNA structure such that it displays a strong affinity for HIV capsid protein. Short DNA oligonucleotides have been successfully modified with Nitrilotriacetic Acid (NTA), Succinimidyl 4-(N-maleimidomethyl)cyclohexane-1-carboxylate (SMCC) and SpyTag peptide. These functional groups are known to interact with the <a href="/lab-book/protein-engineering/protein-design.html">protein motifs</a> of Polyhistidine (His<sub>6</sub>) and Cysteine (Cys), and the protein known as SpyCatcher respectively. A novel method of purification for NTA modified DNA has also been determined, with improvements in both yield and time scale observed.</p>
+
+				<div id="introduction">
+					<h2>Introduction</h2>
+				</div>
+
+				<p>To effectively immobilise the HIV capsid protein with our DNA structures, we need to ensure that we can bind protein to DNA. The binding of protein to other biomolecules (bioconjugation) is key step for many endeavours, such as in diagnostics, biomolecular imaging and most pertinently to this investigation, in the measurement of biological interactions.<sup>1</sup> As such, there are numerous established methods of bioconjugation, and the selection of an appropriate method depends on protein origin, purity, specificity requirements and other application based requirements.<sup>2</sup> Figure 1 illustrates the general concept of bioconjugation as applied to this project.</p>
+
+				<img class="img-fluid" src="/images/conjugation-1.png" />
+
+				<p class="caption">Figure 1: Preparation of a bioconjugate - a deceptively complex process with different solutions for different needs.</p>
+
+				<div id="conjtechniques">
+					<h3>Conjugation Techniques</h3>
+				</div>
+
+				<p>High yield bioconjugation has been achieved with bulk modification of lysine residues with an N-hydroxysuccinimide (NHS) compound.<sup>3</sup> However, this high yield is mainly owing to the commonality of surface lysine residues on most proteins, and so this technique involves a tradeoff with conjugation site specificity. More selective forms of modification have exploited the chemistry of naturally occurring amino acids. Such techniques include targeting tryptophan residues with metallocarbenoid reagents,<sup>4</sup> reacting tyrosines with diazonium salts,<sup>5</sup> and altering cysteine groups with maleimide<sup>6</sup> or iodoacetamide compounds.<sup>7</sup> In general, these selective methods are more successful with recombinantly expressed proteins rather than those extracted from their native environments as these can be modified with site specific mutations.<sup>2</sup></p>
+
+				<p>However, even with the tool of selective or site-directed mutagenesis it is challenging to create a specific conjugation site by exploiting the chemistry of natural amino acids. This is because proteins typically contain multiple instances of the target residue and/or the residue in question is functionally important. A more recent bioconjugation technique uses a highly specific coupling between a short peptide designated SpyTag and a corresponding protein partner Spy Catcher, each being one of the two domains of the FbaB protein from <em>Streptococcus pyogenes</em>.<sup>8</sup> The pair form an irreversible isopeptide bond upon meeting as they reassemble into the complete protein. Expressed proteins have also been conjugated via the appendage of a polyhistidine (His<sub>6</sub>) tag, which can interact with polar functional groups such as nitrilotriacetic acid (NTA) through shared complexation of metal ions.<sup>9</sup> This form of chemistry is already widely used in protein purification,<sup>10</sup> and is distinct from other conjugation methods in that the underlying reaction is reversible.</p>
+
+				<div id="selection">
+					<h3>Selection of Methods</h3>
+				</div>
+
+				<p>The bioconjugation methods to be used in this project were chosen while trying to encompass a wide range of bond strengths and specificities. Three main types of conjugation chemistry have been explored, and these will be explained in turn:</p>
+				<ol>
+					<li>Nitrilotriacetic Acid (NTA) / Nickel (Ni) / Polyhistidine (His<sub>6</sub>) Coordination Chemistry</li>
+					<li>Succinimidyl 4-(N-maleimidomethyl)cyclohexane-1-carboxylate (SMCC) / Cysteine (Cys) Covalent Chemistry</li>
+					<li>Spy Catcher/Spy Tag Isopeptide Bond</li>
+				</ol>
+				<p>The first method is a form of reversible chemistry involving the coordination of metal ions. This means that the bonds formed are relatively weak and can be undone under appropriate conditions. The second is based on targeting cysteine with a reactive maleimide group, which forms covalent bonds but is sometimes limited in specificity. The final method uses a peptide/protein partnership, the species involved form a covalent isopeptide bond upon meeting which is extremely strong and highly selective.</p>
+
+				<div id="aims">
+					<h2>Aims</h2>
+				</div>
+
+				<p>This area of the project aims to ensure practical and consistent production of the materials necessary to allow conjugation of HIV capsid protein to DNA structures using the techniques outlined above. Proteins are equipped with the required functional groups through specific mutations during the expression process. This aim of this area then becomes to produce sufficient DNA oligonucleotides modified with the functional groups able to achieve bioconjugation by interacting with those already present on protein constructs.</p>
+
+				<p>A secondary aim for this section is to improve production throughput by identifying and removing bottlenecks in the methods used to develop conjugation materials. This will contribute to the main aim of achieving practical levels of bioconjugation material production.</p>
+
+				<div id="results">
+					<h2>Results/Discussion</h2>
+				</div>
+
+				<div id="methodone">
+					<h3>Method 1 - NTA/Ni<sup>2+</sup>/HIS<sub>6</sub> Coordination Chemistry</h3>
+				</div>
+
+				<p>The materials required for this technique are DNA modified with nitrilotriacetic acid groups, protein fitted with a polyhistidine (His<sub>6</sub>) tag, and a solution of nickel ions. Both the NTA groups (on the DNA) and histidine tags (on proteins) can form complexes with metal ions, particularly the Ni<sup>2+</sup> ion. Combining these three elements leads to the joint complexing of nickel by <em>both </em>protein and DNA, creating a DNA-protein bond which is mediated by nickel ions. Insertion of a His<sub>6</sub> tag was achieved by introducing a mutation during <a href="/lab-book/protein-engineering/protein-production.html">protein expression</a>, meaning that this project was focussed on the modification of DNA with NTA groups and subsequent purification.</p>
+
+				<h4>NTA Modification of DNA</h4>
+
+				<p>The first step of DNA modification is the attachment of the crosslinking molecule N-succinimidyl 3-(2-pyridyldithio)propionate (SPDP) to short DNA oligonucleotides functionalised with three amine groups. Next, the disulphide bond of the SPDP is reduced using tris(2-carboxyethyl)phosphine (TCEP) to remove the pyridine moiety, yielding DNA with a single accessible thiol group. The final step is to react the thiolated DNA with maleimide NTA, which completes the attachment of the NTA group to the DNA backbone. The successful attachment of NTA groups causes an increase in size of the target DNA, which can be observed with denaturing polyacrylamide gel electrophoresis (PAGE) to confirm the success of the reaction. Figure 2 summarises the modification procedure and gives a typical denaturing PAGE result where the mobility of the DNA has been reduced post modification, reflecting the change in size due to NTA modification.</p>
+
+				<img class="img-fluid" src="/images/conjugation-2.png" />
+
+				<p class="caption">Figure 2: Schematic of NTA modification process. Inset – urea denaturing PAGE visualisation of procedure, samples correspond to the first three stages in the schematic. <a href="#methods">Click here</a> for full description of gel conditions and modification procedure.</p>
+
+				<p>Notably, there are three distinct bands which form upon addition of maleimide NTA, suggesting that tris NTA DNA is not the only product of this reaction. This is attributed to the fact that the modification does not go to completion, and the products of the reaction are divided between tris, bis and mono modified NTA DNA.<sup>9</sup> This presents the need to purify the reaction mixture.</p>
+
+				<h4>Purification of NTA Modified DNA</h4>
+
+				<p>Purification aims to separate the tris NTA DNA from the reaction mixture, as this should provide the most favourable binding with protein. An effective purification also ensures consistency of the modified DNA, which is an important consideration for other areas of the project. The similarity of tris, bis and mono NTA DNA on the molecular level makes this a difficult separation, however there are slight differences in size and charge which can be exploited using PAGE. Figure 3 displays the relative positioning of the variously modified DNA during a typical PAGE purification. It was also noticed that the purification could still be performed using polyacrylamide gels that had been cast without a well comb. The results of this modified procedure are also given by Figure 3, demonstrating that the throughput of the purification was more than doubled without any visible loss in resolution.</p>
+
+				<img class="img-fluid" src="/images/conjugation-3.png" />
+
+				<p class="caption">Figure 3: Purification of tris NTA DNA from its bis and mono counterparts. <a href="#methods">Click here</a> for a full description of the purification method.</p>
+
+				<p>The tris NTA band, highest on gels depicted in Figure 3, was excised and subject to a multi-stage extraction process involving leaching, centrifugation and buffer exchange. The resulting purified Tris NTA DNA was stored at -20&deg;C and used as required to immobilise His tagged protein constructs through their shared affinity for nickel cations.</p>
+
+				<div id="methodtwo">
+					<h3>Method 2 - SMCC/Cys Covalent Chemistry</h3>
+				</div>
+
+				<p>This method of conjugation differs from NTA based chemistry in that it is irreversible. The process involves modifying mono-aminated DNA with the heterobifunctional crosslinker SMCC,<sup>11</sup> which is known to form covalent bonds with thiol groups. A cysteine residue is introduced into the target protein by selective mutation, allowing the protein to be directly conjugated to the modified DNA.</p>
+
+				<h4>SMCC Modification of DNA</h4>
+
+				<p>A mechanistic depiction of SMCC modification of DNA is shown in Figure 4. Aminated DNA is added to a mixture of dimethyl fluoride (DMF), N,N-Diisopropylethylamine (DIPEA) and SMCC. DMF is the reaction solvent, and DIPEA is a strong non-nucleophilic base which catalyses the reaction between aminated DNA and SMCC. The proposed mechanism for this reaction (Figure 4) is via nucleophilic substitution, which is in general practically irreversible. In addition, SMCC is added in large excess meaning there is negligible unmodified DNA remaining at the end of the reaction.<sup>11</sup></p>
+
+				<img class="img-fluid" src="/images/conjugation-4.png" />
+
+				<p class="caption">Figure 4: SMCC modification of aminated DNA, proceeding through nucleophilic substitution.</p>
+
+				<h4>Purification of SMCC DNA</h4>
+
+				<p>The main contaminant in this mixture is unreacted SMCC, which must be removed to provide effective modified DNA for conjugation purposes. This separation was successfully achieved with two consecutive methods, ethanol precipitation and desalting.</p>
+				<h4>Ethanol Precipitation</h4>
+
+				<p>This step exploits the fact that SMCC is soluble in ethanol, while DNA is not. The reaction mixture is adjusted to pH 5 with sodium acetate (NaCH<sub>3</sub>COO) and a large excess of ethanol added. It is then chilled to -80&deg;C, encouraging the modified DNA to fall out of solution. The resulting suspension is centrifuged, and the liquid phase removed. This leaves behind a solid pellet of DNA, which is resuspended in water. The resulting solution of modified DNA is then characterised with UV-Vis Spectroscopy alongside appropriate controls, a typical result given by Figure 5.</p>
+
+				<img class="img-fluid" src="/images/conjugation-5.png" />
+
+				<p class="caption">Figure 5: UV-Vis absorbance spectra of SMCC modified DNA solution (&lsquo;SMCC DNA&rsquo;) and controls. The &lsquo;DNA Control&rsquo; is from an identical procedure using DNA with no SMCC added, and the &lsquo;SMCC Control&rsquo; is vice versa. All other spectra belong to the various reagents involved as shown by the legend.</p>
+
+				<p>Two distinct peaks are observed, one at 228 nm and the other at 255 nm. The former peak is present in all three of the SMCC DNA reaction mixture, the SMCC control and the DNA control. This implies that it is caused by substances common to all three of these samples. Based on the spectra of the individual components, the most likely cause is the presence of some combination of residual DIPEA and residual NaCH<sub>3</sub>COO following the precipitation. The latter peak is believed to represent DNA, as this is absent from the SMCC control but present in both the SMCC DNA reaction mixture and DNA control. There is the possibility of some interference from residual DMF, which can also be seen to absorb light at 255 nm, however as a volatile small molecule most of this is likely to be removed either during evaporation in this stage or size exclusion in the following stage of purification.</p>
+
+				<h4>Desalting</h4>
+
+				<p>The mixture is spun through a column packed with water-equilibrated porous G10 resin, which selects for the modified DNA by size exclusion. The effective removal of residual contaminants is shown by Figure 6 with the disappearance of the UV-Vis absorbance peak at 228 nm, leaving only modified DNA at 255 nm.</p>
+
+				<img class="img-fluid" src="/images/conjugation-6.png" />
+
+				<p class="caption">Figure 6: UV-Vis spectra of SMCC modified DNA solutions after both ethanol precipitation and desalting (run in triplicate).</p>
+
+				<div id="methodthree">
+					<h3>Method 3 - SpyCatcher/SpyTag Isopeptide Bond</h3>
+				</div>
+
+				<p>Unlike most peptide/protein interactions, this technique involves a highly selective and irreversible chemical reaction centring on the formation of an isopeptide bond between the short peptide SpyTag and its protein partner SpyCatcher. In this project, SpyCatcher has been appended to protein constructs as a mutation during expression, while SpyTag is conjugated to DNA. The opposite configuration is possible, but was not explored in this project.</p>
+
+				<h4>Conjugation of SpyTag to DNA</h4>
+
+				<p>SpyTag is a short peptide with a cysteine residue, meaning that it can be conjugated to SMCC modified DNA. The peptide is first incubated with a molar excess of TCEP to reduce any disulfide bonds between peptides. The reduced peptide is then added in large molar excess to SMCC modified DNA, the mixture buffered to pH 7.5 and reaction allowed to proceed for two hours. The successful addition of the peptide increases the size of the SMCC modified DNA, leading to a band shift which can be visualised using PAGE analysis as shown by Figure 7. Comparison with the SMCC DNA control suggests that the reaction yield is relatively low and there is still a substantial amount of unconjugated DNA at completion.</p>
+
+				<img class="img-fluid" src="/images/conjugation-7.png" />
+
+				<p class="caption">Figure 7: Conjugation of SpyTag to SMCC Modified DNA. Inset – urea denaturing PAGE analysis of conjugation reaction mixture alongside appropriate controls. <a href="#methods">Click here</a> for full description of gel conditions.</p>
+
+				<p>One possible cause of the low yield is an undesirable side reaction between TCEP and the maleimide group on the SMCC modified DNA.<sup>12</sup> To investigate this premise, the conjugation was conducted while varying the excess of TCEP used during peptide reduction. The different reaction mixtures were visualised using PAGE, and the prominence of the bands corresponding to the Spy Tag DNA conjugate compared. Figure 8 summarises the results of this screening process, with a considerable improvement in yield observed as shown by the growing prominence of the conjugate band with decreasing molar excess of TCEP.</p>
+
+				<img class="img-fluid" src="/images/conjugation-8.png" />
+
+				<p class="caption">Figure 8: Effects of lowering molar excess of TCEP on conjugation reaction.</p>
+
+				<p>Despite an improved yield, it seems that there is still a small amount of unconjugated DNA remaining at completion. A much more prominent contaminant, though not visible on the gel in Figure 8, will be the substantial amounts of unconjugated peptide remaining from the 10 x molar excess addition of peptide to SMCC DNA. Hence, further separation is needed to obtain purified SpyTag DNA.</p>
+
+				<h4>Purification of SpyTag DNA</h4>
+
+				<p>An attempt was made to separate the various components in the conjugation reaction mixture by exploiting their relative solubilities in particular solvents. Several parallel conjugation reactions were initiated and allowed to proceed to completion. Each reaction mixture was then added to an excess of one of eight different solvents in the hope that this would cause selective precipitation of the desired species, thus enabling purification. Table 1 outlines the solvents used and provides a rationale for their selection.</p>
+
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<p><strong>Reaction ID</strong></p>
+							</td>
+							<td>
+								<p><strong>Solvent Added</strong></p>
+							</td>
+							<td>
+								<p><strong>Rationale</strong></p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>1</p>
+							</td>
+							<td>
+								<p>800 &micro;L Acetone</p>
+							</td>
+							<td rowspan="2">
+								<p>Used to precipitate peptides<sup>14</sup></p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>2</p>
+							</td>
+							<td>
+								<p>800 &micro;L Acetone + 50 &micro;L pH 5 NaCH<sub>3</sub>COO Buffer</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>3</p>
+							</td>
+							<td>
+								<p>800 &micro;L Ethanol</p>
+							</td>
+							<td rowspan="2">
+								<p>Used to precipitate SMCC modified DNA (above)</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>4</p>
+							</td>
+							<td>
+								<p>800 &micro;L Ethanol + 50 &micro;L pH 5 NaCH<sub>3</sub>COO Buffer</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>5</p>
+							</td>
+							<td>
+								<p>0.1 M TEAA + 5% Acetonitrile</p>
+							</td>
+							<td rowspan="4">
+								<p>Previously used in attempts to purify mixture with HPLC, but this was thought to fail due to precipitation of certain species.</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>6</p>
+							</td>
+							<td>
+								<p>0.1 M TEAA + 70% Acetonitrile</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>7</p>
+							</td>
+							<td>
+								<p>0.1% TFA</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>8</p>
+							</td>
+							<td>
+								<p>0.1% TFA + 90% Acetonitrile</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<p class="caption">Table 1: Solvents used to encourage precipitation of various species in conjugation reaction mixture.</p>
+
+				<p>The mixtures were chilled at -80&deg;C for 30 minutes and then centrifuged at 4&deg;C for 30 minutes to encourage precipitation. The solid pellets resulting from each precipitation were then resuspended in deionised water. These were then analysed with PAGE alongside a sample from the initial reaction mixture normalised to the same concentration as the resuspended pellet, as shown by Figure 9.</p>
+
+				<img class="img-fluid" src="/images/conjugation-9.png" />
+
+				<p>Some precipitation has certainly occurred, though it seems most of the species involved remained solubilised during the process as the resuspended pellet bands are markedly less prominent than those of the corresponding reaction mixtures. As a result, it cannot be concluded that precipitation with any of the solvents surveyed represents a practical method of purification. In the absence of an effective separation, it is still possible to use the unpurified reaction mixture to conjugate proteins to DNA structures. However, the vast excess of unconjugated Spy Tag peptide will consume large amounts of Spy Catcher protein which is highly non-ideal. Therefore, further work is needed to establish a more efficient purification for this conjugate.</p>
+
+				<div id="conclusions">
+					<h2>Conclusions</h2>
+				</div>
+
+				<p>Three different forms of protein bioconjugation were selected from literature for the immobilisation of our various protein constructs onto DNA structures. Feasible and reliable chemical reactions were developed for the modification of DNA oligonucleotides with NTA, SMCC and SpyTag peptide.</p>
+				<p>Effective purification techniques were developed for the former two products, however further work is needed to develop a more effective purification for the SpyTag DNA conjugate.</p>
+
+				<div id="methods">
+					<h2>Materials &amp; Methods</h2>
+				</div>
+
+				<h3>Reaction Conditions</h3>
+				<p>Unless explicitly mentioned, all reactions proceeded at 25&deg;C in a temperature controlled laboratory.</p>
+				<h3>Urea Denaturing Page Gels</h3>
+				<p>All denaturing PAGE gels were prepared with casting moulds and associated equipment supplied by BioRad. Gels were cast in two layers, with 32% 19:1 acrylamide/bis-acrylamide in the lower (resolving) layer and 5% 29:1 acrylamide/bis-acrylamide in the upper (stacking) layer. Both layers contained 42 w/v% urea. Loading buffer used was added to samples at a 1:1 ratio immediately before loading and contained 27 w/v% urea, dissolved in a mixture of 60 v/v% 1M Tris HCl (pH 6.8) and 40 v/v% of a 1% bromophenol blue solution. Gels were run in 1 x Tris/Borate/EDTA running buffer at 150 V for 10 minutes followed by 250 V for 90 minutes.</p>
+				<h3>NTA Modification</h3>
+				<p>Tris-aminated DNA (Integrated DNA Technologies) was resuspended in nuclease free water to 1mM and stored in aliquots at -20&deg;C. Immediately prior to reaction, this was buffer exchanged into a buffer solution with 100 mM Na<sub>3</sub>PO<sub>4</sub>, 100mM NaCl and pH 7.3 using pre-equilibrated SEC columns (Bio-Rad Micro Bio Spin 6). SPDP was added to 12.5 mM, left to react for one hour, and then excess removed with 2 more consecutive SEC columns. TCEP was added to 10 mM and incubated for 15 minutes, before adding maleimide-NTA to 20mM and allowing the reaction to proceed for one hour. Excess maleimide NTA was removed with another SEC column, and the products visualised alongside on a denaturing polyacrylamide gel with a SYBR-Gold post-stain.</p>
+				<h3>Tris NTA DNA Purification</h3>
+				<p>The reaction mixture was purified using PAGE. Eight 22% denaturing gels were cast as per standard procedure and the well combs deliberately not used when pouring the stacking gel. 20 &micro;L of the NTA reaction mixture was diluted to 400 &micro;L with deionised water and added to 400 &micro;L of loading dye. This mixture was divided into 100&micro;L portions, each of which was loaded on to one of the denaturing gels. After running, the gels were stained with SYBR-Gold and visualised on a blue/UV light box to determine the location of the tris NTA band. This band was excised, crushed and left sitting in 20mM Tris HCl (pH 8) overnight. The next day, the gel slurry was separated with centrifuge membrane filters (Spin-X) and the filtrate concentrated by vacuum evaporation. This concentrate was desalted using pre-swollen G10 resin and the final concentration determined by visualisation alongside known standards on a denaturing polyacrylamide gel with a SYBR-Gold post-stain to allow quantification.</p>
+				<h3>SMCC Modification and Purification</h3>
+				<p>2 mg of SMCC, 60 &micro;L of DMF, 1 &micro;L of DIPEA and 2 &micro;L of aminated DNA at 10 mM were added to a clean Eppendorf tube and agitated for 30 minutes at room temperature. Following this, the mixture was diluted to 200 &micro;L with deionised water, and added to 50 &micro;L of pH 5 NaCH<sub>3</sub>COO buffer with 800 &micro;L of absolute ethanol. This substance was chilled at -80&deg;C for 30 minutes, then centrifuged at 14,000 g at 4&deg;C in a pre-cooled centrifuge leading to the formation of a visible DNA pellet. The supernate was removed, and the pellet dried in a 37&deg;C incubator for 15 minutes before being resuspended with deionised water. This solution was then desalted using pre-swollen G10 resin, before being characterised with UV-Vis spectroscopy to determine yield and purity. The process was sometimes repeated if the UV-Vis spectra indicated the presence of contaminants. Once purified, the SMCC DNA was distributed into 1 nmol aliquots, vacuum evaporated until dry and stored at -20&deg;C.</p>
+				<h3>Spy Tag Conjugation</h3>
+				<p>10 &micro;L of Spy Tag peptide solution at 1 mM was vacuum evaporated until dry in a clean Eppendorf tube. This was added to 2 &micro;L of deionised water, 1.5 &micro;L of 0.5M NaCl, 1 &micro;L of 0.1M Tris HCl (pH 7.5) and 0.5 &micro;L of 10 mM TCEP. After incubating for 15 minutes, this was transferred to another tube containing 1 nmol of dried SMCC modified DNA and left overnight. The reaction was visualised on a denaturing PAGE gel with a SYBR Gold post stain.</p>
+				<h3>Spy Tag DNA Purification</h3>
+				<p>Following the addition of solvent, the conjugation reaction mixture was chilled at -80&deg;C for 30 minutes then centrifuged at 4&deg;C for a further 30 minutes. The resulting liquid phase was drawn off with a pipette, vacuum evaporated until dry and then resuspended in 50 &micro;L of deionised water. The solid pellet (if any) was directly resuspended in 50 &micro;L of deionised water. Both samples were then analysed with PAGE alongside a sample from the initial reaction mixture to determine the extent of separation.</p>
+
+				<div id="references">
+					<h2>References</h2>
+				</div>
+
+				<ol>
+					<li>Gangaraju Vamsi K. Lin Haifan. <em>Nat Rev Mol Cell Biol</em>. 2009; 10 (2) (1) p. 116-125.</li>
+
+
+					<li>Stephanopoulos N, Francis MB. <em>Nat Chem Biol</em>. 2011; 7 (12) p. 876-884.</li>
+
+
+					<li>Hermanson G. Academic Press; 2013.</li>
+
+
+					<li>Antos JM, Francis MB. <em>J Am Chem Soc</em>. 2004; 126 (33) p. 10256-10257.</li>
+
+
+					<li>Jones MW, Mantovani G, Blindauer CA, et al. <em>J Am Chem Soc</em>. 2012; 134 (17) p. 7406-7413.</li>
+
+
+					<li>Mason A, Thordarson P. <em>J Vis Exp</em>. 2016; (113).</li>
+
+
+					<li>Sechi S, Chait BT. <em>Anal Chem</em>. 1998; 70 (24) p. 5150-5158.</li>
+
+
+					<li>Reddington S, Howarth M. <em>Curr Opin Chem Biol</em>. 2015; (29) p. 94-99.</li>
+
+
+					<li>Goodman RP, Erben CM, Malo J, et al. <em>ChemBioChem</em>. 2009; 10 (9) p. 1551-1557.</li>
+
+
+					<li>Bornhorst J, Falke J. <em>Methods Enzymol</em>. 2000; 326 p. 245-254.</li>
+
+
+					<li>Williams B, Chaput J. <em>Curr Protoc Nucleic Acid Chem</em>. 2011; (480) p. 1-29.</li>
+
+
+					<li>Shafer DE, Inman JK, Lees A. <em>Anal Biochem</em>. 2000; 282 (1) p. 161-164.</li>
+
+
+					<li>Williams B, Chaput J. 2011; (480) p. 1-29.</li>
+
+
+					<li>Simpson DM, Beynon RJ. <em>J Proteome Res</em>. 2010; 9 (1) p. 444-450.</li>
+					
+				</ol>
+
+
+
+
+
+
+
+
+
+
+			</div>
+		</div>
+
 	</div>
 
 
@@ -52,7 +404,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
 	<!-- Custom JavaScript -->
-	<script src="../js/scripts.js"></script>
+	<script src="/js/scripts.js"></script>
 
 </body>
 

@@ -87,9 +87,9 @@ nav {
 
 /* Multiple level heading scheme */
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
 	font-family: "Bebas Neue";
-	font-size: 36px;
+	font-size: 48px;
 	border-left: 3px solid #AB242E;
 	border-bottom: 3px solid #AB242E;
 	border-bottom-left-radius: 10px;
@@ -100,11 +100,16 @@ h1, h2, h3 {
 }
 
 h2 {
-	font-size: 30px;
+	font-size: 42px;
 }
 
 h3 {
-	font-size: 24px;
+	font-size: 36px;
+	border: none;
+}
+
+h4 {
+	font-size: 30px;
 	border: none;
 }
 
@@ -116,9 +121,36 @@ p {
 	padding-left: 10px;
 }
 
-container p>a {
+.container p>a {
 	color: #AA242E;
 	text-decoration: underline;
+}
+
+/* Tables */
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+table.center {
+	margin-left:auto; 
+    margin-right:auto;
+}
+
+/*General images */
+
+img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 60vh;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Image and video on landing page */
@@ -138,7 +170,7 @@ container p>a {
 	top: 0;
 }
 
-ul {
+.sidenav ul {
 	font-family: "Avenir Condensed", sans-serif;
 	margin-left: 8px;
 	padding-left: 8px;
@@ -155,11 +187,30 @@ ul {
 	border-bottom: solid 2px black;
 }
 
-
 /* Sets relative indentation for each new list level */
 
 ul li ul {
 	margin-left: 4px;		
+}
+
+/* Styles other lists */
+
+ul {
+	font-family: "Avenir Condensed", sans-serif;
+	font-size: 18px;
+	list-style-image: url('/images/bullet.png');
+}
+
+ol {
+	font-family: "Avenir Condensed", sans-serif;
+	font-size: 18px;	
+}
+
+/* Captions */
+
+.caption {
+	font-weight: bold;
+	font-style: italic; 
 }
 
 /* Formats active sidebar link */
@@ -174,24 +225,24 @@ ul li ul {
 	padding: 10px;
 }
 
-/* Interactive project map */
+/* Interactivity on svg files */
 
-polygon {
+a g polygon {
 	fill: #C1272D;
 	fill-opacity: 0.0;
 	transition: 0.6s fill-opacity;
 }
 
-text {
+a g text {
 	font-size: 28px;
 	transition: 0.6s font-size;
 }
 
-#mathematical-modelling:hover>polygon, #saxs:hover>polygon, #protein-production:hover>polygon, #dna-origami:hover>polygon, #spr:hover>polygon, #conjugation-chemistry:hover>polygon, #imaging:hover>polygon {
+svg a g:hover polygon {
 	fill-opacity: 0.6;
 }
 
-#mathematical-modelling:hover>text, #saxs:hover>text, #protein-production:hover>text, #dna-origami:hover>text, #spr:hover>text, #conjugation-chemistry:hover>text, #imaging:hover>text {
+svg a g:hover text {
 	font-size: 35px;
 	fill: #C1272D;
 }

@@ -16,7 +16,7 @@
 
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="/css/styles.css">
-	
+
 	<!-- Page Icon -->
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
 
@@ -26,32 +26,282 @@
 
 	<!-- Navigation bar placeholder-->
 	<div id="nav-placeholder"></div>
-	
+
 	<!--Container to wrap page content-->
 	<div class="container">
-	
-	
-	</div>
-		
-	<!--Page footer-->
-	<footer class="footer">
-		<div class="container">
-			<p>&copy; <strong>UNSW BIOMOD 2017 - Capsid Constructors.</strong></p>
+		<div class="row">
+			<div class="col-xl-2 sidenavtracks">
+				<div class="sidenav">
+					<ul>
+						<li><a href="#proteindesign" class="scroll">Protein Design</a>
+							<ul>
+								<li><a href="#introduction" class="scroll">Introduction</a></li>
+								<li><a href="#aims" class="scroll">Aims</a></li>
+								<li><a href="#namingconventions" class="scroll">Naming Conventions</a></li>
+								<li><a href="#mutations" class="scroll">Mutations</a></li>
+								<li><a href="#conclusions" class="scroll">Conclusions</a></li>
+								<li><a href="#references" class="scroll">References</a></li>
+							</ul>
+						</li>
+						<li><a href="/lab-book/protein-engineering/cloning.html">Next: Cloning</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-xl-10">
+
+				<div id="proteindesign">
+					<h1>Protein Design</h1>
+				</div>
+
+				<div id="introduction">
+					<h2>Introduction</h2>
+				</div>
+
+				<p>The HIV viral capsid is formed entirely of hexamers and pentamers of the HIV-1 capsid protein (HIV-1 CA). The HIV-1 CA protein has two domains, an N-terminal domain (NTD) and a C-terminal domain (CTD), connected by a flexible linker (Figure 1). Intra-hexamer and intra-pentamer NTD-NTD and NTD-CTD interactions stabilise hexamer and pentamer structures, whereas CTD-CTD interactions stabilise the lattice structure between adjacent hexamers or pentamers. CTD-CTD interactions also cause the CA protein to form dimers across the hexamer-hexamer or the hexamer-pentamer interface. Despite extensive research, formation of CA hexamer or pentamer structures <em>in vitro</em> in its native form without disulfide bond cross-linking<sup>1-3</sup> or protein templating<sup>1</sup> has not yet been reported.</p>
+
+				<img class="img-fluid" src="/images/protein-design-1.png" />
+
+				<p class="caption">Figure 1: The HIV-1 CA protein consists of an NTD (residues 1-145) and a CTD (residues 150-231), connected by a flexible loop (residues 146-149)<sup>5,6</sup>. Image created using PDB ID: 4XFX<sup>7</sup>. Helices are coloured systematically from the NTD (blue) to CTD (red).</p>
+
+				<p>Our project aims to template HIV-1 CA proteins onto a DNA origami scaffold, to visualise these structures and to investigate the kinetics of capsid formation. In order to ascertain the kinetics of HIV capsid assembly, individual binding events between proteins needed to be isolated and measured. We have designed a number of mutations to the wild-type HIV-1 capsid protein, which will allow us to better observe specific interactions of interest, and develop a model of self-assembly from fundamental kinetic principles.</p>
+
+				<div id="aims">
+					<h2>Aims</h2>
+				</div>
+
+				<p>To design mutations in HIV-1 CA protein that will enable the protein to:</p>
+
+				<ul>
+					<li>have disulfide bond cross-links to spontaneously form discrete and stable hexameric and pentameric structures (Figure 2A);</li>
+					<li>avoid dimerisation between CA proteins from adjacent hexamers, <a href="/lab-book/kinetics.html">to probe intra- hexamer and pentamer interactions</a> (Figure 2B);</li>
+					<li>contain sites for irreversible conjugation to fluorophores, for visualisation with <a href="/lab-book/imaging/tirf.html">single molecule fluorescence</a> (Figure 2C);</li>
+					<li>contain sites for reversible and irreversible <a href="/lab-book/conjugation-chemistry.html">conjugation to DNA</a> (Figure 2D).</li>
+				</ul>
+
+				<img class="img-fluid" src="/images/protein-design-2.png" />
+
+				<p class="caption">Figure 2: Cartoon representations of desired mutations to introduce to HIV-1 CA protein, represented as a red triangle. (A) Cross-linked CA pentamer and hexamer mutants; (B) dimer-disrupting CA mutants; (C) CA with an available cysteine residue (represented as a yellow circle); (D) CA with reversible and irreversible conjugation mechanisms (clockwise from top left: cysteine residue, SpyTag [black oval], SpyCatcher [black &lsquo;C&rsquo; shape], polyhistidine tag [six pink polygons]).</p>
+
+				<div id="namingconventions">
+					<h2>Naming conventions</h2>
+				</div>
+				<p>For ease of reading, we have established the following naming conventions for HIV-1 CA protein mutants, utilised throughout this website. CA hexamers stabilised by the disulfide bond A14C/E45C are referred to as &lsquo;cross-linked hexamer&rsquo;, and CA pentamers stabilised by the disulfide bond N21C/A22C are referred to as &lsquo;cross-linked pentamer&rsquo;. Any CA mutant containing W184A/M185A substitutions are labelled &lsquo;discrete&rsquo; (if additionally containing cross-linking mutations) or &lsquo;monomeric&rsquo; (not cross-linked). A C-terminal polyhistidine tag is referred to as &lsquo;6His&rsquo;.</p>
+
+				<div id="mutations">
+					<h2>Mutations</h2>
+				</div>
+
+				<h3>Disulfide bond cross linking</h3>
+
+				<h4>A14C/E45C &ndash; cross-linked hexamer</h4>
+				<h4>N21C/A22C &ndash; cross-linked pentamer</h4>
+
+				<p>Cysteine residues have an available sulfhydryl group (-SH) that can form covalent bonds with another sulfhydryl group upon oxidation. Disulfide bonds between two cysteine residues can help stabilise tertiary and quaternary protein structure. Disulfide bond stabilised CA protein hexamer structures were first reported by Pornillos et al. 2009<sup>1</sup> by introducing cysteine residues at the positions A14 and E45, and have been well characterised by X-ray diffraction<sup>1,3 </sup>(Figure 3a). Disulfide bond stabilised CA protein pentamer structures were also reported by Pornillos et al. 2011<sup>2</sup> (Figure 3b) through a similar method. Cross-linking was introduced to induce a pentameric structure by mutating residues N21 and A22 to cysteine residues.</p>
+
+				<img class="img-fluid" src="/images/protein-design-3.png" />
+
+				<p class="caption">Figure 3: (A) Disulfide bond cross-linked CA hexamer with A14C/E45C mutation highlighted. Cysteine residues are shown inset. Image created using PDB ID: 3H47<sup>1</sup>. (B) Disulfide bond cross-linked CA pentamer with N21C/A22C mutation highlighted. Cysteine residues are shown inset. Image created using PDB ID: 3P05<sup>2</sup>.</p>
+
+				<h3>Disruption of dimerisation between CA proteins from adjacent hexamers</h3>
+
+				<h4>W184A/M185A &ndash; discrete/monomeric mutation</h4>
+
+				<p>Gamble et al. (1997) introduced alanine residues at position W184 and M185 to disrupt hydrophobic C-terminal dimerisation interactions that occur between adjacent hexamers (Figure 4). These mutations have been used in addition to disulfide bond cross-linking to produce discrete hexamer and pentamer structures that do not polymerise and are less prone to aggregation<sup>1-4</sup>. The W184A/M185A mutations are especially important for kinetic experiments, as it ensures that we are measuring protein binding events between monomers that are of the same hexamer or pentamer, and not between monomers from adjacent hexamers or pentamers.</p>
+
+				<img class="img-fluid" src="/images/protein-design-4.png" />
+
+				<p class="caption">Figure 4: C-terminal dimerisation domain between two adjacent CA hexamers, with the hydrophobic interface shown inset. W184A/M185A substitutions can reduce these hydrophobic interactions and enable the formation of discrete hexamer and pentamer structures. Image created using PDB ID: 4XFX<sup>7</sup>.</p>
+
+				<h3>Reversible and irreversible conjugation</h3>
+
+				<p>(For more information on conjugation, <a href="/lab-book/conjugation-chemistry.html">click here</a>)</p>
+
+				<p>The templating of CA proteins onto a DNA scaffold requires an attachment mechanism. Three mechanisms have been designed that enable specific reversible and covalent bonding to a DNA scaffold. Covalent bonds enable spontaneous irreversible attachment of CA protein to DNA. Kinetic and imaging experiments require proteins with both types of conjugation.</p>
+
+				<p>The C-terminus was chosen as the site of conjugation, as crystal structures of the CA hexamer and pentamer show that the N-terminus of the monomers is at the centre of the hexamer and pentamer structures (Figure 5). The introduction of bulky residues may inhibit the formation of hexamers or pentamers by steric hindrance.</p>
+
+				<img class="img-fluid" src="/images/protein-design-5.png" />
+
+				<p class="caption">Figure 5: (A) CA hexamer with C-termini circled in black. After 90 degrees forward rotation, only three of the C-termini are visible. (B) CA hexamer with N-termini circled in black. Images created using PDB ID: 4XFX<sup>7</sup>.</p>
+
+				<h4>Reversible Conjugation: Polyhistidine tag</h4>
+
+				<p>Polyhistidine tags are a commonly used amino acid motif for protein purification. Six histidine residues in series (His-tag), usually at the N- or C- terminal of the protein, have affinity to cations, such as nickel ions<sup>8</sup>. The introduction of a His-tag to the CA protein is useful for both protein purification and attachment to DNA that has been modified with tris-nitrotriloacetic acid (NTA) to chelate three Ni<sup>2+</sup> ions. Six histidine residues were therefore introduced at the C-terminus of the CA protein after L231 to facilitate a specific interaction with modified DNA (Figure 6).</p>
+
+				<img class="img-fluid" src="/images/protein-design-6.png" />
+
+				<p class="caption">Figure 6: 2 histidine residues of a polyhistidine tag coordinating around a nickel ion chelated by nitrotriloacetic acid (NTA) <sup>9</sup>. We have modified DNA with 3 NTA groups, which chelate 3 Ni<sup>2+</sup> ions, which 6 histidine residues can coordinate around.</p>
+
+				<h4>Irreversible conjugation: C-terminal Cysteine and K158C</h4>
+
+				<p>In addition to covalent bonding to other cysteine residues, the sulfhydryl group of a cysteine residue can covalently bond to compounds containing maleimide groups. These can be used as a conjugation method to link DNA or fluorophores to CA proteins with available cysteine residues. Cysteine residues were introduced at two sites - at the C-terminus after L231, and by mutating K158 to cysteine. Although K158 is not at the C-terminus, it is located on a flexible linker between helices 6 and 7, proximally close to the C-terminus and is accessible for conjugation to DNA (Figure 8).</p>
+
+				<img class="img-fluid" src="/images/protein-design-7.png" />
+
+				<p class="caption">Figure 7: Model of a CA hexamer with K158C substitution. Image created using PDB ID: 4XFX <sup>7</sup>, with mutagenesis tool to introduce a cysteine residue at K158.</p>
+
+				<h4>Irreversible conjugation: SpyCatcher and SpyTag</h4>
+
+				<p>The SpyTag peptide and SpyCatcher protein are isolated fragments of a pilin subunit protein, fibronectin-binding protein FbaB, from<em> Streptococcus pyogenes</em><sup>9,10</sup>. A covalent isopeptide bond spontaneously forms between D7 of the SpyTag and K31 of the SpyCatcher (Figure 9).</p>
+
+				<p>A recombinant HIV-1 CA/SpyTag or HIV-1 CA/SpyCatcher protein would be able to conjugate to a SpyCatcher protein or SpyTag peptide affixed to a DNA scaffold. The SpyTag peptide and the SpyCatcher protein were introduced at the C-terminus after L231, with the SpyCatcher protein preceded by a GSG x 3 linker (Gly-Ser-Gly-Gly-Ser-Gly-Gly-Ser-Gly). A GSG x 3 linker provides flexibility between the SpyCatcher and CA proteins, enabling the CA protein to freely orient itself once affixed onto the DNA scaffold.</p>
+
+				<img class="img-fluid" src="/images/protein-design-8.png" />
+
+				<p class="caption">Figure 8. SpyTag (red) and SpyCatcher (black) covalently bonded by an isopeptide bond (shown inset). Image created using PDB ID: 4MLI.<sup>10</sup></p>
+
+				<div id="conclusions">
+					<h2>Conclusions</h2>
+				</div>
+
+				<p>This broad availability of conjugation mechanisms, and the possibility of using the K158C substitution in addition to a C-terminal conjugation mechanism, provides many methods of attachment for kinetic and imaging experiments. There are up to 60 combinations of the mutations described above, as when selecting a mutant 4 decisions must be made; there are 3 disulfide bond cross-linking, 2 C-terminal dimer disrupting, 2 flexible linker conjugation and 5 C-terminal conjugation choices of mutation. They are summarised in the table below.</p>
+
+				<table class="center">
+					<tbody>
+						<tr>
+							<td>
+								<p><strong>Disulfide bond cross-linking</strong></p>
+							</td>
+							<td>
+								<p><strong>W184A/M185A</strong></p>
+							</td>
+							<td>
+								<p><strong>K158C</strong></p>
+							</td>
+							<td>
+								<p><strong>C-terminal conjugation method</strong></p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>None</p>
+							</td>
+							<td>
+								<p>Yes</p>
+							</td>
+							<td>
+								<p>Yes</p>
+							</td>
+							<td>
+								<p>None</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>Hexamer (A14C/E45C)</p>
+							</td>
+							<td>
+								<p>No</p>
+							</td>
+							<td>
+								<p>No</p>
+							</td>
+							<td>
+								<p>Polyhistidine tag</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>Pentamer (A21C/N22C)</p>
+							</td>
+							<td>
+								<p>&nbsp;</p>
+							</td>
+							<td>
+								<p>&nbsp;</p>
+							</td>
+							<td>
+								<p>Cysteine residue</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>&nbsp;</p>
+							</td>
+							<td>
+								<p>&nbsp;</p>
+							</td>
+							<td>
+								<p>&nbsp;</p>
+							</td>
+							<td>
+								<p>SpyTag</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>&nbsp;</p>
+							</td>
+							<td>
+								<p>&nbsp;</p>
+							</td>
+							<td>
+								<p>&nbsp;</p>
+							</td>
+							<td>
+								<p>SpyCatcher</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<p>Certain mutation combinations can be eliminated; disulfide bond cross-linking with K158C and/or a C-terminal cysteine could lead to unexpected cysteine-cysteine bonding and malformation of the CA protein. The elimination of these combinations leaves 36 mutation permutations. 16 of these mutations have been successfully <a href="/lab-book/protein-engineering/cloning.html">cloned into plasmids</a>, and 9 of these proteins have been successfully <a href="/lab-book/protein-engineering/protein-production.html">produced and purified</a>.</p>
+
+				<p>When introducing amino acid substitutions, the large number of potential interactions can make it hard to predict the effect of the mutation on protein structures. It is important to note that there is an inter-monomer disulfide bond between C198 and C218 that is close to K158 (approximately 11&Aring; between C-alphas). The introduction of a cysteine residue at this position is unlikely to cause protein misfolding and malformation, as the sulphur atoms of the possible K158C rotamers are not within the Van der Waals radii of the sulphur atoms of C198 and C218, and protein misfolding would cause steric clashes between other residues.</p>
+
+				<p>Another important consideration is the effect of C-terminal additions to the assembly of CA lattice structures. It is possible that these conjugation methods could inhibit hexamer-hexamer and hexamer-pentamer interactions, especially the relatively large SpyCatcher protein.</p>
+
+				<div id="references">
+					<h2>References</h2>
+				</div>
+
+				<ol>
+					<li>Pornillos, O., Ganser-Pornillos, B., Kelly, B., Hua, Y., Whitby, F., Stout, C., Sundquist, W., Hill, C. and Yeager, M. (2009). X-Ray Structures of the Hexameric Building Block of the HIV Capsid. <em>Cell</em>, 137(7), pp.1282-1292.</li>
+					<li>Pornillos, O., Ganser-Pornillos, B. and Yeager, M. (2011). Atomic-level modelling of the HIV capsid. <em>Nature</em>, 469(7330), pp.424-427.</li>
+					<li>Price, A., Jacques, D., McEwan, W., Fletcher, A., Essig, S., Chin, J., Halambage, U., Aiken, C. and James, L. (2014). Host Cofactors and Pharmacologic Ligands Share an Essential Interface in HIV-1 Capsid That Is Lost upon Disassembly. <em>PLoS Pathogens</em>, 10(10), p.e1004459.</li>
+					<li>Jacques, D., McEwan, W., Hilditch, L., Price, A., Towers, G. and James, L. (2016). HIV-1 uses dynamic capsid pores to import nucleotides and fuel encapsidated DNA synthesis. <em>Nature</em>, 536(7616), pp.349-353.</li>
+					<li>Yeager, D. (2011). Design of in vitro Symmetric Complexes and Analysis by Hybrid Methods Reveal Mechanisms of HIV Capsid Assembly. <em>J Mol Biol</em>, 410(4), pp. 534-552.</li>
+					<li>Zhao, G., Perilla, J. R., Yufenyuy, E. L., Meng, X., Chen, B., Ning, J., Ahn, J., Gronenborn, A. M., Schulten, K., Aiken, C., Zhang, P. (2013). Mature HIV-1 capsid structure by cryo-electron microscopy and all-atom molecular dynamics. <em>Nature</em>, 497(7451), pp. 643&ndash;646.</li>
+					<li>Gres, A., Kirby, K., KewalRamani, V., Tanner, J., Pornillos, O. and Sarafianos, S. (2015). X-ray crystal structures of native HIV-1 capsid protein reveal conformational variability. <em>Science</em>, 349(6243), pp.99-103.</li>
+					<li>Hochuli, E., Bannwarth, W., D&ouml;beli, H., Gentz, R. and St&uuml;ber, D. (1988). Genetic Approach to Facilitate Purification of Recombinant Proteins with a Novel Metal Chelate Adsorbent. <em>Nature Biotechnology</em>, 6(11), pp.1321-1325.</li>
+					<li>Kang, H. J, Coulibaly F., Clow F., Proft T., Baker E. N. (2007). Stabilizing isopeptide bonds revealed in gram-positive bacterial pilus structure. <em>Science</em>. 318, pp.1625&ndash;1628.</li>
+					<li>Li, L., Fierer, J., Rapoport, T. and Howarth, M. (2014). Structural Analysis and Optimization of the Covalent Association between SpyCatcher and a Peptide Tag. <em>J Mol Biol</em>, 426(2), pp.309-317.</li>
+				</ol>
+
+
+
+
+
+
+
+
+
+
+			</div>
+
+
 		</div>
-	</footer>
 
-	<!-- jQuery -->
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<!--Page footer-->
+		<footer class="footer">
+			<div class="container">
+				<p>&copy; <strong>UNSW BIOMOD 2017 - Capsid Constructors.</strong></p>
+			</div>
+		</footer>
 
-	<!-- Tether -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
-	<!-- Bootstrap Minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-	
-	<!-- Custom JavaScript, including navbar load -->
-	<script type="text/javascript" src="/js/scripts.js"></script>
-	
+		<!-- Tether -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+		<!-- Bootstrap Minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+		<!-- Custom JavaScript, including navbar load -->
+		<script type="text/javascript" src="/js/scripts.js"></script>
+
 </body>
 
 

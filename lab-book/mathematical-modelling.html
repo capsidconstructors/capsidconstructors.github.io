@@ -15,10 +15,13 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
 	<!-- Custom CSS -->
-	<link rel="stylesheet" href="../css/styles.css">
+	<link rel="stylesheet" href="/css/styles.css">
 
 	<!-- Page Icon -->
-	<link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+
+	<!-- MathJax -->
+	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML"></script>
 
 </head>
 
@@ -29,11 +32,127 @@
 
 	<!--Container to wrap page content-->
 	<div class="container">
-	
-	<h1>Under Construction</h1>
-	
-	<p>We are currently hard at work putting together our research, watch this space!</p>
-	
+		<div class="row">
+			<div class="col-xl-2 sidenavtracks">
+				<div class="sidenav">
+					<ul>
+						<li><a href="#modelling" class="scroll">Mathematical Modelling</a>
+							<ul>
+								<li><a href="#introduction" class="scroll">Introduction</a>
+									<li><a href="#aims" class="scroll">Aims</a></li>
+									<li><a href="#methodology" class="scroll">Methodology</a>
+
+							</ul>
+							</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-xl-10">
+
+				<div id="modelling">
+					<img class="img-fluid" src="/images/modelling-1.png" />
+				</div>
+
+				<div id="introduction">
+					<h2>Introduction</h2>
+				</div>
+
+				<p>We are artificially constructing the HIV capsid by binding HIV-1capsid subunits in defined configurations to DNA templates. This increases the local concentration of protein and allows us to observe the rate of assembly of subunits into pentamers and hexamers. Here, we model this process mathematically to extract the fundamental rate constants that govern this process of self-assembly from experimental data.</p>
+
+				<p>The problem itself arises due to the difficulty in controlling and observing the formation of pentamer and hexamer structures from the native capsid protein. By facilitating the self-assembly of the capsid proteins with a DNA scaffold in vitro, we can better understand the spontaneous formation of the HIV capsid in vivo.</p>
+
+				<p>Observations of the binding events largely took place through Surface Plasmon Resonance, Biolayer Interferometry and gel band-shift experimentation. In addition, TIRF was investigated as an avenue to visualise single-molecule interactions. An understanding of the particular protein, any conjugation chemistry relevant to the experimental design, and the geometry of the origami structure, allows a description and quantitative model to be developed explaining the assembly of proteins in a particular system. To that end, modelling may be used to calculate information useful to the fundamental understanding of the capsid structure.</p>
+
+				<div id="aims">
+					<h2>Aims</h2>
+				</div>
+
+				<p>Using the mathematical model developed, we aimed to quantify the interaction strength of capsid proteins as they form pentamers and hexamers. Subsequently, we wanted to quantify the stability of pentamer and hexamer structures formed from capsid proteins in order to evaluate the conditions within which the capsid forms in vivo. </p>
+				<p>Additionally, we planned to develop a working model for aggregation of capsid proteins into pentamer and hexamer forms. By doing so, we have established an experimental design suited to test and monitor self-assembly of proteins more generally. </p>
+
+				<div id="methodology">
+					<h2>Methodology</h2>
+				</div>
+
+				<p>The problem of setting up a model for the aggregation of proteins has been approached through the use of ordinary differential equations (ODEs). ODEs describe how a system, or a particular state, changes over time. Put simply, they are a language by which we can precisely define the evolution of a system. </p>
+
+				<p>ODEs are often coupled. This means that the change in a particular state over time is dependent on one, or several other states, which too change with time. In order to solve such coupled ODEs, a complete set of equations is necessary. Programs such as MatLab can then be used to output numerical solutions. The drawback of this method is that all states must be predetermined; the model does not yet account for more complex aggregations, or pathways in addition to those described below. </p>
+
+				<p>In kinetic experimentation, we used a &lsquo;racquet&rsquo; DNA construct (<em>Figure 1</em>). To learn more about this structure, check out our DNA design. Through modelling we aimed to discover how the proteins were binding to these racquets, and the paths through which they form pentamers and hexamers.</p>
+
+				<img class="img-fluid" src="/images/modelling-2.png" />
+
+				<p class="caption">Figure 1: Through the use of conjugation chemistry (Yellow), we were able to bind our proteins to a DNA template. The racquet template was built in two sizes; as a hexamer (Left) and as the pentamer (Right). Functionalised DNA (Red) was annealed onto the template backbone (Black)</p>
+
+				<h2>Experimental limitations</h2>
+
+				<p>SPR and BLItz detect small changes in mass over time. Thus, many &lsquo;different&rsquo; states under this model will be measured as identical and indistinguishable. Experiments must either be carefully designed to test particular interactions and exclude unwanted binding events, or data must be deliberately analysed in consideration of the complex binding phenomena occurring at the nano-scale. Alternatively, single molecule experimentation may serve to increase the resolution of our binding experiments, overcoming inherent ambiguity in bulk measurements.</p>
+
+				<h2>Pentamer and hexamer formation</h2>
+
+				<p>We can visualise the binding pathways for the formation of pentamer and hexamer protein aggregates by creating a branching tree (<em>Figure 2</em> and <em>3</em> respectively).</p>
+
+				<img class="img-fluid" src="/images/modelling-3.png" />
+
+				<p class="caption">Figure 2: The possible binding pathway of proteins (Red) onto a pentamer racquet (Black). The numbers represent how many possible transitions there are between two states.</p>
+
+				<img class="img-fluid" src="/images/modelling-4.png" />
+
+				<p class="caption">Figure 3: The possible binding pathway of proteins (Red) onto a hexamer racquet (Black. The numbers represent how many possible transitions there are between two states.</p>
+
+				<p>From the above pathways, we can see the formation of pentamers and hexamers from an empty DNA template. It assumes binding events are discrete, and rotationally symmetrical. The number allocated to each binding event is dependent on the number of variations a particular transition encompasses which would still reach the same final state.</p>
+				<p>When looking to the above binding pathways, each step may be characterised in one of three ways. Firstly, a protein may bind to a template at a location that has neither adjacent sides occupied. Secondly, a protein may bind to a template at a location that has one adjacent side occupied. Thirdly, a protein may bind to a template at a location that has both adjacent sides occupied. Thus, we can break the problem down into a zero-neighbour, and one-neighbour, and a two-neighbour case.</p>
+
+				<h2>Mass action</h2>
+				<p>Protein self-assembly will be made up of binding and un-binding events. In order to mathematically describe these events, in the context of differential equations, it is important to utilise the mass action principle. This principle states that a binding event is dependent on the concentration of the monomers which are involved in binding. Conversely, an un-binding event is independent of the concentration of monomers. </p>
+				<h2>Assumptions</h2>
+				<p>As in all models, it is crucial to outline the assumptions made in order to assess the strength of the theoretical description of a physical system. The key assumptions made are outlined below.</p>
+
+				<ol>
+					<li>Identical, concentration-relevant interactions</li>
+				</ol>
+
+				<p>When considering the model developed, it is assumed that there are two discrete binding interactions that may occur. Firstly, a protein may bind to (or un-bind from) the racquet template. Rate constants define the likelihood and speed with which a particular transition occurs. In the binding/un-binding of a protein to the racquet template, we use rate constants `k_+^T` and `k_-^T`.</p>
+
+				<img class="img-fluid" src="/images/modelling-5.png" />
+
+				<p class="caption">Figure 4: Proteins (Red) binding and unbinding from a section of the racquet template (Black) through conjugation chemistry (Yellow).</p>
+
+				<p>Secondly, the protein may bind to another protein in the system. This interaction will have associated rate constants `k_+^P` and `k_-^P`.</p>
+
+				<img class="img-fluid" src="/images/modelling-6.png" />
+
+				<p class="caption">Figure 5: Proteins (Red) binding to each other whilst attached to the DNA template (Black). </p>
+
+
+				<p>As discussed, association is concentration dependant, whilst disassociation is concentration independent. </p>
+				<ol>
+					<li>Two-neighbours</li>
+				</ol>
+				<p>The assembly of proteins into pentamer and hexamer forms can be broken down into a series of zero, one and two-neighbour cases. The assumption is supported by the geometry of the DNA structure, which is hexameric/pentameric in nature. </p>
+				
+				<img class="img-fluid" src="/images/modelling-7.png"/>
+				
+				<p class="caption">Figure 6: Hexameric DNA racquet (Black) annealing with functionalised DNA (Red). Proteins (Red) bind to the template through conjugation chemistry (Yellow) to form aggregates such as hexamers.</p>
+
+				<p>However, as the backbone of the racquet template consists of single-stranded DNA, it is possible that the inherent flexibility leads to a breakdown in this assumption. Instead, proteins may be able to bind to other subunits opposite it on a particular template. This may be remedied if the `k_-^P` is very high (and thus proteins regularly un-bind), or if the distance between the subunits decreases the likelihood of a binding event to occur. </p>
+				<p>Additionally, research has begun on developing a stronger, more rigid racquet structure. However, we were unable to complete experiments using this new racquet due to time constraints.</p>
+				<ol>
+					<li>Effective concentration</li>
+				</ol>
+				<p>As already described, association is dependent on the concentration of monomers. However, by increasing the local concentration of proteins in the vicinity of the template through protein-template binding events, the relevant concentration is no longer the easily identified solution concentration (`m_f`). Instead, an &lsquo;effective&rsquo; concentration (`m_f`) must be established, calculated with reference to the geometry of the system and the length of any conjugation chemistry.</p>
+				
+				<img class="img-fluid" src="/images/modelling-8.png"/>
+				
+				<p class="caption">Figure 7: Two possible pathways through which Protein-Protein binding may occur. Evidently, the concentration in Panel B) is higher than in Panel A). Due to the increase in local concentration, the second case is more likely than the first. As such, we introduce the term ‘effective concentration’ to quantify this increase in probability.</p>
+
+
+
+
+
+			</div>
+		</div>
 	</div>
 
 
@@ -54,7 +173,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
 	<!-- Custom JavaScript -->
-	<script src="../js/scripts.js"></script>
+	<script src="/js/scripts.js"></script>
 
 </body>
 
