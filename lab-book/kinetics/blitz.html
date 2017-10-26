@@ -29,28 +29,213 @@
 
 	<!--Container to wrap page content-->
 	<div class="container">
-	
-	
-	</div>
 
-	<!--Page footer-->
-	<footer class="footer">
-		<div class="container">
-			<p>&copy; <strong>UNSW BIOMOD 2017 -  Capsid Constructors.</strong></p>
+		<div class="row">
+			<div class="col-xl-2 sidenavtracks">
+				<div class="sidenav">
+					<ul>
+						<li><a href="#blitz" class="scroll">BLItz</a>
+							<ul>
+								<li><a href="#introduction" class="scroll">Introduction</a></li>
+								<li><a href="#aims" class="scroll">Aims</a></li>
+								<li><a href="#methods" class="scroll">Methodology</a></li>
+								<li><a href="#results" class="scroll">Results</a></li>
+								<li><a href="#conclusion" class="scroll">Conclusion</a></li>
+							</ul>
+						</li>
+						<li><a href="/lab-book/kinetics/spr.html">Next: SPR</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-xl-10">
+
+				<div id="blitz">
+					<img class="img-fluid" src="/images/blitz-1.png" />
+				</div>
+
+				<div id="introduction">
+					<h2>Introduction</h2>
+				</div>
+
+				<p>In order to gain a fundamental understanding of the self-assembly of the HIV capsid, it is crucial to characterise the reaction kinetics of the system. Biolayer Interferometry allows for quick, accurate kinetic experiments to be completed. </p>
+
+				<p>BLItz is an alternative means of obtaining kinetic data to SPR, which was also utilised throughout the project. You can check out our <a href="/lab-book/kinetics/spr.html">SPR data here</a>! BLItz was often easier to access, and quicker to set-up, than SPR. Whilst SPR is an automated system, BLItz is largely manual.</p>
+
+				<img class="img-fluid" src="/images/blitz-2.png" />
+
+				<p class="caption">Figure 1: A schematic diagram of the Biolayer Interferometry mechanics. Proteins, or other subunits (red) bind to DNA template binding sites. The change in properties observed in the reflected white light is output as a change in biolayer over time. </p>
+
+				<p>BLItz is a label-free way to measure nano-scale binding events between nucleic acids and proteins in real time. A highly fragile glass tip contains a biosensor on which reaction takes place. As white light passes through the optical fibre tip, it is reflected back at the biolayer interface. </p>
+
+				<p>However, chemistry at the surface of the biocompatible layer allows anchor to be bound. Subsequently, we were able to attach various DNA structures to the surface, and facilitate interactions between the DNA structures and our HIV-1 capsid proteins. This surface layer will alter the refractive index, and thus the final intensity, of the reflected light. BLItz analyses this change in wavelength and outputs a live binding curve. </p>
+
+				<div id="aims">
+					<h2>Aims</h2>
+				</div>
+
+				<p>Whilst BLItz serves as a fantastic means by which to test binding events more generally, due to time constraints BLItz was used to provide evidence for a working hypothesis. We suspected that our discrete cross-linked hexamer 6His (A14C/E45C) bound to single-stranded and double-stranded DNA. We had also produced preliminary data indicating that monomeric CA-6His protein (W184A/M185A) bound to single-stranded DNA. Take a look at all this data, and more, over on our <a href="/lab-book/kinetics/spr.html">SPR page</a>. The following BLItz experiments sought to test this hypothesis.</p>
+
+				<div id="methods">
+					<h2>Methodology</h2>
+				</div>
+
+				<p>A Biolayer Interferometry optimisation buffer was prepared and diluted for use during BLItz experimentation. The BLItz biosensor tips were soaked in the buffer for a number of hours prior to any runs to remove a preservative coating and to equilibrate the tip. Monomeric CA-6His proteins, and discrete cross-linked hexamer 6His proteins, were diluted to a similar concentration using the optimisation buffer following buffer exchange. If you want to know how we produced these proteins, you’ll want to check out our <a href="/lab-book/protein-engineering.html">Protein Engineering</a> page! Single stranded and double stranded DNA linear templates had been prepared so as to bind to an anchor. The following BLItz protocol was used.</p>
+
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<p><strong>Time (s)</strong></p>
+							</td>
+							<td>
+								<p><strong>Step</strong></p>
+							</td>
+							<td>
+								<p><strong>Description</strong></p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>30</p>
+							</td>
+							<td>
+								<p>Baseline</p>
+							</td>
+							<td>
+								<p>Tip placed in BLItz buffer</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>240</p>
+							</td>
+							<td>
+								<p>Loading</p>
+							</td>
+							<td>
+								<p>Tip placed in anchor</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>60</p>
+							</td>
+							<td>
+								<p>Baseline</p>
+							</td>
+							<td>
+								<p>Tip placed in BLItz buffer</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>360</p>
+							</td>
+							<td>
+								<p>Loading</p>
+							</td>
+							<td>
+								<p>Tip placed in DNA template</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>120</p>
+							</td>
+							<td>
+								<p>Baseline</p>
+							</td>
+							<td>
+								<p>Tip placed in BLItz buffer</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>180</p>
+							</td>
+							<td>
+								<p>Loading</p>
+							</td>
+							<td>
+								<p>Tip placed in Protein</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>120</p>
+							</td>
+							<td>
+								<p>Dissociation</p>
+							</td>
+							<td>
+								<p>Tip placed in BLItz buffer</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<p>This was accompanied by the following materials</p>
+
+				<ul>
+					<li>Monomeric CA-6His protein (Buffer exchanged, 250 , 0.17mg/mL)</li>
+					<li>Discrete cross-lined hexamer 6His protein (Not buffer exchanged, 250 , 0.241mg/mL)</li>
+					<li>Anchor (250 , 100nM)</li>
+					<li>ss DNA (250 , 100nM)</li>
+					<li>ds DNA (250 , 100nM)</li>
+				</ul>
+
+				<div id="results">
+					<h2>Results</h2>
+				</div>
+
+				<h3>Experiment 1: Hexamer Binding</h3>
+
+				<p>The aim of our hexamer experiments was to determine whether the cross-linked hexamer would natively bind to single stranded or double stranded DNA.</p>
+
+				<img class="img-fluid" src="/images/blitz-3.png" />
+
+				<p>The binding curves observed in the interaction between discrete cross-linked hexamer proteins and ss/ds DNA strongly indicates some sort reaction. Whilst the sharp spike at the point of protein addition is likely to be systematic, the following exponential binding/un-binding events are consistent with the hypothesis that the discrete cross-lined hexamer protein binds to both single and double stranded DNA. </p>
+				<p>If hexamers are capable of binding to both single stranded and double stranded DNA, this could serve as a fantastic means through which to test future assembly experiments. This could also help to explain in vivo capsid construction; perhaps hexamers and pentamers, once formed, localise on DNA or RNA to facilitate self-assembly.</p>
+
+				<h3>Experiment 2: Monomer Binding</h3>
+
+				<img class="img-fluid" src="/images/blitz-4.png" />
+
+				<p>Unfortunately, due to the inability to extract a useful control experiment, the monomeric CA protein binding curves are not particularly helpful. Whilst binding appears to occur at the point of protein addition, the control curve (which inexplicably rising over time, despite only buffer being used) also shows a similar binding curve. As such, at the very least, this BLItz experiment does not provide evidence for monomeric protein interaction with single stranded or double stranded DNA. </p>
+				<p>Whilst an interesting avenue of research, this outcome would be preferential for our experiments. If our protein consistently interacted with single stranded and/or double stranded DNA, we would be unable to use DNA scaffolds as our vehicle of assembly. Take an in-depth look at our DNA scaffold here. Non-specific binding would discredit any quantitative data established. </p>
+
+				<div id="conclusion">
+					<h2>Conclusion</h2>
+				</div>
+
+				<p>BLItz allowed us to quickly test the binding of hexamer protein structures to single stranded and double stranded DNA. Our hypothesis was that discrete cross-linked hexamers would bind to a linear DNA template. The above BLItz results strongly support such a hypothesis, and give evidence for both a binding and unbinding phase for self-assembled hexamer proteins. </p>
+				<p>This finding is particularly interesting given the in vivo application of such a binding event. Proteins, having formed hexamers and pentamers, natively interact so as to form the complex three-dimensional fullerene cone of the capsid. As the local concentration of hexamerised proteins increase, the likelihood of capsid self-assembly increases. This result suggests that there may be complex binding phenomena within the Virus that results in hexamers localising on DNA or RNA. There is also some evidence regarding the mechanism of binding between the discrete cross-linked hexamer protein and DNA. It is suggested that DNA nucleotides are attracted to the positively-charged centre of the hexamer structure. Having come into close proximity with each other, a seeding event may occur, and the capsid may begin to construct.</p>
+
+			</div>
+
+
 		</div>
-	</footer>
 
-	<!-- jQuery -->
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<!--Page footer-->
+		<footer class="footer">
+			<div class="container">
+				<p>&copy; <strong>UNSW BIOMOD 2017 -  Capsid Constructors.</strong></p>
+			</div>
+		</footer>
 
-	<!-- Tether -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
-	<!-- Minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		<!-- Tether -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 
-	<!-- Custom JavaScript -->
-	<script src="/js/scripts.js"></script>
+		<!-- Minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+		<!-- Custom JavaScript -->
+		<script src="/js/scripts.js"></script>
 
 </body>
 
