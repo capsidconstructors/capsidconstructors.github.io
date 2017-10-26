@@ -121,7 +121,7 @@ p {
 	padding-left: 10px;
 }
 
-.container p>a {
+.container p>a, .col-xl-10 a {
 	color: #AA242E;
 	text-decoration: underline;
 }
