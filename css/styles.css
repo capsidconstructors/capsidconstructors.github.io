@@ -141,6 +141,10 @@ table.center {
     margin-right:auto;
 }
 
+.tblhead {
+	font-weight: bolder;
+}
+
 /*Manuscript images */
 
 .col-xl-10>img {
