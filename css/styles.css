@@ -143,6 +143,7 @@ p {
 
 table {
 	border-collapse: collapse;
+	
 }
 
 table,
@@ -154,13 +155,14 @@ td {
 table.center {
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .tblhead {
 	font-weight: bolder;
 	text-decoration: underline;
 }
-
 
 /*Manuscript images */
 

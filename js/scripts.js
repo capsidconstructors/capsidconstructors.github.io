@@ -95,7 +95,11 @@ $('.tablegel>img').each(function() {
 	
 	var $tableheight = $(this).next().height();
 	
+	if ($(this).height() > $tableheight) {
+	
 	$(this).height($tableheight);
+		
+	};
 	
 });
 	
