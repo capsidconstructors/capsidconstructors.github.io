@@ -29,53 +29,128 @@
 
 	<!--Container to wrap page content-->
 	<div class="container">
-	
-	<div class="row">
+
+		<div class="row">
 			<div class="col-xl-2 sidenavtracks">
 				<div class="sidenav">
 					<ul>
-						<li><a href="#tirf" class="scroll">TIRF</a><ul>
-							<li><a href="" class="scroll"></a></li>
-							<li><a href="" class="scroll"></a></li>
-							<li><a href="" class="scroll"></a></li>
-							<li><a href="" class="scroll"></a></li>
-							<li><a href="" class="scroll"></a></li>
-							<li><a href="" class="scroll"></a></li>
-							<li><a href="" class="scroll"></a></li>
-							<li><a href="" class="scroll"></a></li>
-							<li><a href="" class="scroll"></a></li>
-							<li><a href="" class="scroll"></a></li>
-						</ul>
-							
-							
+						<li><a href="#tirf" class="scroll">TIRF</a>
+							<ul>
+								<li><a href="#introduction" class="scroll">Introduction</a></li>
+								<li><a href="#aim" class="scroll">Aim</a></li>
+								<li><a href="#themicroscope" class="scroll">The Microscope</a></li>
+								<li><a href="#materials" class="scroll">Materials</a></li>
+								<li><a href="#future" class="scroll">Future Directions</a></li>
+								<li><a href="#references" class="scroll">References</a></li>
+							</ul>
 						</li>
+						<li><a href="/lab-book/imaging/tem.html">Previous: TEM</a></li>
 					</ul>
 				</div>
 			</div>
 
 			<div class="col-xl-10">
-	
-	
-	</div>
 
-	<!--Page footer-->
-	<footer class="footer">
-		<div class="container">
-			<p>&copy; <strong>UNSW BIOMOD 2017 -  Capsid Constructors.</strong></p>
+				<div id="tirf">
+					<img class="img-fluid" src="/images/tirf-1.png" />
+				</div>
+
+				<div id="introduction">
+					<h2>Introduction</h2>
+				</div>
+				<p>Total Internal Reflection Fluorescence Microscopy is a single molecule imaging technique which allows for precise observations of single molecule binding events to a surface. TIRFM can be used to provide data on how our HIV-1 CA proteins bind to our DNA origami scaffold structure. </p>
+
+				<p>Our microscope is able to execute fluorescent microscopy in two settings, epifluorescence microscopy and TIRF microscopy. The difference between these settings is the angle at which the laser is directed towards the objective (see figure 1). Epifluorescence allows a directed column of laser to pass through the entirety of the sample, whereas TIRF angles the laser to a reflective angle, with the site of the angle of incidence emitting an evanescent field which penetrates only a thin layer of the sample due to degradation of the light over time. </p>
+				<p>TIRF microscopy is ideally suited to single molecule experiments as the illumination of only a thin layer of sample allows for the elimination of noise caused by excess fluorophores, as only fluorophores bound to the surface will emit an excitation signal.</p>
+
+				<img class="img-fluid" src="/images/tirf-2.png" />
+
+				<p class="caption">Figure 1: Comparative diagram of epifluorescence microscopy (top) and TIRF microscopy (bottom).</p>
+
+				<p>As TIRF Microscopy allows the observation of single molecule binding events, it would be an ideal technique for both qualitatively and quantitatively measuring protein binding events. However, due to the short time frame of the BIOMOD competition, we were unable to reach this point in analysis. This would be a beneficial future direction for the project, with our preliminary experiments having set the ground-work for such experiments.</p>
+
+				<div id="aim">
+					<h2>Aim</h2>
+				</div>
+
+				<p>TIRF experiments aim to confirm the functionality of our DNA origami structure as a scaffold for protein localisation.</p>
+
+				<div id="themicroscope">
+					<h2>The Microscope</h2>
+				</div>
+
+				<p>The Lee Lab in which we have been completing our project has recently set up a new TIRF microscope for use in single molecule experiments. We have spent time aiding in microscope set-up, familiarising ourselves with the machinery, and testing the imaging programs in preparation for future use. See below Figures 2 and 3 detailing the set-up of our microscope.</p>
+
+				<img class="img-fluid" src="/images/tirf-3.png" />
+
+				<p class="caption">Figure 2: Schematic of TIRFM microscope set-up </p>
+
+				<img class="img-fluid" src="/images/tirf-4.png" />
+
+				<p class="caption">Figure 3: Images of Microscope</p>
+
+				<div id="materials">
+					<h2>Production of Materials</h2>
+				</div>
+
+				<p>In order to observe individual binding events of proteins to our DNA origami structure, an initial layer of surface chemistry must be immobilised as a binding surface. We have identified and practiced preparation of a BSA/biotin/streptavidin conjugation system for use in our future experiments. We have also produced our DNA origami structure with biotinylated extensions, for the purpose of fixing to our cover slip surface, and conjugated HIV-1 CA proteins with fluorophores in preparation for imaging. Unfortunately, due to time constraints and the technical inefficiencies posed by using a new microscope for the first time, we were unable to conduct our proposed single molecule experiments.</p>
+
+				<div id="future">
+					<h2>Future Directions</h2>
+				</div>
+
+				<h3>Characterisation of protein binding sites using PAINT</h3>
+
+				<p>Point Accumulation in nanoscale topography (PAINT) is a method which uses transient binding events of short fluorophore labelled oligonucleotides, imager strands, to single stranded extensions of an origami structure, docking strands, to generate a blinking signal. The blinking effect produced by this technique is used for super-resolution reconstruction of the location of binding events, therefore indicating the precise location of the binding sites on our DNA origami structure by stochastic imaging.</p>
+				<p>We propose to use PAINT as a method to characterise our DNA origami scaffold. The process of imager strands binding and unbinding from the extension strands of our structure will enable us to assess the functionality of our scaffold. We will generate information about the functionality of these sites to bind ssDNA-conjugated proteins, as well as information about the distances between binding sites, indicating the ability of the structure to influence protein-protein interactions.</p>
+				
+				<img class="img-fluid" src="/images/tirf-5.png" />
+
+				<p class="caption">Figure 4: Diagram of proposed PAINT experiment to characterise our DNA origami structure. Binding sites of DNA origami indicated in pink, excited fluorophores indicated in green.</p>
+				
+				<h3>Seeded assembly of HIV-1 CA proteins</h3>
+				
+				<p>Extending upon characterisation of our DNA origami scaffold, we would like to show how HIV-1 CA proteins are able to bind to the scaffold, and by localisation begin to bind to each other and assemble into hexameric lattice structures. This would be accurately achievable using TIRF microscopy, as elimination of background noise will enable extraction of accurate kinetic data.</p>
+				
+				<img class="img-fluid" src="/images/tirf-6.png" />
+				
+				<p class="caption">Figure 5: Diagram of proposed seeding experiment to characterise latticing of HIV-1 CA proteins. DNA origami represented as honeycomb lattice, with binding sites of DNA origami indicated in pink. Excited, protein bound fluorophores indicated in green, and extension of such hexameric proteins beyond the scaffold showing how assembly may occur.</p>
+
+
+
+				<div id="references">
+					<h2>References</h2>
+				</div>
+
+				<ol>
+					<li>Fish KN. Total Internal Reflection Fluorescence (TIRF) Microscopy. Current protocols in cytometry / editorial board, J Paul Robinson, managing editor . [et al]. 2009;0 12:Unit12.18.</li>
+					<li>Schnitzbauer J, Strauss MT, Schlichthaerle T, Schueder F, Jungmann R. Super-resolution microscopy with DNA-PAINT. Nat Protoc. 2017;12(6):1198-1228. </li>
+					<li>Chen B, Tycko R. Simulated Self-Assembly of the HIV-1 Capsid: Protein Shape and Native Contacts Are Sufficient for Two-Dimensional Lattice Formation. Biophysical Journal. 2011;100(12):3035-3044.</li>
+				</ol>
+
+			</div>
+
+
 		</div>
-	</footer>
 
-	<!-- jQuery -->
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<!--Page footer-->
+		<footer class="footer">
+			<div class="container">
+				<p>&copy; <strong>UNSW BIOMOD 2017 -  Capsid Constructors.</strong></p>
+			</div>
+		</footer>
 
-	<!-- Tether -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
-	<!-- Minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		<!-- Tether -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 
-	<!-- Custom JavaScript -->
-	<script src="/js/scripts.js"></script>
+		<!-- Minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+		<!-- Custom JavaScript -->
+		<script src="/js/scripts.js"></script>
 
 </body>
 
