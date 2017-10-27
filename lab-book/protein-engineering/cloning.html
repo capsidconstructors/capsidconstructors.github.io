@@ -66,25 +66,25 @@
 					<h2>INTRODUCTION</h2>
 				</div>
 
-				<p>The process of turning protein design into functional units for use in analytical experiments requires that designed constructs, in the form of DNA sequences, are firstly cloned into vectors, and then expressed using <em>E. coli</em>. This section will describe the processes used to produce plasmids containing our mutated protein sequences. As outlined in our <a href="/lab-book/protein-engineering/protein-design.html">Protein Deisgn</a> section, we have designed a number of HIV-1 CA protein variants. These mutations enable:</p>
+				<p>The process of turning protein design into functional units for use in analytical experiments requires that designed constructs, in the form of DNA sequences, are firstly cloned into vectors, and then expressed using <em>E. coli</em>. This section will describe the processes used to produce plasmids containing our mutated protein sequences. As outlined in our <u>Protein Design</u> section, we have designed a number of HIV-1 CA protein variants. These mutations enable:</p>
 				<ul>
 					<li>Formation of disulfide bond cross-links between proteins which stabilise hexameric and pentameric formations,<sup>1</sup></li>
-					<li>Inhibition of protein dimerization,<sup>2</sup></li>
+					<li>Inhibition of protein dimerisation,<sup>2</sup></li>
 					<li>Accessibility of residues for fluorophore conjugation, and </li>
 					<li>Conjugation sites for reversible and irreversible chemistry.<sup>3,4</sup> </li>
 				</ul>
 				<p>We were kindly provided a number of base constructs by Derrick Lau, upon which we added mutations in order to achieve the desired protein capabilities. The following proteins were provided within pET11a plasmids, inserts of which were found between BamHI and Ndel restriction sites: </p>
 				<ul>
 					<li>Wild type HIV capsid protein (HIV-1 CA wild type)</li>
-					<li>Disulphide bond stabilised hexamer (HIV-1 CA A14C/E45C)</li>
-					<li>Disulphide bond stabilised hexamer with C-terminal dimer disruption (HIV-1 CA A14C/E45C/W184A/M185A)</li>
-					<li>Disulphide bond stabilised pentamer (HIV-1 CA N21C/A22C)</li>
-					<li>Disulphide bond stabilised pentamer with C-terminal dimer disruption (HIV-1 CA N21C/A22C/W184A/M185A)</li>
-					<li>Accessible cysteine on the n-terminus flexible loop (HIV-1 CA K158C)</li>
+					<li>Disulfide bond stabilised hexamer (HIV-1 CA A14C/E45C)</li>
+					<li>Disulfide bond stabilised hexamer with C-terminal dimer disruption (HIV-1 CA A14C/E45C/W184A/M185A)</li>
+					<li>Disulfide bond stabilised pentamer (HIV-1 CA N21C/A22C)</li>
+					<li>Disulfide bond stabilised pentamer with C-terminal dimer disruption (HIV-1 CA N21C/A22C/W184A/M185A)</li>
+					<li>Accessible cysteine on the N-terminus flexible loop (HIV-1 CA K158C)</li>
 				</ul>
 				<p>Mutations were added to these constructs by three cloning methods, overviews of which have been summarised in Figure 1:</p>
 				<ol>
-					<li>Restriction-ligation cloning, for addition of a 6-Histadine tag to the C-terminal of the proteins</li>
+					<li>Restriction-ligation cloning, for addition of a 6-Histidine tag to the C-terminal of the proteins</li>
 					<li>Site directed mutagenesis, for single nucleotide polymorphisms, and</li>
 					<li>Gibson assembly, for the generation of large mutations.</li>
 				</ol>
@@ -108,7 +108,7 @@
 					<h2>Method 1: Restriction-ligation cloning</h2>
 				</div>
 
-				<p>In order to add a polyhistidine tag to the C-terminus of each of our base constructs. The 6-Histidine tag added would enable the protein to for reversible bonds with our DNA templates through <a href="/lab-book/conjugation-chemistry.html">Nickel-NTA conjugation chemistry</a>, for use in our kinetic experiments.<sup>3</sup> Our protocol for restriction-ligation cloning was adapted from Addgene.<sup>5</sup> We designed reverse primers with this encoded mutation, DNA sequences of which can be found <a href="/supp/Cloning%20Supplementary%20Materials.zip" download>here</a>. We then used these primers in a PCR amplification of our base constructs, and in doing so our mutations were added to the C-terminal ends of the proteins. </p>
+				<p>In order to add a polyhistidine tag to the C-terminus of each of our base constructs. The 6-Histidine tag added would enable the protein to for reversible bonds with our DNA templates through <u>Nickel-NTA conjugation chemistry</u>, for use in our kinetic experiments.<sup>3</sup> Our protocol for restriction-ligation cloning was adapted from Addgene.<sup>5</sup> We designed reverse primers with this encoded mutation, DNA sequences of which can be found <u>here</u>. We then used these primers in a PCR amplification of our base constructs, and in doing so our mutations were added to the C-terminal ends of the proteins. </p>
 
 				<img class="img-fluid span" src="/images/cloning-3.png" />
 
@@ -121,7 +121,7 @@
 
 				<p class="caption">Figure 3: 1% agarose gel verifying successful amplification of HIV-1 CA proteins with C-terminal 6-Histidin additions</p>
 
-				<p>The next step for creating functional plasmids to be used in protein expression was insertion of our new, mutated gene into our vector, pET11a (Figure 4).<sup>6</sup> This plasmid confers an ampicillin resistance gene (see the green arrow from base pairs 4609 to 5469, &lsquo;AmpR&rsquo;), which enables us to select for bacteria which have taken up this target plasmid during plasmid amplification and sequence verification. Our target cloning sites are located at restriction enzyme sites BamHI (319) and NdeI (359). Expression is under the control of the Lac operon (purple arrow), inducible by IPTG</p>
+				<p>The next step for creating functional plasmids to be used in protein expression was insertion of our new, mutated gene into our vector, pET11a (Figure 4).<sup>6</sup> This plasmid confers an ampicillin resistance gene (see the green arrow from base pairs 4609 to 5469, &lsquo;AmpR&rsquo;), which enables us to select for bacteria which have taken up this target plasmid during plasmid amplification and sequence verification. Our target cloning sites are located at restriction enzyme sites BamHI (319) and NdeI (359). Expression is under the control of the <em>Lac</em> operon (purple arrow), inducible by IPTG</p>
 
 				<img class="img-fluid span" src="/images/cloning-5.png" />
 
@@ -132,14 +132,14 @@
 				<div id="methodtwo">
 					<h2>Method 2: Site directed mutagenesis</h2>
 				</div>
-				<p>In order to make single nucleotide changes within our base constructs, we attempted site directed mutagenesis. Our protocol was adapted from methods proposed by Aligent Genomics.<sup>8</sup> We designed primers with additional nucleotides between complementary DNA to our target gene. Sequences for these primers can be found <a href="/supp/Cloning%20Supplementary%20Materials.zip" download>here</a>. PCR amplification of the entire plasmid was then performed using these primers, which results in the insertion of the new nucleotides into the gene of interest. </p>
+				<p>In order to make single nucleotide changes within our base constructs, we attempted site directed mutagenesis. Our protocol was adapted from methods proposed by Agilent Genomics.<sup>8</sup> We designed primers with additional nucleotides between complementary DNA to our target gene. Sequences for these primers can be found <u>here</u>. PCR amplification of the entire plasmid was then performed using these primers, which results in the insertion of the new nucleotides into the gene of interest. </p>
 
 				<img class="img-fluid span" src="/images/cloning-6.png" />
 
 				<p class="caption">Figure 5: diagram illustrating the process of site directed mutagenesis during PCR amplification of whole plasmid. </p>
 				
 				<p>The PCR reaction mixture was treated with DpnI restriction enzyme, which would break down plasmids which do not contain any mutation. These plasmids are identified as they are bacterially produced, causing methylation. Enzymes were removed after the reaction using PCR clean up kit.</p>
-				<p>Insertion of our desired mutations into the plasmid were confirmed using gel electrophoresis (Figure 6). We performed a PCR optimisation, to ascertain the best conditions for performing site directed mutagenesis. Annealing temperatures for primer bindings were tested at 47<sup>o</sup>C, 52<sup>o</sup>C, 57<sup> o</sup>C, and 62<sup> o</sup>C. Additions of Magnesium, DMSO, and different polymerase enzymes were also screened. The brightest bands correlate to the highest yields of amplified plasmid. Figure 6 shows that our mutation was successfully introduced into the plasmid under all conditions, with the optimal condition across constructs a 57<sup>o</sup>C anneal using Taq polymerase enzyme. </p>
+				<p>Insertion of our desired mutations into the plasmid were confirmed using gel electrophoresis (Figure 6). We performed a PCR optimisation, to ascertain the best conditions for performing site directed mutagenesis. Annealing temperatures for primer bindings were tested at 47<sup>o</sup>C, 52<sup>o</sup>C, 57<sup> o</sup>C, and 62<sup> o</sup>C. Additions of Magnesium, DMSO, and different polymerase enzymes were also screened. The brightest bands correlate to the highest yields of amplified plasmid. Figure 6 shows that our mutation was successfully introduced into the plasmid under all conditions, with the optimal condition across constructs a 57<sup>o</sup>C anneal using <em>Taq</em> polymerase enzyme. </p>
 
 				<img class="img-fluid" src="/images/cloning-7.png" />
 
@@ -148,7 +148,7 @@
 				<div id="methodthree">
 					<h2>Method 3: Gibson assembly</h2>
 				</div>
-				<p>In order to introduce larger mutations to our plasmid constructs, such as Spy Catcher proteins, we used Gibson Assembly. Addition of a Spy Catcher protein at the C-terminal of our HIV-1 CA proteins would allow for irreversible Spy Catcher/Spy Tag conjugation to our DNA scaffolds.<sup>4</sup> Large pieces of DNA sequences, gBlocks, were designed to encode our desired mutations and synthesised by IDT. These were inserted into a pET C-terminal TEV His6 cloning vector with BioBrick polycistronic restriction sites (9bc), a gift from Scott Gradia (Addgene plasmid #48285).<sup>9</sup> This plasmid, as visualised in Figure 7, was chosen as it contains a gene for amplicilin resistance, labelled green &lsquo;AmpR&rsquo; on the plasmid map below, to allow for screening of successful transforms during plasmid amplification. The cloning site is found at restriction enzyme site HpaI (4135). The Lac operon found on a plasmid within our expression strain of <em>E. coli</em> is able to be induced by IPTG. This operon controls the expression of a T7 polymerase gene, which consequently binds to the T7 promoter site on pET9bc (4011), inducing expression of the insert at HpaI cloning site.</p>
+				<p>In order to introduce larger mutations to our plasmid constructs, such as Spy Catcher proteins, we used Gibson Assembly. Addition of a Spy Catcher protein at the C-terminal of our HIV-1 CA proteins would allow for irreversible Spy Catcher/Spy Tag conjugation to our DNA scaffolds.<sup>4</sup> Large pieces of DNA sequences, gBlocks, were designed to encode our desired mutations and synthesised by IDT. These were inserted into a pET C-terminal TEV His6 cloning vector with BioBrick polycistronic restriction sites (9bc), a gift from Scott Gradia (Addgene plasmid #48285).<sup>9</sup> This plasmid, as visualised in Figure 7, was chosen as it contains a gene for amplicilin resistance, labelled green &lsquo;AmpR&rsquo; on the plasmid map below, to allow for screening of successful transforms during plasmid amplification. The cloning site is found at restriction enzyme site HpaI (4135). The <em>Lac</em> operon found on a plasmid within our expression strain of <em>E. coli</em> is able to be induced by IPTG. This operon controls the expression of a T7 polymerase gene, which consequently binds to the T7 promoter site on pET9bc (4011), inducing expression of the insert at HpaI cloning site.</p>
 
 				<img class="img-fluid span" src="/images/cloning-8.png" />
 				<p class="caption">Figure 7: Plasmid map of pET9bc, sequence obtained from Addgene,<sup>8</sup> image generated used Snapgene.</p>
@@ -161,14 +161,14 @@
 					<h2>Plasmid amplification and sequence verification</h2>
 				</div>
 				<p>After producing our recombinant plasmids, the next step was to transform these into our competent cells for plasmid amplification. We heat shock transformed our plasmids into a strain of <em>E. coli</em> optimised for cloning, DH5-alpha. This strain was chosen because it undergoes large-scale plasmid production, which we can then harvest for sequencing. After heat shock, our <em>E. coli</em> were plated onto LB agar containing ampicillin antibiotic. </p>
-				<p>Due to the antibiotic resistance gene within our plasmid, only bacteria which had been successfully transformed should have grown on our plates. Colonies were selected from the plates, and a colony PCR performed to confirm successful transformation of our recombinant plasmids. Those colonies with the correct plasmids were grown up, and then a miniprep performed to extract and purify the plasmids. As a final confirmation of successful plasmid production with the correct mutation, sanger sequencing was performed by the Ramaciotti Centre for Genomics to verify gene sequences. An overview of this process is demonstrated in Figure 9.</p>
+				<p>Due to the antibiotic resistance gene within our plasmid, only bacteria which had been successfully transformed should have grown on our plates. Colonies were selected from the plates, and a colony PCR performed to confirm successful transformation of our recombinant plasmids. Those colonies with the correct plasmids were grown up, and then a miniprep performed to extract and purify the plasmids. As a final confirmation of successful plasmid production with the correct mutation, Sanger sequencing was performed by the Ramaciotti Centre for Genomics to verify gene sequences. An overview of this process is demonstrated in Figure 9.</p>
 				<img class="img-fluid span" src="/images/cloning-10.png" />
 				<p class="caption">Figure 9: Overview of transformation and colony PCR to verify insertion, followed by plasmid harvesting and sequence verification to generate sequence level confirmation of mutation to our target gene. </p>
 				<div id="results">
 					<h2>RESULTS</h2>
 				</div>
 				<h3>Restriction-Ligation cloning</h3>
-				<p>We have successfully introduced 6-Histadine tags to the C-terminus all of our base constructs via restriction-ligation cloning. This has enabled us to produce HIV-1 CA proteins which can be conjugated to our DNA origami using <a href="/lab-book/conjugation-chemistry.html">Nickle/NTA chemistry</a>. The presence of our target inserts was confirmed by performing colony PCR (Figures 10, 11 and 12), to amplify the gene of interest from whole colonies. This produced an amplified band of DNA, with a size corresponding to our target gene, verified by comparison to the ladder. This was repeated on several colonies per construct. </p>
+				<p>We have successfully introduced 6-Histidine tags to the C-terminus all of our base constructs via restriction-ligation cloning. This has enabled us to produce HIV-1 CA proteins which can be conjugated to our DNA origami using <u>Nickel/NTA chemistry</u>. The presence of our target inserts was confirmed by performing colony PCR (Figures 10, 11 and 12), to amplify the gene of interest from whole colonies. This produced an amplified band of DNA, with a size corresponding to our target gene, verified by comparison to the ladder. This was repeated on several colonies per construct. </p>
 
 				<img class="img-fluid gel" src="/images/cloning-11.png" />
 
@@ -213,7 +213,7 @@
 
 				<h3>Gibson Assembly</h3>
 
-				<p>We were also successful in creating a number of important recombinant plasmid using the Gibson Assembly method. Due to the time restraints of the competition, we decided to focus on a select number of mutated proteins which would be most useful for our analysis experiments. See below our colony PCR gels confirming insertion of our gBlocks into our plasmids (Figures 14, 15, and 16). </p>
+				<p>We were also successful in creating a number of important recombinant plasmids using the Gibson Assembly method. Due to the time restraints of the competition, we decided to focus on a select number of mutated proteins which would be most useful for our analysis experiments. See below our colony PCR gels confirming insertion of our gBlocks into our plasmids (Figures 14, 15, and 16). </p>
 
 				<img class="img-fluid gel" src="/images/cloning-15.png" />
 								
@@ -255,34 +255,34 @@
 				<h3>Base Constructs</h3>
 				<ul>
 					<li>Wild type HIV capsid protein (HIV-1 CA wild type) - Positive control for analysis experiments</li>
-					<li>Disulphide bond stabilised hexamer (HIV-1 CA A14C/E45C) - Used for testing lattice assembly and analysing hexamer-hexamer interaction</li>
-					<li>Disulphide bond stabilised hexamer with C-terminal dimer disruption (HIV-1 CA A14C/E45C/W184A/M185A) - Used for testing hexameric affinity to DNA</li>
-					<li>Disulphide bond stabilised pentamer (HIV-1 CA N21C/A22C) - Used For testing lattice assembly and analysing pentamer-hexamer interaction</li>
-					<li>Disulphide bond stabilised pentamer with C-terminal dimer disruption (HIV-1 CA N21C/A22C/W184A/M185A) - Used for testing pentameric affinity to DNA</li>
-					<li>Accessible cysteine on the n-terminus flexible loop (HIV-1 CA K158C) - Accessible cysteine for conjugation to fluorophores, for use in single molecule imaging experiments</li>
+					<li>Disulfide bond stabilised hexamer (HIV-1 CA A14C/E45C) - Used for testing lattice assembly and analysing hexamer-hexamer interaction</li>
+					<li>Disulfide bond stabilised hexamer with C-terminal dimer disruption (HIV-1 CA A14C/E45C/W184A/M185A) - Used for testing hexameric affinity to DNA</li>
+					<li>Disulfide bond stabilised pentamer (HIV-1 CA N21C/A22C) - Used For testing lattice assembly and analysing pentamer-hexamer interaction</li>
+					<li>Disulfide bond stabilised pentamer with C-terminal dimer disruption (HIV-1 CA N21C/A22C/W184A/M185A) - Used for testing pentameric affinity to DNA</li>
+					<li>Accessible cysteine on the N-terminus flexible loop (HIV-1 CA K158C) - Accessible cysteine for conjugation to fluorophores, for use in single molecule imaging experiments</li>
 				</ul>
 				
 				<h3>C-Terminal mutations</h3>
 				<ul>
-					<li>HIV-1 CA Wild-type protein with C-terminal 6-Histadine tag</li>
-					<li>HIV-1 CA protein with K158C substitution and C-terminal 6-Histadine tag</li>
-					<li>HIV-1 CA cross-linked hexameric protein with C-terminal 6-Histadine tag</li>
-					<li>HIV-1 CA HIV-1 CA cross-linked hexameric protein with dimer disruption and C-terminal 6-Histadine tag</li>
-					<li>HIV-1 CA cross-linked pentameric protein with C-terminal 6-Histadine tag</li>
-					<li>HIV-1 CA HIV-1 CA cross-linked pentameric protein with dimer disruption and C-terminal 6-Histadine tag</li>
+					<li>HIV-1 CA Wild-type protein with C-terminal 6-Histidine tag</li>
+					<li>HIV-1 CA protein with K158C substitution and C-terminal 6-Histidine tag</li>
+					<li>HIV-1 CA cross-linked hexameric protein with C-terminal 6-Histidine tag</li>
+					<li>HIV-1 CA HIV-1 CA cross-linked hexameric protein with dimer disruption and C-terminal 6-Histidine tag</li>
+					<li>HIV-1 CA cross-linked pentameric protein with C-terminal 6-Histidine tag</li>
+					<li>HIV-1 CA HIV-1 CA cross-linked pentameric protein with dimer disruption and C-terminal 6-Histidine tag</li>
 				</ul>
 				<p>Addition of a 6-Histidine tag will allow for each protein to be reversibly conjugated to our DNA scaffolds.</p>
 
 				<h3>Gibson Assemblies</h3>
 				<ul>
-					<li>HIV-1 CA Wild-type protein with dimer disruption and 6-Histadine tag under TEV restriction site - Used to test intra-hexamer or intra-pentamer interactions, with reversible conjugation chemistry to DNA</li>
-					<li>HIV-1 CA Wild-type protein with dimer disruption, C-terminal Spy Catcher protein, and 6-Histadine tag under TEV restriction site - Used to test intra-hexamer or intra-pentamer interactions, with reversible and irreversible conjugation chemistry to DNA</li>
-					<li>HIV-1 CA protein with K158C substitution, dimer disruption, and 6-Histadine tag under TEV restriction site - Used to test intra-hexamer or intra-pentamer interactions during single molecule experiments, with reversible conjugation chemistry to DNA</li>
-					<li>HIV-1 CA protein with K158C substitution, dimer disruption, C-terminal Spy Catcher protein, and 6-Histadine tag under TEV restriction site - Used to test intra-hexamer or intra-pentamer interactions during single molecule experiments, with reversible and irreversible conjugation chemistry to DNA</li>
+					<li>HIV-1 CA Wild-type protein with dimer disruption and 6-Histidine tag under TEV restriction site - Used to test intra-hexamer or intra-pentamer interactions, with reversible conjugation chemistry to DNA</li>
+					<li>HIV-1 CA Wild-type protein with dimer disruption, C-terminal Spy Catcher protein, and 6-Histidine tag under TEV restriction site - Used to test intra-hexamer or intra-pentamer interactions, with reversible and irreversible conjugation chemistry to DNA</li>
+					<li>HIV-1 CA protein with K158C substitution, dimer disruption, and 6-Histidine tag under TEV restriction site - Used to test intra-hexamer or intra-pentamer interactions during single molecule experiments, with reversible conjugation chemistry to DNA</li>
+					<li>HIV-1 CA protein with K158C substitution, dimer disruption, C-terminal Spy Catcher protein, and 6-Histidine tag under TEV restriction site - Used to test intra-hexamer or intra-pentamer interactions during single molecule experiments, with reversible and irreversible conjugation chemistry to DNA</li>
 				</ul>
 			
 
-				<p>With our desired mutations now successfully cloned into plasmids, our constructs were ready for expression. <a href="/lab-book/protein-engineering/protein-production.html">Click here</a> to read about how we expressed our proteins! (link to protein production page)</p>
+				<p>With our desired mutations now successfully cloned into plasmids, our constructs were ready for expression. <a href="/lab-book/protein-engineering/protein-production.html">Click here</a> to read about how we expressed our proteins!</p>
 
 				<div id="references">
 					<h2>References</h2>
@@ -296,7 +296,7 @@
 					<li>Addgene, Plasmid Cloning by PCR, <a href="https://www.addgene.org/protocols/pcr-cloning/">https://www.addgene.org/protocols/pcr-cloning/</a></li>
 					<li>Addgene, Vector Database, Plasmid: pET11a, <a href="https://www.addgene.org/vector-database/2625/">https://www.addgene.org/vector-database/2625/</a></li>
 					<li>Promega, Wizard SV Gel and PCR Clean-Up system, <a href="https://www.promega.com.au/resources/protocols/technical-bulletins/101/wizard-sv-gel-and-pcr-cleanup-system-protocol/">https://www.promega.com.au/resources/protocols/technical-bulletins/101/wizard-sv-gel-and-pcr-cleanup-system-protocol/</a></li>
-					<li>Aligent Genomics, QuikChange II Site-Directed Muagenesis Kit, <a href="https://www.agilent.com/cs/library/usermanuals/public/200523.pdf">https://www.agilent.com/cs/library/usermanuals/public/200523.pdf</a></li>
+					<li>Agilent Genomics, QuikChange II Site-Directed Muagenesis Kit, <a href="https://www.agilent.com/cs/library/usermanuals/public/200523.pdf">https://www.agilent.com/cs/library/usermanuals/public/200523.pdf</a></li>
 					<li>Addgene, pET C-terminal TEV His6 cloning vector with BioBrick polycistronic restriction sites (9bc), <a href="https://www.addgene.org/48285/">https://www.addgene.org/48285/</a></li>
 					<li>Gibson DG, Young L, Chuang RY, Venter JC, Hutchison CA 3rd, Smith HO (2009). Enzymatic assembly of DNA molecules up to several hundred kilobases.<em>Nature Methods</em>,<strong>6</strong>(5), pp. 343&ndash;345.</li>
 				</ol>
