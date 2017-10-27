@@ -339,9 +339,17 @@ td.sol:hover {
 	margin-top: 20%;
 }
 
+#team {
+	height: 80vh;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 #leelab {
 	width: 75%;
 	height: auto;
+	margin-bottom: 15px;
 }
 
 
