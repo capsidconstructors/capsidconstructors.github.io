@@ -208,20 +208,27 @@ td>img {
 }
 
 img.long {
-	max-height: 150vh;
-	width: auto;
+	max-height: 200vh;
+	width: 60%;
 }
 
 /* Videos */
 
 .video {
-	margin: 10px auto;
-	text-align: center;
+	position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+	background: white;
 }
 
-iframe {
-	height: auto;
-	width: 80%;
+.video iframe, .video video {
+	position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /* Image on landing page */
@@ -328,15 +335,6 @@ g.hidden {
 g.showing:hover + g.hidden {
 	display: block;
 }
-
-#flowintro {
-	margin-bottom: -120px;
-}
-
-#flowoutro {
-	margin-top: -50px;
-}
-
 
 /* Interactivity on linked svg files */
 
