@@ -89,21 +89,12 @@ $('td#sol1').hover(function() {
 		$('.plotholder').css("background-image", "none");
 	});
 	
-//Tables next to gels
-	
-$('.tablegel>img').each(function() {
-	
-	var $tableheight = $(this).next().height();
-	
-	if ($(this).height() > $tableheight) {
-	
-	$(this).height($tableheight);
-		
-	};
+$('.toggle').click(function() {
+	$(this).next().toggle(1000);
+})
 	
 });
-	
-});
+
 
 
 

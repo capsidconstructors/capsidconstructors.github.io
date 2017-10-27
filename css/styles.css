@@ -263,6 +263,28 @@ ol {
 	font-style: italic;
 }
 
+/* Toggle buttons */
+
+.toggle {
+	margin: 15px auto;
+	background-color: white;
+    border: 1.5 px solid black;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    display: block;
+    font-family: 'Avenir Condensed';
+}
+
+.toggle:hover {
+	background-color: #AA242E;
+	color: white;
+}
+
+.hits {
+	display: none;
+}
+
 
 /* Formats active sidebar link */
 
