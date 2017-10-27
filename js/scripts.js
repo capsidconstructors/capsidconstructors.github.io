@@ -58,35 +58,35 @@ $(window).scroll(function() {
 //Interactive table/plot thing
 	
 $('td#sol1').hover(function() {
-		$('.plotholder').css("background", "center no-repeat url('/images/modellingsol1.png')");
+		$('.plotholder').css("background-image", "url('/images/modellingsol1.png')", "background-size", "contain");
 	})
 	
 	.mouseleave(function() {
-		$('.plotholder').css("background", "none");
+		$('.plotholder').css("background-image", "none");
 	});
 	
 	$('td#sol2').hover(function() {
-		$('.plotholder').css("background", "center no-repeat url('/images/modellingsol2.png')");
+		$('.plotholder').css("background-image", "url('/images/modellingsol2.png')", "background-size", "contain");
 	})
 	
 	.mouseleave(function() {
-		$('.plotholder').css("background", "none");
+		$('.plotholder').css("background-image", "none");
 	});
 	
 	$('td#sol3').hover(function() {
-		$('.plotholder').css("background", "center no-repeat url('/images/modellingsol3.png')");
+		$('.plotholder').css("background-image", "url('/images/modellingsol3.png')", "background-size", "contain");
 	})
 	
 	.mouseleave(function() {
-		$('.plotholder').css("background", "none");
+		$('.plotholder').css("background-image", "none");
 	});
 	
 	$('td#sol4').hover(function() {
-		$('.plotholder').css("background", "center no-repeat url('/images/modellingsol4.png')");
+		$('.plotholder').css("background-image", "url('/images/modellingsol4.png')", "background-size", "contain");
 	})
 	
 	.mouseleave(function() {
-		$('.plotholder').css("background", "none");
+		$('.plotholder').css("background-image", "none");
 	});
 	
 });
