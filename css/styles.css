@@ -219,6 +219,11 @@ img.long {
 	text-align: center;
 }
 
+iframe {
+	height: auto;
+	width: 80%;
+}
+
 /* Image on landing page */
 
 #heroimage {
