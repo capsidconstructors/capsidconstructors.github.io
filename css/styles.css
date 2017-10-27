@@ -164,6 +164,10 @@ table.center {
 	text-decoration: underline;
 }
 
+td.pic {
+	text-align: center;
+}
+
 /*Manuscript images */
 
 .col-xl-10>img {
@@ -194,14 +198,11 @@ img.protcon {
 	width: 30%;
 }
 
-/* Tables next to gels */
-
-.tablegel {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+td>img {
+	width: 200px;
+	height: auto;
+	padding: 5px;
 }
-
 
 /* Image and video on landing page */
 

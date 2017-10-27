@@ -29,51 +29,346 @@
 
 	<!--Container to wrap page content-->
 	<div class="container">
-	
+
 		<div class="row">
 			<div class="col-xl-2 sidenavtracks">
 				<div class="sidenav">
 					<ul>
-						<li><a href="#spr" class="scroll">Surface Plasmon Resonance (SPR)</a>
+						<li><a href="#tem" class="scroll">TEM</a>
 							<ul>
 								<li><a href="#introduction" class="scroll">Introduction</a></li>
 								<li><a href="#aims" class="scroll">Aims</a></li>
-								<li><a href="#methods" class="scroll">Materials &amp; Methods</a></li>
-								<li><a href="#results" class="scroll">Results</a></li>
-								<li><a href="#conclusions" class="scroll">Conclusions</a></li>
+								<li><a href="#experimentone" class="scroll">Experiment 1</a></li>
+								<li><a href="#experimenttwo" class="scroll">Experiment 2</a></li>
+								<li><a href="#discussion" class="scroll">Discussion</a></li>
 								<li><a href="#references" class="scroll">References</a></li>
 							</ul>
 						</li>
-						<li><a href="/lab-book/kinetics/blitz.html">Previous: BLItz</a></li>
+						<li><a href="/lab-book/imaging/tirf.html">Next: TIRF</a></li>
 
 					</ul>
 				</div>
 			</div>
 
 			<div class="col-xl-10">
+
+				<div id="tem">
+					<img class="img-fluid" src="/images/TEM-0.png" />
+				</div>
+
+				<div id="introduction">
+					<h2>Introduction</h2>
+				</div>
+
+				<p>TEM is a technique used to produce nanometre resolution images of structures such a DNA origami and protein assemblies.<sup>1</sup> Images are gained by transmitting high energy electrons through a thin layer of sample, containing the object of interest. Objects will let different amounts of electrons pass through them depending on their electron density, creating a &lsquo;shadow&rsquo; which can be detected. This produces an image which can be viewed using high magnification. </p>
+
+				<img class="img-fluid" src="/images/TEM-1.png" />
+
+				<p class="caption">Figure 1: Diagram displaying the process of TEM. Left shows expected view for a with side-up orientation. Right shows expected view for top-up orientation.</p>
+
+				<p>The high energy of the electrons transmitted mean that they also have a small wavelength, which allows for resolution on a nanometre scale. TEM is therefore a highly effective tool for determining whether our DNA origami has correctly formed, and ensuring we have the perfect protocol for producing uniform structures.</p>
+				<p>We expect that our DNA origami scaffold structures will appear as boxes, approximately 42.5nm by 21.08nm by 28.48nm. </p>
+
+				<img class="img-fluid" src="/images/TEM-2.png" />
+
+				<p class="caption">Figure 2: Estimated dimensions of &lsquo;blockagon&rsquo; DNA origami design. Dimensions were calculated using the following assumptions: 0.34 nm per bp, 2 nm rod diameter, 0.5nm interhelical spacing (included for all rods including end ones).</p>
+
+				<p>TEM images will allow us to resolve distinct features in our origami structure. Observations of the flat ends of the honeycomb lattice provide a proof-of-concept for the creation of binding sites for our proteins. In addition, detailed resolution means we are also able to observe proteins bound to our structure.</p>
+
+				<div id="aims">
+					<h2>AIMS</h2>
+				</div>
+
+				<ol>
+					<li>To observe and confirm the optimal synthesis of DNA origami &lsquo;blockagon&rsquo; structures, to serve as a scaffold for protein binding</li>
+					<li>To observe proteins binding to our DNA origami scaffold, both through conjugation chemistry methods and natural DNA-protein affinity</li>
+				</ol>
+
+				<div id="experimentone">
+					<h2>Experiment 1: Confirming optimal synthesis of blockagon structures</h2>
+				</div>
+
+				<p>Synthesis of our origami structure was performed as outlined <a href="/lab-book/dna-origami.html">here</a>. Optimal conditions for synthesis of origami structures vary depending on the specific properties of the design. Tests were performed to determine the best conditions for synthesis, with varied concentrations of Mg<sup>2+</sup> and varied anneal times. </p>
+
+				<p>When observing structures using TEM, we were looking for a number of distinctive features to indicate the formation of functional DNA origami:</p>
+
+				<ol>
+					<li>Straight-edged box shape, with distinctive features, such as honeycomb latticing (top-up view) and striations (side-up view)</li>
+					<li>Uniformity between structures within a sample</li>
+					<li>Size approximate to estimated values</li>
+					<li>Plentiful numbers of structures with minimal aggregation</li>
+				</ol>
+
+				<p>Fulfilment of these criteria under TEM observation proves the successful design and synthesis of our origami design, ready for use in further experiments. </p>
+
+				<h3>MAGNESIUM SCREEN</h3>
+
+				<p>To confirm formation of the structures, gel electrophoresis was used to screen for ideal Mg<sup>2+</sup> concentrations at a 37 hour anneal. Mg<sup>2+</sup> is added to the synthesis mixture to aid in the efficiency of DNA origami formation.<sup>2</sup> When DNA origami structures are well formed and folded correctly, they are generally more compact, and therefore migrate further during gel electrophoresis than poorly formed structures, or structures that have aggregated. As we can see in Figure 3, our DNA origami structure migrated fastest at concentrations of Mg<sup>2+ </sup>above 9mM, with a clear jump in migration between 9mM and 12mM indicating significant improvement in formation. </p>
+
+				<img class="img-fluid" src="/images/TEM-3.png" />
+
+				<p class="caption">Figure 3: Agarose gel (2%) containing samples of DNA origami structures synthesised at varied Mg<sup>2+</sup> concentrations.</p>
+
+				<p>We selected structures formed at 15mM, 18mM, 21mM, 24mM, and 27mM Mg<sup>2+</sup> concentrations for further analysis on TEM, as they appeared to run furthest and with the highest intensity on the gel, indicating good formation and abundance of structures. Visualisation of these structures using TEM helped to determine which concentration produced the most well-formed origami. A selection of these images across each sample have been presented in Figure 4, along with interpretation of the results compared to our criteria for well-formed origami structure.</p>
+
+				<table class="center">
+					<tbody>
+						<tr>
+							<td>
+								<p>SYNTHESIS CONDITIONS</p>
+							</td>
+							<td>
+								<p>TEM IMAGES</p>
+							</td>
+							<td>
+								<p>NOTES</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>15mM Mg<sup>2+</sup>, 37 hour anneal</p>
+							</td>
+							<td class="pic">
+								<img class="img-fluid" src="/images/TEM-4.png" />
+							</td>
+							<td>
+								<p>Blockagon formation not uniform.</p>
+								<p>Some aggregation.</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>18mM Mg<sup>2+</sup>, 37 hour anneal</p>
+							</td>
+							<td class="pic">
+								<img class="img-fluid" src="/images/TEM-5.png" />
+								<img class="img-fluid" src="/images/TEM-6.png" />
+							</td>
+							<td>
+								<p>Clear and uniform formation of block structure with straight edges.</p>
+								<p>Visibility of fine details, including honeycomb latticing and striations observable.</p>
+								<p>No serious aggregation.</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>21mM Mg<sup>2+</sup>, 37 hour anneal</p>
+							</td>
+							<td class="pic">
+								<img class="img-fluid" src="/images/TEM-7.png" />
+								<img class="img-fluid" src="/images/TEM-8.png" />
+							</td>
+							<td>
+								<p>Clear and uniform formation of block structure with straight edges.</p>
+								<p>Visibility of fine details, including honeycomb latticing and striations observable.</p>
+								<p>No serious aggregation.</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>24mM Mg<sup>2+</sup>, 37 hour anneal</p>
+							</td>
+							<td class="pic">
+								<img class="img-fluid" src="/images/TEM-9.png" />
+							</td>
+							<td>
+								<p>Irregular formation of box structures.</p>
+								<p>Small aggregations observable.</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>27mM Mg<sup>2+</sup>, 37 hour anneal</p>
+							</td>
+							<td class="pic">
+								<img class="img-fluid" src="/images/TEM-10.png" />
+								<img class="img-fluid" src="/images/TEM-11.png" />
+							</td>
+							<td>
+								<p>Box-like structures formed, however some dark cavities observed within structure.</p>
+								<p>Aggregation observed.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<p class="caption">Table 1: Table summarising the results of magnesium screen, including synthesis conditions, TEM images, and notes on the formation of structures.</p>
+
+				<p>Due to appearance of well-formed structures under these conditions, 18mM, 21mM were selected to further analyse under varied time conditions. 27mM Mg<sup>2+ </sup>concentration was also selected as a possible negative control.</p>
+
+				<h3>TIME SCREEN</h3>
+
+				<p>In order to determine which anneal length produced the most consistent and well-formed structures, Mg<sup>2+ </sup>concentrations selected from the previous experiment were subjected to different anneal times; 24 hours, 36 hours, 37 hours, 48 hours, and 71 hours. As we can see in Figure 4, our origami structures ran further in the gel than the M13 negative control, indicating good formation of structures. </p>
+
+				<img class="img-fluid" src="/images/TEM-12.png" />
+
+				<p class="caption">Figure 4: Agarose gel (2%) containing samples of DNA origami structures synthesised under varied Mg<sup>2+</sup> and time conditions.</p>
+
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<p>SYNTHESIS CONDITIONS</p>
+							</td>
+							<td>
+								<p>TEM IMAGES</p>
+							</td>
+							<td>
+								<p>NOTES</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>18mM, 24hr anneal</p>
+							</td>
+							<td class="pic">
+								<img class="img-fluid" src="/images/TEM-13.png" />
+								<img class="img-fluid" src="/images/TEM-14.png" />
+							</td>
+							<td>
+								<p>&lsquo;spaghetti-like&rsquo; formation with irregular box shape and edges.</p>
+								<p>Aggregation observed.</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>18mM, 37hr anneal</p>
+							</td>
+							<td class="pic">
+								<img class="img-fluid" src="/images/TEM-15.png" />
+							</td>
+							<td>
+								<p>Non-uniform formation of structures, with varied size and irregular edges.</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>18mM, 48hr anneal</p>
+							</td>
+							<td class="pic">
+								<img class="img-fluid" src="/images/TEM-16.png" />
+								<img class="img-fluid" src="/images/TEM-17.png" />
+							</td>
+							<td>
+								<p>Clear box structures with straight edges. Observation of honeycomb lattice and striations.</p>
+								<p>Structures well dispersed and uniform.</p>
+								<p>No clumping.</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>21mM, 37hr anneal</p>
+							</td>
+							<td class="pic">
+								<img class="img-fluid" src="/images/TEM-18.png" />
+								<img class="img-fluid" src="/images/TEM-19.png" />
+							</td>
+							<td>
+								<p>Observation of malformed, elongated structures.</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>21mM, 48hr anneal</p>
+							</td>
+							<td class="pic">
+								<img /><img class="img-fluid" src="/images/TEM-20.png" />
+							</td>
+							<td>
+								<p>Formation of box-like structures, however shape is not uniform across the sample.</p>
+								<p>Presence of long strands of aggregated DNA.</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>21mM, 72 hr anneal</p>
+							</td>
+							<td class="pic">
+								<img class="img-fluid" src="/images/TEM-21.png" />
+								<img class="img-fluid" src="/images/TEM-22.png" />
+							</td>
+							<td>
+								<p>Clear box structures formed, however long strands of aggregated DNA observed.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<p class="caption">Table 2: Table summarising results of time and magnesium screens, including synthesis conditions, TEM images, and notes on the formation of structures.</p>
+
+				<p>When selecting final synthesis conditions based upon these screen, we tried to find a balance between the best formation of structure and the efficiency of the protocol. As identified in Figure 2, it was clear that the 18mM Mg<sup>2+</sup> 48hr anneal yielded the most well-formed structures. Not only were desirable structural features observed, such as straight edges, honeycomb latticing, and striations on the side of the box structure, these features were uniform across structures within the sample. These conditions were therefore imported into our standard synthesis protocol for this blockagon DNA origami structure.</p>
+
+				<h3>Production of Origami with extensions</h3>
+
+				<p>In order for us to use our origami structure as a scaffold for protein, single stranded extensions need to be added to a honeycomb lattice face of the structure. <a href="/lab-book/dna-origami.html">Click here</a> to read the synthesis procedure for these structures.</p>
+
+				<p>Along with our previously synthesised origami structure without extensions (&ldquo;passivated&rdquo;), two other types of origami were synthesised. &ldquo;Half-activated&rdquo; origami were synthesised with 3<sup>&rsquo;</sup> extensions, with only half the binding site available, optimised for spy tag/spy catcher conjugation chemistry. &ldquo;Activated&rdquo; origami with both 5<sup>&rsquo;</sup> and 3<sup>&rsquo;</sup> extensions were synthesised, enabling all binding sites to be available. These structures were used to test protein affinity to single stranded DNA without conjugation chemistry. Results of the anneal were run on a 2% agarose gel, displayed below in Figure 5. Our samples ran further than the M13 control, indicating formation of our DNA origami structure for all conditions.</p>
+
+				<img class="img-fluid" src="/images/TEM-24.png" />
+
+				<p class="caption">Figure 5: Agarose gel (2%), containing passivated, half activated, and activated origami structures.</p>
+
+				<p>Unfortunately, due to time restraints and access issues, we were unable to image our origami structures synthesised with extension strands. The verification of this aspect of synthesis will be a future direction for this project.</p>
+
+				<div id="experimenttwo">
+					<h2>Experiment 2: Observing protein-origami binding events</h2>
+				</div>
+
+				<p>The ultimate aim of our project is to scaffold proteins on our origami structure, in order to co-localise the proteins and induce self-assembly processes. TEM was used to confirm the binding of proteins qualitatively, so that these interactions could later be analysed quantitatively.</p>
+
+				<p>Jacques <em>et al.</em> displayed in their 2016 paper that HIV-1 CA hexameric proteins has some affinity with single nucleotides at their central &lsquo;pore&rsquo;.<sup>3</sup> We hypothesised that this capability may be extended to single stranded DNA, such as the extensions on our DNA origami structure. We aimed to observe hexameric protein binding to our DNA origami scaffold, using TEM to generate qualitative evidence of this process.</p>
+
+				<p>Prior to imaging, the ability for our proteins to bind in this way was tested using a bandshift experiment. An increase in weight of the origami structure due to protein binding was observed as a &lsquo;shift&rsquo; on a gel, as the origami/protein structure would not run as far as un-conjugated origami.</p>
+
+				<p>We initially wanted to obtain a binary indication of whether or not our hypothesis &ndash; that hexameric protein can bind to single stranded DNA &ndash; was feasible. We designed an experiment with protein in large excess to increase our chances of observing this protein/DNA interaction. Activated origami (structure with 72 single stranded extensions, one from each potential binding site) at 3.63nM was incubated with 75.6mM excess hexameric, dimer disrupted protein. Protein was added in 3471 times excess to potential binding sites. This was incubated at room temperature for 2 and 48 hours, to determine whether binding was time dependent. Controls were run using passivated origami. Incubations were then run on a 2% agarose gel at 70V for 2 hours on ice.</p>
+
+				<img class="img-fluid" src="/images/TEM-25.png" />
+				<p class="caption">Figure 6: Agarose gel (2%) containing DNA origami incubated with hexameric HIV-1 CA protein</p>
+
+				<p>As we can see from the above gel, there is a distinct shift in the gel between un-conjugated origami and origami incubated with hexameric protein for 2 hours. This suggests that the proteins have a natural affinity for the single stranded DNA extensions, and bind to the origami structure without conjugation chemistry. </p>
+
+				<p>Unfortunately, due to time restrictions, we were unable to image this band using TEM. This result is, however, an encouraging step towards our goal of localising HIV-1 CA proteins upon a scaffold, to seed lattice formation and characterise the formation of the HIV capsid.
+					<p>
+
+						<div id="discussion">
+							<h2>Discussion</h2>
+						</div>
+
+						<p>We have successfully created a DNA origami structure, consistent with our design and theoretical specifications, and have observed the structure using TEM. Synthesis of this structure has been optimised to create a standard protocol for production of this origami. Further work will focus on imaging our DNA structure when extension strands have been added, to determine whether this increases aggregation between structures. Our DNA origami scaffold may soon be optimised for use in kinetic and single molecule imagine experiments, displaying significant progress towards our goal of creating a scaffold which we can use to derive fundamental principles driving self-assembly of the HIV capsid.</p>
+
+						<p>We have also begun to investigate whether HIV-1 CA hexameric proteins are able to bind to our origami scaffold due to their natural affinity to single nucleotides.<sup>3</sup> This represents an important step towards achieving our goals of co-ordinated self-assembly, as we may be able to seed lattice formation simply by binding a few proteins to our scaffold. This information could also be used to design kinetic experiments using our scaffold, and extract the rates at which this binding occurs. </p>
+
+						<div id="references">
+							<h2>References</h2>
+						</div>
+						<ol>
+							<li>Bellot G, McClintock MA, Lin C, Shih WM. Recovery of intact DNA nanostructures after agarose gel-based separation. <em>Nat Meth</em>. 2011;8(3):192-194.</li>
+							<li>Douglas SM, Dietz H, Liedl T, Hogberg B, Graf F, Shih WM. Self-assembly of DNA into nanoscale three-dimensional shapes.&nbsp;<em>Nature</em>. 2009;459(7245):414-418. doi:10.1038/nature08016.</li>
+							<li>Jacques DA, McEwan WA, Hilditch L, Price AJ, Towers GJ, James LC. HIV-1 uses dynamic capsid pores to import nucleotides and fuel encapsidated DNA synthesis. <em>Nature</em>. 2016;536(7616):349-353.</li>
+						</ol>
 			</div>
-	
-	
-	</div>
 
-	<!--Page footer-->
-	<footer class="footer">
-		<div class="container">
-			<p>&copy; <strong>UNSW BIOMOD 2017 -  Capsid Constructors.</strong></p>
+
 		</div>
-	</footer>
 
-	<!-- jQuery -->
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<!--Page footer-->
+		<footer class="footer">
+			<div class="container">
+				<p>&copy; <strong>UNSW BIOMOD 2017 -  Capsid Constructors.</strong></p>
+			</div>
+		</footer>
 
-	<!-- Tether -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
-	<!-- Minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		<!-- Tether -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 
-	<!-- Custom JavaScript -->
-	<script src="/js/scripts.js"></script>
+		<!-- Minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+		<!-- Custom JavaScript -->
+		<script src="/js/scripts.js"></script>
 
 </body>
 
