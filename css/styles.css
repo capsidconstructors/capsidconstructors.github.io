@@ -45,6 +45,12 @@ nav {
 	padding: 0px;
 }
 
+/* Accounts for fixed navbar */
+
+body {
+	padding-top: 105px;
+}
+
 
 /* Overrides default properties for Bootstrap collapse and navbar brand */
 
@@ -100,10 +106,7 @@ h3,
 h4 {
 	font-family: "Bebas Neue";
 	font-size: 48px;
-	border-left: 3px solid #AB242E;
 	border-bottom: 3px solid #AB242E;
-	border-bottom-left-radius: 10px;
-	border-top-left-radius: 10px;
 	padding: 5px;
 	padding-left: 10px;
 	margin-top: 5px;
@@ -225,8 +228,7 @@ img.long {
 /* Styles lists in sidebar navigation */
 
 .sidenav {
-	position: sticky;
-	top: 0;
+	position: fixed;
 }
 
 .sidenav ul {
@@ -309,6 +311,7 @@ ol {
 
 .footer {
 	padding: 10px;
+	float: bottom;
 }
 
 /* Project flowchart */
@@ -350,6 +353,10 @@ svg a g:hover polygon {
 svg a g:hover text {
 	font-size: 35px;
 	fill: #C1272D;
+}
+
+svg.landing {
+	padding: 100px 0px;
 }
 
 #easter-egg {
