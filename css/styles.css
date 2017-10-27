@@ -10,6 +10,7 @@
 	src: url('fonts/AvenirCondensed.otf') format('opentype');
 }
 
+
 /* Styles navbar, including active link */
 
 nav {
@@ -44,6 +45,7 @@ nav {
 	padding: 0px;
 }
 
+
 /* Overrides default properties for Bootstrap collapse and navbar brand */
 
 .navbar-brand {
@@ -56,6 +58,7 @@ nav {
 	margin-left: 50px;
 }
 
+
 /* Multi-level dropdown */
 
 .dropdown-submenu {
@@ -66,6 +69,7 @@ nav {
 	top: 0px;
 	left: 100%;
 }
+
 
 /* Small logo in collapsed navbar */
 
@@ -79,15 +83,21 @@ nav {
 	background-color: gray;
 }
 
+
 /* Dropdowns */
 
-.dropdown-menu, dropdown-submenu {
+.dropdown-menu,
+dropdown-submenu {
 	background: rgba(255, 255, 255, 0.95);
 }
 
+
 /* Multiple level heading scheme */
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
 	font-family: "Bebas Neue";
 	font-size: 48px;
 	border-left: 3px solid #AB242E;
@@ -96,7 +106,7 @@ h1, h2, h3, h4 {
 	border-top-left-radius: 10px;
 	padding: 5px;
 	padding-left: 10px;
-	margin-top: 5px;	
+	margin-top: 5px;
 }
 
 h2 {
@@ -113,6 +123,7 @@ h4 {
 	border: none;
 }
 
+
 /* Styles paragraph text and hyperlinks */
 
 p {
@@ -121,30 +132,35 @@ p {
 	padding-left: 10px;
 }
 
-.container p>a, .col-xl-10 a {
+.container p>a,
+.col-xl-10 a {
 	color: #AA242E;
 	text-decoration: underline;
 }
 
+
 /* Tables */
 
 table {
-    border-collapse: collapse;
+	border-collapse: collapse;
 }
 
-table, th, td {
-    border: 1px solid black;
+table,
+th,
+td {
+	border: 1px solid black;
 }
 
 table.center {
-	margin-left:auto; 
-    margin-right:auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .tblhead {
 	font-weight: bolder;
 	text-decoration: underline;
 }
+
 
 /*Manuscript images */
 
@@ -154,8 +170,8 @@ table.center {
 	max-width: 100%;
 	max-height: 60vh;
 	display: block;
-    margin-left: auto;
-    margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 img.math {
@@ -163,6 +179,23 @@ img.math {
 	max-width: 50%;
 	height: auto;
 }
+
+img.span {
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	max-height: 80vh;
+}
+
+
+/* Tables next to gels */
+
+.tablegel {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 
 /* Image and video on landing page */
 
@@ -173,6 +206,7 @@ img.math {
 #video {
 	border: 1.5px solid black;
 }
+
 
 /* Styles lists in sidebar navigation */
 
@@ -198,11 +232,13 @@ img.math {
 	border-bottom: solid 2px black;
 }
 
+
 /* Sets relative indentation for each new list level */
 
 ul li ul {
-	margin-left: 4px;		
+	margin-left: 4px;
 }
+
 
 /* Styles other lists */
 
@@ -214,27 +250,31 @@ ul {
 
 ol {
 	font-family: "Avenir Condensed", sans-serif;
-	font-size: 18px;	
+	font-size: 18px;
 }
+
 
 /* Captions */
 
 .caption {
 	font-weight: bold;
-	font-style: italic; 
+	font-style: italic;
 }
+
 
 /* Formats active sidebar link */
 
 .scroll.active {
-	font-weight: bold; 
+	font-weight: bold;
 }
+
 
 /* Styles page footer */
 
 .footer {
 	padding: 10px;
 }
+
 
 /* Interactivity on svg files */
 
@@ -266,6 +306,7 @@ svg a g:hover text {
 	fill-opacity: 0.2;
 }
 
+
 /* Interactivity for tables */
 
 td.sol {
@@ -275,7 +316,7 @@ td.sol {
 }
 
 td.sol:hover {
-	background-color: #AA242E;	
+	background-color: #AA242E;
 }
 
 .plotholder {
@@ -289,6 +330,7 @@ td.sol:hover {
 	background-position: center;
 }
 
+
 /* Team page */
 
 .gutter {
@@ -300,11 +342,13 @@ td.sol:hover {
 	height: auto;
 }
 
+
 /* Sponsors page */
 
 #sponsors {
 	padding-right: 10%;
 }
+
 
 /* Media queries overriding Bootstrap default */
 
@@ -312,20 +356,21 @@ td.sol:hover {
 	.navbar-brand {
 		margin-left: -100px;
 	}
-	
 	.nav-link {
 		margin: 0px;
 		margin-left: -50px;
 	}
 }
 
+
 /* Activates dropdown on hover, instead of click */
 
 @media (min-width: 768px) {
-  ul.navbar-nav > li.dropdown:hover > .dropdown-menu {
-    display: block;
-  }
+	ul.navbar-nav>li.dropdown:hover>.dropdown-menu {
+		display: block;
+	}
 }
+
 
 /* Hides side navigation on smaller screens */
 
