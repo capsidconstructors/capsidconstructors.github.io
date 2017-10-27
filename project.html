@@ -38,8 +38,8 @@
 							<ul>
 								<li><a href="#relevance" class="scroll">Relevance</a>
 									<ul>
-										<li><a href="#theproblem" class="scroll">The Problem</a></li>
 										<li><a href="#background" class="scroll">Background</a></li>
+										<li><a href="#theproblem" class="scroll">The Problem</a></li>
 									</ul>
 								</li>
 								<li><a href="#merit" class="scroll">Merit</a>
@@ -68,7 +68,19 @@
 				<div id="relevance">
 					<h2>Relevance</h2>
 				</div>
-				
+
+				<div id="background">
+					<h3>Background</h3>
+				</div>
+
+				<p>Self-assembly is a powerful theme found throughout all stages of biological life. From the imposing sight of a murmuration of birds, to the incredible way microbes coordinate behaviour to search and obtain nutrients, the principle of spontaneous formation of complex systems from simple sub-units is abundant. We are interested in learning more about the fundamental principle of self-assembly. </p>
+				<p>There has been substantial academic interest in the process of self-assembly. Systems such as the bacterial flagellar motor display finely-tuned properties that facilitate movement of simple organisms, despite being constructed from individual subunits with knowledge only of their immediate neighbour.<sup>[1]</sup> Viral capsids self-assemble from individual proteins, creating a shield that protects the genomic material within.</p>
+				<p>The human immunodeficiency virus (HIV-1) contains the HIV viral capsid, a fullerene cone made of individual protein subunits. </p>
+
+				<img class="img-fluid" src="/images/background-1.png" />
+
+				<p>The HIV capsid has been the subject of much research in recent years. Attempts to construct the HIV capsid <em>in vitro</em> have not been successful under physiological conditions. Addition of salt to a high concentration results in the formation of tube-like arrays or extended lattice structures.<sup>2</sup> Underlying this difficulty is our failure to fully understand the fundamental principle of self-assembly. In particular, due to the difficulty of controlling protein interactions given their complexity, and the nano-meter scale on which the proteins self-assembly, the problem of capsid formation is of particular interest.</p>
+
 				<div id="theproblem">
 					<h3>The Problem</h3>
 				</div>
@@ -84,18 +96,6 @@
 				<p>In order to gain any further understanding of the process of organisation at a biomolecular scale, we have chosen to characterise the construction of the HIV capsid. However, whilst accessing and expressing wild type CA proteins was within reach, observing their interaction and mechanism of assembly served to be a far more difficult task.</p>
 
 				<p>Ultimately, our project came down to a single question; how do we accurately characterise not just the final product of an assembly process, but also the steps necessary to produce that final construct? To that end, we have developed a method that may be applied to investigation of other self-assembling systems.</p>
-				
-				<div id="background">
-					<h3>Background</h3>
-				</div>
-				
-				<p>Self-assembly is a powerful theme found throughout all stages of biological life. From the imposing sight of a murmuration of birds, to the incredible way microbes coordinate behaviour to search and obtain nutrients, the principle of spontaneous formation of complex systems from simple sub-units is abundant. We are interested in learning more about the fundamental principle of self-assembly. </p>
-				<p>There has been substantial academic interest in the process of self-assembly. Systems such as the bacterial flagellar motor display finely-tuned properties that facilitate movement of simple organisms, despite being constructed from individual subunits with knowledge only of their immediate neighbour.<sup>[1]</sup> Viral capsids self-assemble from individual proteins, creating a shield that protects the genomic material within.</p>
-				<p>The human immunodeficiency virus (HIV-1) contains the HIV viral capsid, a fullerene cone made of individual protein subunits. </p>
-				
-				<img class="img-fluid" src="/images/background-1.png"/>
-				
-				<p>The HIV capsid has been the subject of much research in recent years. Attempts to construct the HIV capsid <em>in vitro</em> have not been successful under physiological conditions. Addition of salt to a high concentration results in the formation of tube-like arrays or extended lattice structures.<sup>2</sup> Underlying this difficulty is our failure to fully understand the fundamental principle of self-assembly. In particular, due to the difficulty of controlling protein interactions given their complexity, and the nano-meter scale on which the proteins self-assembly, the problem of capsid formation is of particular interest.</p>
 
 				<div id="merit">
 					<h2>Merit</h2>
@@ -110,29 +110,138 @@
 
 				<p>We were successfully able to develop a methodology that allowed us to conjugate engineered proteins to carefully designed DNA structures. By building the HIV capsid from the ground up, and with control over the variables within each self-assembly experiment, we were able to move towards a comprehensive understanding of this complex assembly phenomenon.</p>
 				<p>Our overall solution, that being of artificially reconstructing the HIV capsid outside of the cell, required answers to many smaller questions ranging from protein mutation to kinetic measurements. By considering various idealised experimental designs which would allow us to test particular self-assembly principles, we produced materials capable of answering our various hypothesise and draw conclusions about self-assembly generally. We have also provided the opportunity for others investigating their own self-assembly system to implement our methods.</p>
-				
+
 				<div id="specandfeas">
 					<h2>Specification &amp; Feasibility</h2>
 				</div>
 				<div class="goals">
 					<h3>Goals</h3>
 				</div>
-				
+
 				<p>The goal of our project is to artificially construct the HIV capsid using synthetic DNA templates. However, in order to make our project feasible and achievable for BIOMOD we have had to focus on a few core goals that demonstrate key points in the construction of a full HIV capsid fullerene cone.</p>
-				
-				<p>We aim to produce a modular DNA origami structure capable of binding HIV capsid protein via multiple, tunable conjugation chemistries. To model the formation of the HIV capsid we have chosen to focus on key capsid components, the hexamer and to a lesser extent the pentamer capsid protein structures. These hexamer and pentamer proteins form the key building blocks of the HIV capsid and so understanding how they form and interact with each other is critical to understanding HIV capsid formation. </p>
-				
-				<p>Project goal checklist (click on each section for background, methods and results):</p>
-				
+
+				<p>We aim to produce a modular DNA origami structure capable of binding HIV capsid protein via multiple, tunable conjugation chemistries. To model the formation of the HIV capsid we have chosen to focus on key capsid components, the hexamer and to a lesser extent the pentamer capsid protein structures. These hexamer and pentamer proteins form the key building blocks of the HIV capsid and so understanding how they form and interact with each other is critical to understanding HIV capsid formation.</p>
+
+				<p id="flowintro">To help you understand the different areas of our project necessary to reach these goals, here is a flowchart to show you how everything fits together. Hover over the hexagons to see more!</p>
+
+				<svg id="flowchart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1743 2167">
+					<defs>
+						<style>.cls-1,.cls-14,.cls-2,.cls-5{fill:transparent; cursor:default;}.cls-14,.cls-2{stroke:#c1272d;}.cls-11,.cls-14,.cls-17,.cls-2,.cls-21,.cls-22,.cls-23,.cls-25,.cls-26,.cls-3,.cls-4,.cls-5{stroke-miterlimit:10;}.cls-2,.cls-5{stroke-width:2.13px;}.cls-11,.cls-17,.cls-21,.cls-22,.cls-23,.cls-25,.cls-26,.cls-3,.cls-4{fill:#fff;stroke:#fff;}.cls-3{stroke-width:2.6px;}.cls-3,.cls-4{opacity:0.49;}.cls-4{stroke-width:2.42px;}.cls-5{stroke:#000;}.cls-6{font-size:50px;}.cls-13,.cls-6{font-family:BebasNeue, Bebas Neue;}.cls-7{letter-spacing:-0.01em;}.cls-8{letter-spacing:0em;}.cls-9{letter-spacing:-0.04em;}.cls-10{letter-spacing:-0.01em;}.cls-11{stroke-width:1.72px;}.cls-11,.cls-17,.cls-21,.cls-22,.cls-23{opacity:0.6;}.cls-12{letter-spacing:-0.01em;}.cls-13{font-size:30px;cursor: default;}.cls-14{stroke-width:1.75px;}.cls-15{clip-path:url(#clip-path);}.cls-16{letter-spacing:-0.06em;}.cls-17{stroke-width:2.05px;}.cls-18{letter-spacing:0em;}.cls-19{letter-spacing:0em;}.cls-20{clip-path:url(#clip-path-2);}.cls-21{stroke-width:1.02px;}.cls-22{stroke-width:2.51px;}.cls-23{stroke-width:2.08px;}.cls-24{clip-path:url(#clip-path-3);}.cls-25{stroke-width:1.38px;}.cls-25,.cls-26{opacity:0.71;}.cls-26{stroke-width:1.15px;}.cls-27{letter-spacing:0em;}.cls-28{letter-spacing:-0.04em;}.cls-29{letter-spacing:0em;}.cls-30{letter-spacing:0em;} svg {cursor:default;}</style>
+						<clipPath id="clip-path"><polygon class="cls-1" points="1038.16 1824 924.97 1824 868.38 1922.02 924.97 2020.04 1038.16 2020.04 1094.75 1922.02 1038.16 1824"/></clipPath>
+						<clipPath id="clip-path-2"><polygon class="cls-1" points="1412.85 1832.23 1300.4 1832.23 1244.17 1929.61 1300.4 2027 1412.85 2027 1469.08 1929.61 1412.85 1832.23"/></clipPath>
+						<clipPath id="clip-path-3"><polygon class="cls-1" points="426.16 642 312.97 642 256.38 740.02 312.97 838.04 426.16 838.04 482.75 740.02 426.16 642"/></clipPath>
+					</defs>
+
+					<title>flowchart</title>
+					
+					
+					<!--Non interactive -->
+					<g id="Main"><polygon class="cls-2" points="1051.64 1177 914.23 1177 845.52 1296 914.23 1415 1051.64 1415 1120.34 1296 1051.64 1177"/><rect class="cls-3" x="884" y="1244" width="199" height="39"/><rect class="cls-4" x="897.5" y="1305.5" width="173" height="39"/><line class="cls-5" x1="981" y1="1430" x2="981" y2="1520.99"/><polygon points="981 1536 972.36 1514.85 981 1519.87 989.64 1514.85 981 1536"/><line class="cls-5" x1="1357" y1="1082" x2="1357" y2="1520.99"/><polygon points="1357 1536 1348.36 1514.85 1357 1519.87 1365.64 1514.85 1357 1536"/><line class="cls-5" x1="873" y1="1365" x2="729.01" y2="1593.3"/><polygon points="721 1606 724.97 1583.5 729.61 1592.35 739.59 1592.72 721 1606"/><line class="cls-5" x1="724" y1="1012" x2="863.46" y2="1213.65"/><polygon points="872 1226 852.86 1213.52 862.82 1212.73 867.08 1203.69 872 1226"/><polygon class="cls-2" points="676.64 827 539.23 827 470.52 946 539.23 1065 676.64 1065 745.34 946 676.64 827"/><text class="cls-6" transform="translate(545.1 932)">Protein<tspan x="-30.5" y="60">Production</tspan></text><polygon class="cls-2" points="1425.7 827 1288.3 827 1219.59 946 1288.3 1065 1425.7 1065 1494.41 946 1425.7 827"/><text class="cls-6" transform="translate(1325.95 932.77)">DNA<tspan class="cls-7" x="-50.92" y="60">S</tspan><tspan x="-32.57" y="60">ynthesis</tspan></text><text class="cls-6" transform="translate(883.25 1282)">Conju<tspan class="cls-8" x="93.15" y="0">g</tspan><tspan class="cls-9" x="112.6" y="0">a</tspan><tspan x="131.05" y="0">tion</tspan><tspan x="14" y="60">Chemist</tspan><tspan class="cls-10" x="146.1" y="60">r</tspan><tspan x="165.7" y="60">y</tspan></text><line class="cls-5" x1="491" y1="1018" x2="371.17" y2="1147.96"/><polygon points="361 1159 368.98 1137.59 371.94 1147.14 381.69 1149.31 361 1159"/><line class="cls-5" x1="1241" y1="1015" x2="1101.54" y2="1216.65"/><polygon points="1093 1229 1097.92 1206.69 1102.18 1215.73 1112.14 1216.52 1093 1229"/><line class="cls-5" x1="1093" y1="1365" x2="1235.07" y2="1593.26"/><polygon points="1243 1606 1224.48 1592.61 1234.47 1592.3 1239.16 1583.48 1243 1606"/><line class="cls-5" x1="608" y1="731" x2="608" y2="800.99"/><polygon points="608 816 599.36 794.85 608 799.87 616.64 794.85 608 816"/><line class="cls-5" x1="1357" y1="731" x2="1357" y2="800.99"/><polygon points="1357 816 1348.36 794.85 1357 799.87 1365.64 794.85 1357 816"/></g>
+					
+					
+					<g id="saxs">
+					<g class="showing">
+						<polygon class="cls-2" points="429.64 1177 292.23 1177 223.52 1296 292.23 1415 429.64 1415 498.34 1296 429.64 1177"/>
+						<rect class="cls-11" x="317" y="1280" width="87" height="39"/>
+						<text class="cls-6" transform="translate(321.58 1317)">SAXS</text>
+					</g>
+					<g class="hidden">
+						<polygon class="cls-2" points="192.16 1069 78.97 1069 22.38 1167.02 78.97 1265.04 192.16 1265.04 248.75 1167.02 192.16 1069"/><image width="1682" height="1000" transform="translate(44.42 1036) rotate(26.04) scale(0.17)" xlink:href="/images/flowchart1.png"/><text class="cls-13" transform="translate(96.57 1096.78)">Ab initio</text>
+					</g>
+					</g>
+
+					<g id="kinetics">
+					<g class="showing">
+						<polygon class="cls-2" points="676.71 1553 539.29 1553 470.59 1672 539.29 1791 676.71 1791 745.41 1672 676.71 1553"/>
+						<text class="cls-6" transform="translate(540.38 1687.77)">Kinetics</text>
+					</g>
+					<g class="hidden">
+						<polygon class="cls-2" points="437.16 1704 323.97 1704 267.38 1802.02 323.97 1900.04 437.16 1900.04 493.75 1802.02 437.16 1704"/><text class="cls-13" transform="translate(590.03 1858.78)">SPR</text><text class="cls-13" transform="translate(355.41 1729.78)">BLItz</text><polygon class="cls-14" points="664.16 1832 550.97 1832 494.38 1930.02 550.97 2028.04 664.16 2028.04 720.75 1930.02 664.16 1832"/><image width="555" height="320" transform="translate(301 1768) scale(0.29)" xlink:href="/images/flowchart2.png"/><image width="827" height="682" transform="translate(491 1835) scale(0.29)" xlink:href="/images/flowchart3.png"/>
+					</g></g>
+
+					<g id="modelling">
+						<g class="showing">
+							<polygon class="cls-2" points="1049.7 1553 912.29 1553 843.59 1672 912.29 1791 1049.7 1791 1118.41 1672 1049.7 1553"/>
+							<text class="cls-6" transform="translate(896.05 1687.77)">Modelling</text>
+						</g>
+						<g class="hidden">
+							<polygon class="cls-14" points="1038.16 1824 924.97 1824 868.38 1922.02 924.97 2020.04 1038.16 2020.04 1094.75 1922.02 1038.16 1824"/>
+							<g class="cls-15"><image width="1024" height="699" transform="translate(887 1842) scale(0.23 0.23)" xlink:href="/images/flowchart4.png"/></g><text class="cls-13" transform="translate(961.95 1850.78)">Self</text><text class="cls-13" transform="translate(936.04 1875.28)">assemb<tspan class="cls-16" x="74.1" y="0">l</tspan><tspan x="82.41" y="0">y</tspan></text>
+						</g>
+					</g>
+
+					<g id="imaging">
+					<g class="showing">
+						<polygon class="cls-2" points="1421.7 1553 1284.3 1553 1215.59 1672 1284.3 1791 1421.7 1791 1490.41 1672 1421.7 1553"/>
+						<rect class="cls-17" x="1290.5" y="1653.5" width="127" height="38"/>
+						<text class="cls-6" transform="translate(1289.65 1689.77)">Imaging</text>
+					</g>
+						
+					<g class="hidden">
+						<g class="cls-20"><image width="840" height="845" transform="translate(1243.22 1820.15) scale(0.27)" xlink:href="/images/flowchart5.png"/></g><polygon class="cls-2" points="1413.16 1832 1299.97 1832 1243.38 1930.02 1299.97 2028.04 1413.16 2028.04 1469.75 1930.02 1413.16 1832"/><text class="cls-13" transform="translate(1563.95 1729.78)">Tirf</text><polygon class="cls-2" points="1640.16 1703 1526.97 1703 1470.38 1801.02 1526.97 1899.04 1640.16 1899.04 1696.75 1801.02 1640.16 1703"/><rect class="cls-21" x="1333.5" y="1834.5" width="46" height="26"/><text class="cls-13" transform="translate(1337.35 1857.78)">TEM</text><image width="452" height="563" transform="translate(1526 1737) scale(0.29)" xlink:href="/images/flowchart6.png"/>
+					</g>
+					</g>
+
+					<g id="protein-engineering">
+					
+					<g class="showing">
+						<polygon class="cls-2" points="676.64 482 539.23 482 470.52 601 539.23 720 676.64 720 745.34 601 676.64 482"/>
+						<rect class="cls-22" x="509.5" y="611.5" width="196" height="37"/>
+						<rect class="cls-23" x="544.5" y="550.5" width="127" height="39"/>
+						<text class="cls-6" transform="translate(545.1 587)">Protein<tspan x="-35.77" y="60">Engineering</tspan></text>
+					</g>
+										
+					<g class="hidden">
+						<image width="1060" height="782" transform="translate(582.26 190) rotate(44.65) scale(0.25)" xlink:href="/images/flowchart7.png"/>
+						<image width="1060" height="782" transform="translate(763.15 629.82) rotate(22.31) scale(0.25)" xlink:href="/images/flowchart8.png"/><g class="cls-24"><image width="445" height="440" transform="translate(188.47 679.52) rotate(-24.99) scale(0.61)" xlink:href="/images/flowchart9.png"/></g><rect class="cls-25" x="329" y="671" width="84.5" height="26"/><rect class="cls-26" x="341.5" y="647" width="59" height="26"/><text class="cls-13" transform="translate(813.35 672.78)">Cross</text><polygon class="cls-2" points="664.16 255 550.97 255 494.38 353.02 550.97 451.04 664.16 451.04 720.75 353.02 664.16 255"/><text class="cls-13" transform="translate(547.48 282.78)">Conju<tspan class="cls-27" x="55.89" y="0">g</tspan><tspan class="cls-28" x="67.56" y="0">a</tspan><tspan x="78.63" y="0">tion</tspan></text><polygon class="cls-2" points="426.16 642 312.97 642 256.38 740.02 312.97 838.04 426.16 838.04 482.75 740.02 426.16 642"/><text class="cls-13" transform="translate(816.06 698.28)">lin<tspan class="cls-29" x="28.68" y="0">k</tspan><tspan class="cls-30" x="40.95" y="0">s</tspan></text><text class="cls-13" transform="translate(342.69 669.78)">Dimer</text><text class="cls-13" transform="translate(330.39 695.28)">Blocked</text><polygon class="cls-2" points="899.16 642 785.97 642 729.38 740.02 785.97 838.04 899.16 838.04 955.75 740.02 899.16 642"/>
+					</g>
+					</g>
+
+					<g id="dna-design">
+					
+					<g class="showing">
+						<polygon class="cls-2" points="1421.7 482 1284.3 482 1215.59 601 1284.3 720 1421.7 720 1490.41 601 1421.7 482"/>
+						<text class="cls-6" transform="translate(1321.95 587.77)">DNA<tspan x="-22.87" y="60">design</tspan></text>
+					</g>
+					
+					<g class="hidden">
+						<g id="O3WrfI.tif"><image id="Layer_0" data-name="Layer 0" width="1600" height="1076" transform="translate(1435 642.47) scale(0.19)" xlink:href="/images/flowchart10.png"/></g><polygon class="cls-2" points="1643.16 640 1529.97 640 1473.38 738.02 1529.97 836.04 1643.16 836.04 1699.75 738.02 1643.16 640"/><text class="cls-13" transform="translate(1546.84 665.64)">Ori<tspan class="cls-27" x="29.64" y="0">g</tspan><tspan x="41.31" y="0">ami</tspan></text><polygon class="cls-2" points="1176.16 642 1062.97 642 1006.38 740.02 1062.97 838.04 1176.16 838.04 1232.75 740.02 1176.16 642"/><text class="cls-13" transform="translate(1078.65 669.78)">R<tspan class="cls-27" x="12.06" y="0">a</tspan><tspan x="24.24" y="0">cquet</tspan></text><image width="438" height="541" transform="translate(1056 680) scale(0.29)" xlink:href="/images/flowchart11.png"/>	
+					</g>
+					
+					</g>
+
+				</svg>
+
+				<p id="flowoutro">The primary goals associated with each of the above main areas are summarised by this checklist:</p>
+
 				<ul>
-					<li>Protein Engineering - Can we make HIV capsid proteins capable of being attached to DNA origami structures?</li>
-					<li>Small Angle X-Ray Scattering &ndash; Can we characterise the solution structure of our protein constructs?</li>
-					<li>Imaging - Can we confirm our DNA origami structures and confirm attachment of capsid protein to them?</li>
-					<li>Conjugation chemistry - Can we successfully conjugate proteins to DNA origami both reversibly and irreversibly?</li>
-					<li>Mathematical modelling - Can we model steps in the capsid protein cone formation and derive protein-protein binding affinity?</li>
-					<li>SPR - Can we obtain quantitative data of protein-protein and protein-DNA interactions?</li>
-					<li>DNA Origami - Can we construct a synthetic template for the capsid lattice?</li>
-				</ul>			
+					<li><a href="/lab-book/protein-engineering.html">Protein Engineering</a> - Can we make HIV capsid proteins capable of being attached to DNA origami structures?</li>
+					<li><a href="/lab-book/saxs.html">Small Angle X-Ray Scattering (SAXS)</a> - Can we characterise the solution structure of our protein constructs?</li>
+					<li><a href="/lab-book/imaging.html">Imaging</a> - Can we confirm our DNA origami structures and confirm attachment of capsid protein to them?</li>
+					<li><a href="/lab-book/conjugation-chemistry.html">Conjugation Chemistry</a> - Can we successfully conjugate proteins to DNA origami both reversibly and irreversibly?</li>
+					<li><a href="/lab-book/mathematical-modelling.html">Modelling</a> - Can we model steps in the capsid protein cone formation and derive protein-protein binding affinity</li>
+					<li><a href="/lab-book/kinetics.html">Kinetics</a> - Can we obtain quantitative data of protein-protein and protein-DNA interactions?</li>
+					<li><a href="/lab-book/dna-origami.html">DNA Design</a> - Can we construct a synthetic template for the capsid lattice?</li>
+				</ul>
+				
+				<div id="references">
+					<h2>References</h2>
+					
+					<ol>
+						<li><strong>Baker M.<em>et al.</em>Domain-swap polymerization drives the self-assembly of the bacterial flagellar motor.<em>Nat Struc Mol Biol</em>23(3) 197-205.</strong></li>
+						<li><strong></strong></li>
+						<li>Pornillos O. et al. X-Ray Structures of the Hexameric Building Block of the HIV Capsid.<em>Cell</em>137(7), 1282-92 (2009).</li>
+						<li></li>
+						<li>Pornillos<em>et al</em>. Atomic-level modelling of the HIV capsid.<em>Nature</em>469 424-427.</li>
+						<li></li>
+						<li>Blair W<em>et al</em>. HIV Capsid is a Tractable Target for Small Molecule Therapeutic Intervention.<em>PLoS Pathog</em>(2010) 6(12).</li>
+						<li></li>
+						<li><strong>Ehrlich LS, Agresta B E &amp; Carter C A Assembly of recombinant human immunodeficiency virus type 1 capsid protein in vitro.<em>J Virol</em>(1992) 66(8) 4874-83.</strong></li>
+						<li><strong></strong></li>
+						<li><strong>Rothemund P Folding DNA to create nanoscale shapes and patterns<em>Nature</em>2006 440 297-302.</strong></li>
+					</ol>
+					
+				</div>
 			</div>
 
 

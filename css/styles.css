@@ -299,8 +299,26 @@ ol {
 	padding: 10px;
 }
 
+/* Project flowchart */
 
-/* Interactivity on svg files */
+g.hidden {
+	display: none;
+}
+
+g.showing:hover + g.hidden {
+	display: block;
+}
+
+#flowintro {
+	margin-bottom: -120px;
+}
+
+#flowoutro {
+	margin-top: -50px;
+}
+
+
+/* Interactivity on linked svg files */
 
 a g polygon {
 	fill: #C1272D;
