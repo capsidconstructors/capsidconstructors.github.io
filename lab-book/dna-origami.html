@@ -29,32 +29,706 @@
 
 	<!--Container to wrap page content-->
 	<div class="container">
-	
-	<h1>Under Construction</h1>
-	
-	<p>We are currently hard at work putting together our research, watch this space!</p>
-	
-	</div>
+
+		<div class="row">
+			<div class="col-xl-2 sidenavtracks">
+				<div class="sidenav">
+					<ul>
+						<li><a href="#dnaorigami" class="scroll">DNA Design</a>
+							<ul>
+								<li><a href="#history" class="scroll">History</a></li>
+								<li><a href="#aim" class="scroll">Aim</a></li>
+								<li><a href="#background" class="scroll">Background</a></li>
+								<li><a href="#design" class="scroll">Design</a></li>
+								<li><a href="#synthesis" class="scroll">Synthesis</a></li>
+								<li><a href="#modelling" class="scroll">Modelling</a></li>
+								<li><a href="#designsforspr" class="scroll">Designs for SPR</a></li>
+								<li><a href="#conclusions" class="scroll">Conclusion</a></li>
+								<li><a href="#materials" class="scroll">Materials &amp; Methods</a></li>
+								<li><a href="#references" class="scroll">References</a></li>
+							</ul>
+						</li>
+						<li><a href="/lab-book/imaging/tirf.html">Next: TIRF</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-xl-10">
+
+				<div id="dnaorigami">
+					<img class="img-fluid" src="/images/dna-0.png" />
+				</div>
+
+				<img class="img-fluid" src="/images/dna-1.png" />
+				<p class="caption">Figure 1: DNA Origami with Extensions for Binding</p>
+
+					<div id="history">
+						<h2>History</h2>
+					</div>
+
+					<p>The technique of DNA origami was publicised by Paul Rothermund’s paper <sup>1</sup>, “Folding DNA to create nanoscale shapes and patterns” in 2006. Before his findings, the task of creating nanoscale sized biological devices was incredibly energy consuming as well as being a difficult to control process.</p>
+
+					<p>DNA origami works by folding a circular strand of DNA that serves as a backbone. Oligonucleotides, known as staple strands, then hybridise to the backbone which cause it to fold in specific sections. </p>
+
+					<img class="img-fluid" src="/images/dna-2.png" />
+
+					<p class="caption">Figure 2: DNA Folding Mechanism</p>
+
+					<p>By using a backbone to facilitate the formation of origami, the process of creating a structure becomes simple. The predictability of DNA’s pairing rules and its programmability means that structure’s staples and scaffold will self-assemble into its lowest energy state, and hence most stable state. <sup>1</sup></p>
+
+					<p>This was first supported by Rothermund’s publications of two-dimensional shapes which he created with the DNA origami technique. These shapes included stars, triangles, and even a smiley face, demonstrating that DNA can be designed into specific structures. <sup>1</sup></p>
+
+					<p>Since these findings in 2006, the technique of DNA origami has grown to the point where we are now able to create much more complex designs and in three-dimensional space. Concurrently, more sophisticated design and analysis tools have developed, meaning that creating specific and accurately formed DNA structures is simpler than ever. <sup>2</sup></p>
+
+					<div id="aim">
+						<h2>Aim</h2>
+					</div>
+
+					<p>We aimed to make a DNA scaffold that would allow for as many protein hexamers to bind to. For this to happen, we created a structure with a large flat surface while also ensuring that the stability of the structure was not compromised. We also aimed to create a single stranded DNA structure for protein monomers to bind to so that we could obtain kinetic data via <a href="/lab-book/kinetics/spr.html">SPR experiments</a></p>
+
+					<div id="background">
+						<h2>Background</h2>
+					</div>
+
+					<p>Within a full revolution of DNA there are 10.5 base pairs. Hence, 7 base pairs completes 240 degrees of rotation. </p>
+
+					<img class="img-fluid" src="/images/dna-3.png" />
+
+					<p class="caption">Figure 3: DNA Rotations and Base Pairs</p>
+
+					<p>If two parallel helices run alongside with each other, there is the chance for DNA to cross over from one helix to the other helix due to the rotation and consequent relative distance of the helices. This only occurs on certain bases of the DNA and will only occur if the structure is designed to do so i.e. the DNA will not cross over spontaneously. These crossovers are positioned such that twist strain is minimised in the structure. <sup>3</sup></p>
+
+					<img class="img-fluid" src="/images/dna-4.png" />
+
+					<p class="caption">Figure 4: DNA Cross-over</p>
+
+					<p>As mentioned, 7 base pairs in a helix rotates 240 degrees. This means that for 14 base pairs, and 21 base pairs, 480 and 720 degree of rotation are completed respectively. This causes a helix to have 3 distinct equally spaced angles where cross overs can occur with neighbouring helices as seen in Figure 5. </p>
+
+					<p>This results in a honeycomb lattice formation of helices as each helix can form crossovers with the 3 neighbouring helices as shown in Figure 6. </p>
+
+					<img class="img-fluid" src="/images/dna-5.png" />
+
+					<p class="caption">Figure 5: DNA Rotations</p>
+
+					<img class="img-fluid" src="/images/dna-6.png" />
+
+					<p class="caption">Figure 6: DNA Honeycomb Lattice</p>
+
+					<div id="design">
+						<h2>Design</h2>
+					</div>
+
+					<p>For us to create a structure capable of maximising the amount of hexamer proteins that can attach to it, we were required to create a structure with a large flat surface. While also being restricted to the length of the m13a backbone (7249 base pairs) <sup>4</sup>, this meant creating a shorter structure to allow for a larger area for attachments. </p>
+
+					<p>However, a shorter structure meant there were less instances of DNA crossovers, hence creating a less stable structure. The challenge for us was to ensure that a suitable compromise was found between the amount of attachment sites and the stability of the structure. The final dimensions of the design are shown in Figure 7. <sup>2</sup></p>
+
+					<img class="img-fluid" src="/images/dna-7.png" />
+
+					<p class="caption">Figure 7: DNA Blockagon Dimensions</p>
+
+					<img class="img-fluid" src="/images/dna-8.png" />
+
+					<p class="caption">Figure 8: Blockagon Top View</p>
 
 
-	<!--Page footer-->
-	<footer class="footer">
-		<div class="container">
-			<p>&copy; <strong>UNSW BIOMOD 2017 -  Capsid Constructors.</strong></p>
+					<p>By using Cadnano, we created the Blockagon structure using 115 helices. Helices were created in couplets so that the edges of the DNA backbone would line up, hence creating a flat surface. </p>
+					<p>The ends of certain DNA helices were chosen to be sites for binding to hexameric proteins. Using the distances of the hexamer C-terminuses (link to Brian) (83.6Å), 6 neighbouring helices in a bundle with a 50Å diameter was determined to be the distribution with the closest diameter to the hexamer’s, hence this distribution decided our binding sites. We managed to fit 12 of these 6 helix bundles into our design as shown by the shaded circles in Figure 9.</p>
+
+					<p>Certain helices were also chosen to be sites for biotinylation so that they may be imaged for TIRF (link to Maddie). Because DNA has a 5’ and a 3’ end, 8 sites for biotinylation were chosen (4 for each end). Even and odd numbered rods in Figure 9 have their 3’ and 5’ directed on the binding site side respectively. 3’ ends used for biotinylation are circled in black and 5’ ends used for biotinylation are circled in grey. </p>
+
+					<img class="img-fluid" src="/images/dna-9.png" />
+
+					<p class="caption">Figure 9: Cadnano Helix Arrangement</p>
+
+					<p>The Cadnano design in Figure 10 followed the following rules:</p>
+
+					<ul>
+						<li>Every helix is to have at least 2 or 3 crossovers with every neighbouring helix, of which 1 crossover is a backbone crossover</li>
+						<li>Crossovers are to be kept at least 7 base pairs apart</li>
+						<li>Must avoid kinetic traps</li>
+						<li>Each strand is to have a seed region (14 base pair section) that is between smaller regions</li>
+						<li>The shortest region in a strand cannot be between 2 longer regions
+						</li>
+						<li>If required to fulfil the above requirements, crossovers can use only a single strand rather than a double strand</li>
+						<li>The absolute maximum length of a strand is 50 base pairs</li>
+						<li>The absolute minimum length of a strand is 5 base pairs</li>
+						<li>If there are strands shorter than 7 base pairs on the backbone edge, remove them</li>
+						<li>If strands form loops within the structures, split them apart</li>
+						<li>The helices chosen to be attachment sites for proteins were extended by 10 base pairs while remaining sites were extended by 5 thymine base pairs to prevent base stacking between structures</li>
+						<li>Helices chosen to be sites for biotinylation were extended by 20 base pairs</li>
+						<li>Binding site extensions were also planned to be attached to complimentary oligo strands so that extensions would be double stranded rather than single stranded. As we only possessed 5’ modified oligos, only the 3’ extensions could become double stranded. </li>
+					</ul>
+
+					<p>Hence, we created the following versions of our structure:</p>
+
+					<ul>
+						<li>No extensions off the binding sites (passivated)</li>
+						<li>Half the binding sites with extensions (even numbered helices activated)</li>
+						<li>All binding sites with extensions (activated)</li>
+					</ul>
+
+					<img class="img-fluid long" src="/images/dna-10.png" />
+
+					<p class="caption">Figure 10: Cadnano Staple Routing</p>
+
+					<p>The following colours were used to highlight different types of strands:</p>
+
+					<ul>
+						<li>Green – binding strands</li>
+						<li>Blue – m13a backbone strands</li>
+						<li>Pink – internal strands</li>
+						<li>Black – edge strands</li>
+						<li>Red- biotinylation strands</li>
+					</ul>
+
+					<div id="synthesis">
+						<h2>Synthesis</h2>
+					</div>
+
+					<p>DNA origami is formed by the process of annealing, where staple strands, backbone strands, buffer, water and salts (Magnesium Chloride) are mixed in solution and then subject to a cycle of rapid heating and slow cooling. Theoretically, each staple strand can fold a backbone strand, however in reality not all strands do. For this reason, staple strands are added in excess (usually in 5-fold excess). <sup>5</sup></p>
+
+					<p>The two most important factors for DNA origami formation are magnesium concentration and duration of the anneal. </p>
+
+					<p>Aqueous magnesium (Mg<sup>2+</sup>) creates a positively charged environment around the negative charge of the DNA, preventing them from the repelling each other due to electrostatic forces. The optimal concentration of magnesium depends on the complexity of the structure, and is determined by conducting a magnesium screen where the DNA origami is annealed in varying magnesium concentrations <sup>6</sup>.  The results of our magnesium screen can be found <a href="/lab-book/imaging/tem.html">here</a>.</p>
+
+					<p>In the annealing process, there are two stages that the DNA is repeatedly subject to, a rapid heating and a slow cooling stage. The rapid heating denatures undesirable secondary structures, and the slow cool returns it to room temperature. By use of a thermocycler, varying time lengths are tested to find an ideal length of anneal. The results of our time screen can be found <a href="/lab-book/imaging/tem.html">here</a>.</p>
+
+					<p>The ideal conditions for synthesis were found to be 18mM of Magnesium, and 48 hours of anneal time. </p>
+
+					<div id="modelling">
+						<h2>Modelling</h2>
+					</div>
+
+					<p>The caDNAno Blockagon file was processed through CanDo software to produce the following images in Figure 11. They represent the side, front, and top views of the Blockagon respectively. These images clearly showed the structure as we intended it to be.</p>
+
+					<img class="img-fluid" src="/images/dna-11.png" />
+
+					<p class="caption">Figure 11: CanDo images of Blockagon.</p>
+
+					<p>The following movies were also outputted, showing relatively low instability (standard displacement of &lt;0.8).</p>
+
+					<div class="video" class="embed-responsive embed-responsive-16by9">
+						<video class="embed-responsive-item" controls allowfullscreen onclick="this.paused ? this.play() : this.pause();">
+						<source src="/video/cando1.mp4" type="video/mp4"/></video>
+					</div>
+					
+					<div class="video" class="embed-responsive embed-responsive-16by9">
+						<video class="embed-responsive-item" controls allowfullscreen onclick="this.paused ? this.play() : this.pause();">
+						<source src="/video/cando2.mp4" type="video/mp4"/></video>
+					</div>
+					<div class="video" class="embed-responsive embed-responsive-16by9">
+						<video class="embed-responsive-item" controls allowfullscreen onclick="this.paused ? this.play() : this.pause();">
+						<source src="/video/cando3.mp4" type="video/mp4"/></video>
+					</div>
+			
+					<p>Chimera X software was then used to produce the following PDB image (Figure 12). It visualises each strand in the DNA design, including the specific locations where crossovers occur.</p>
+
+					<img class="img-fluid" src="/images/dna-12.png" />
+
+					<p class="caption">Figure 12: Blockagon PDB Image</p>
+
+					<div id="designsforspr">
+						<h2>DNA Designs for SPR Experimentation</h2>
+					</div>
+
+					<p>A linear and ‘tennis racquet’ template DNA design were used for SPR experiments to measure the kinetics of protein conjugation to DNA.</p>
+
+					<p>The linear template is a 65-base pair sequence of DNA with a complementary 50-base pair sequence. The longer sequence has a 15 base pair overhang on the 5’ end (as shown in Figure 13) to allow for annealing to biotinylated DNA that forms the binding site for SPR and BLItz analytical instruments.</p>
+
+					<img class="img-fluid" src="/images/dna-13.png" />
+
+					<p class="caption">Figure 13: Linear Template Overhang</p>
+
+					<p>The ‘tennis racquet; design comprises of 6 domains for which proteins can bind to as shown in Figure 14. Between each domain there is also a single stranded poly-T domain. At the ‘handle’ of the racquet, there is a 15 base pair domain that closes the racquet up. Also attached to this is another 15 base pair domain that serves as an anchor domain that can attach to anchor strands on a surface such as an SPR chip or a TIRF microscope slide.</p>
+
+					<img class="img-fluid" src="/images/dna-14.png" />
+
+					<p class="caption">Figure 14: Tennis Racquet Template</p>
+
+					<p>Further information on how these designs were used can be found <a href="/lab-book/kinetics/spr.html">here</a>.</p>
+
+
+					<div id="conclusions">
+						<h2>Conclusion and Future Work</h2>
+					</div>
+
+					<p>Our DNA origami structure successfully formed with 12 potential positions for hexameric proteins to attach to. The structure was suitably stable and able to form at a consistent size as shown by EM images (link to Maddie). We were also able to create our desired single stranded DNA for SPR experimentation.</p>
+
+					<p>In future, we would like to further characterise our DNA origami structure so that we have a comparison between the dimensions of the formed DNA and the intended dimensions in the design. We would also like to create an extensive analysis on the size distribution of our structure in the various conditions that we synthesized it in.</p>
+
+					<p>Furthermore, we would like to create more variations in the binding sites of our structure. By having a variety of allocations of the hexamer binding sites, we may conduct more experiments that analyse the hexamer binding to the origami and their effects on other bound hexamers.</p>
+
+					<div id="materials">
+						<h2>Materials &amp; Methods</h2>
+					</div>
+
+					<h3>Ordering</h3>
+
+					<p>DNA was ordered from Integrated DNA Technologies</p>
+
+					<ul>
+						<li>V-well (shallow) 96 well plate for edge staples, internal staples, binding staples. </li>
+						<li>Single tubes for biotinylating extensions </li>
+						<li>Normalised to highest amount </li>
+						<li>Standard desalting purification </li>
+						<li>Dry shipping</li>
+					</ul>
+
+					<h3>Resuspension</h3>
+					<ol>
+						<li>
+							Spin down plates/tubes at 4000 rpm, 20°c for 10min to dislodge the pellet from the top or sides. Resuspend the pellet in water up to 1uM for internal, edge, and binding staples. Resuspend up to 10uM for biotinylating extensions</li>
+						<li>
+							Seal the plate very well with a foil cover and store -20°</li>
+					</ol>
+
+					<h3>Staple Mixes</h3>
+
+					<ol>
+						<li>Spin down plates/tubes at 4000 rpm, 20°c for 10min</li>
+						<li>Pipette 2uL of each staple into its respective tube</li>
+					</ol>
+
+					<h3>Synthesis</h3>
+					<ul>
+						<li>Magnesium screen: 0-30 mM Mg should be screened to find optimal conditions for synthesis. 3mM increments: 0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 mM over 37hr anneal time.</li>
+						<li>Time screen: Synthesis times should be screened to find shortest time in which you can make well-formed origami. The more complex the structure the more time needed for synthesis.</li>
+					</ul>
+
+					<table class="center">
+						<tr>
+							<td>
+								<p><b>Total Reaction Volume (uL)</b></p>
+							</td>
+							<td>
+								<p>15.00</p>
+							</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>
+								<p>Reactants</p>
+							</td>
+							<td>
+								<p>Reaction Concentration (nM)</p>
+							</td>
+							<td>
+								<p>Stock Concentration (uM)</p>
+							</td>
+							<td>
+								<p>Volume to Pipette 1x reaction (uL)</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>m13 </p>
+							</td>
+							<td>
+								<p>20.00</p>
+							</td>
+							<td>
+								<p>0.45</p>
+							</td>
+							<td>
+								<p>0.67</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>General staple mix (internal and edge staples)</p>
+							</td>
+							<td>
+								<p>100.00</p>
+							</td>
+							<td>
+								<p>1.00</p>
+							</td>
+							<td>
+								<p>1.50</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>Binding staples</p>
+							</td>
+							<td>
+								<p>100.00</p>
+							</td>
+							<td>
+								<p>1.00</p>
+							</td>
+							<td>
+								<p>1.50</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>Biotinylation extensions </p>
+							</td>
+							<td>
+								<p>100.00</p>
+							</td>
+							<td>
+								<p>10.00</p>
+							</td>
+							<td>
+								<p>0.15</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>Buffer (1mM EDTA and 5mM Tris)</p>
+							</td>
+							<td></td>
+							<td></td><td>
+								<p>1.50</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>Total Volume </p>
+							</td>
+							<td></td>
+							<td></td><td>
+								<p>5.32</p>
+							</td>
+						</tr>
+						<tr>
+						</tr>
+						<tr>
+							<td>
+								<p>Mg + H2O </p>
+							</td>
+							<td></td>
+							<td></td><td>
+								<p>9.68</p>
+							</td>
+						</tr>
+						<tr>
+						</tr>
+						<tr>
+							<td>
+								<p>Total (uL)</p>
+							</td>
+							<td></td>
+							<td></td><td>
+								<p>15.00</p>
+							</td>
+						</tr>
+					</table>
+
+					<table class="center">
+						<tr>
+							<td>
+								<p>Magnesium Reaction Concentration (mM)</p>
+							</td>
+							<td>
+								<p>100mM MgCl2 (uL)</p>
+							</td>
+							<td>
+								<p>Water (uL)</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>0</p>
+							</td>
+							<td>
+								<p>0</p>
+							</td>
+							<td>
+								<p>9.68</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>3</p>
+							</td>
+							<td>
+								<p>0.45</p>
+							</td>
+							<td>
+								<p>9.23</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>6</p>
+							</td>
+							<td>
+								<p>0.9</p>
+							</td>
+							<td>
+								<p>8.78</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>9</p>
+							</td>
+							<td>
+								<p>1.35</p>
+							</td>
+							<td>
+								<p>8.33</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>12</p>
+							</td>
+							<td>
+								<p>1.8</p>
+							</td>
+							<td>
+								<p>7.88</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>15</p>
+							</td>
+							<td>
+								<p>2.25</p>
+							</td>
+							<td>
+								<p>7.43</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>18</p>
+							</td>
+							<td>
+								<p>2.7</p>
+							</td>
+							<td>
+								<p>6.98</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>21</p>
+							</td>
+							<td>
+								<p>3.15</p>
+							</td>
+							<td>
+								<p>6.53</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>24</p>
+							</td>
+							<td>
+								<p>3.6</p>
+							</td>
+							<td>
+								<p>6.08</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>27</p>
+							</td>
+							<td>
+								<p>4.05</p>
+							</td>
+							<td>
+								<p>5.63</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>30</p>
+							</td>
+							<td>
+								<p>4.5</p>
+							</td>
+							<td>
+								<p>5.18</p>
+							</td>
+						</tr>
+					</table>
+
+					<table class="center">
+						<tr>
+							<td>
+								<p><b>Temperature</b></p>
+							</td>
+							<td>
+								<p><b>24 hr anneal</b></p>
+							</td>
+							<td>
+								<p><b>36 hr anneal</b></p>
+							</td>
+							<td>
+								<p><b>37hr anneal</b></p>
+							</td>
+							<td>
+								<p><b>48 hr anneal</b></p>
+							</td>
+							<td>
+								<p><b>71 hr anneal</b></p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>65°C</p>
+							</td>
+							<td>
+								<p>15min</p>
+							</td>
+							<td>
+								<p>15min</p>
+							</td>
+							<td>
+								<p>15min</p>
+							</td>
+							<td>
+								<p>15min</p>
+							</td>
+							<td>
+								<p>15min</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>65-60°C</p>
+							</td>
+							<td>
+								<p>1 min/-0.1°</p>
+							</td>
+							<td>
+								<p>1 min/-0.1°</p>
+							</td>
+							<td>
+								<p>1 min/-0.1°</p>
+							</td>
+							<td>
+								<p>1 min/-0.1°</p>
+							</td>
+							<td>
+								<p>1 min/-0.1°</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>60-40°C</p>
+							</td>
+							<td>
+								<p>4 min/-0.1°</p>
+							</td>
+							<td>
+								<p>6 min/-0.1°</p>
+							</td>
+							<td>
+								<p>10 min/-0.1°</p>
+							</td>
+							<td>
+								<p>8 min/-0.1°</p>
+							</td>
+							<td>
+								<p>12 min/-0.1°</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>40-25°C</p>
+							</td>
+							<td>
+								<p>4 min/-0.1°</p>
+							</td>
+							<td>
+								<p>6 min/-0.1°</p>
+							</td>
+							<td>
+								<p>1 min/-0.1°</p>
+							</td>
+							<td>
+								<p>8 min/-0.1°</p>
+							</td>
+							<td>
+								<p>12 min/-0.1°</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>storage</p>
+							</td>
+							<td>
+								<p>RT</p>
+							</td>
+							<td>
+								<p>RT</p>
+							</td>
+							<td>
+								<p>RT</p>
+							</td>
+							<td>
+								<p>RT</p>
+							</td>
+							<td>
+								<p>RT</p>
+							</td>
+						</tr>
+					</table>
+
+					<h3>Purification - Agarose Gel Electrophoresis</h3>
+
+					<ol>
+						<li>Gel composed of 100mL of buffer (90mL water, 9mL 0.5 TBE, 1mL 1M MgCl<sub>2</sub>), 2g agarose, and<sub> </sub>5uL of gelred dye. Before dye is added the buffer is microwaved for 2 minutes to dissolve the agarose</li>
+						<li>Solution is poured into a gel mould with a lane comb within</li>
+						<li>Gel immersed in 300mL of buffer</li>
+						<li>Samples, a 1kb ladder are loaded into the lanes</li>
+						<li>The 2 controls used are the staple general mix and m13</li>
+						<li>Run 70V through the gel for 2 hours</li>
+						<li>Cut out desired bands under UV illumination and insert into freeze and squeeze tubes</li>
+						<li>Keep tubes in -20°c for 5 min, centrifuge at 13000 rpm for 3 min at room temperature</li>
+						<li>Remove excess material</li>
+						<li>DNA collected in the dolphin tube ready to use.</li>
+					</ol>
+
+					<div id="references">
+						<h2>References</h2>
+					</div>
+
+					<ol>
+						<li><em>Folding DNA to create nanoscale shapes and patterns. </em><b>Rothermund, P W K.</b> s.l.: Nature, 2006, Vol. 440.</li>
+						<li><em>Self-assembly of DNA into nanasocle three-dimensional shapes. </em><b>Douglas, S M, et al.</b> 8, s.l.: Nature, 2009, Vol. 459.</li>
+						<li><em>A primer to scaffolded DNA origami. </em><b>Castro, C E, et al.</b> 3, s.l.: Perspective, 2011, Vol. 8.</li>
+						<li><b>[Online] 2011. https://eurofinsgenomics.jp/media/48523/product-sheet-single-stranded-scaffold-dna-type-7249-m1-10.pdf.</b></li>
+						<li><b><em>Magnesium-free self-assembly of multi-layer DNA objects . </em>Martin, T G and Dietz, H. s.l.: Nature Communications,
+						2012.</b></li>
+						<li><b>Rothermund, P W K. <em>Design of DNA origami. </em>s.l.: California Insitute of Technology.</b></li>
+				</ol>
+
+			</div>
+
 		</div>
-	</footer>
 
-	<!-- jQuery -->
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
-	<!-- Tether -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<!--Page footer-->
+		<footer class="footer">
+			<div class="container">
+				<p>&copy; <strong>UNSW BIOMOD 2017 -  Capsid Constructors.</strong></p>
+			</div>
+		</footer>
 
-	<!-- Minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
-	<!-- Custom JavaScript -->
-	<script src="/js/scripts.js"></script>
+		<!-- Tether -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+		<!-- Minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+		<!-- Custom JavaScript -->
+		<script src="/js/scripts.js"></script>
 
 </body>
 

@@ -204,16 +204,23 @@ td>img {
 	padding: 5px;
 }
 
-/* Image and video on landing page */
+img.long {
+	max-height: 150vh;
+	width: auto;
+}
+
+/* Videos */
+
+.video {
+	margin: 10px auto;
+	text-align: center;
+}
+
+/* Image on landing page */
 
 #heroimage {
 	width: 80%;
 }
-
-#video {
-	border: 1.5px solid black;
-}
-
 
 /* Styles lists in sidebar navigation */
 
