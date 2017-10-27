@@ -38,7 +38,15 @@
 					<ul>
 						<li><a href="#saxs" class="scroll">SAXS</a>
 							<ul>
-
+								<li><a href="#introduction" class="scroll">Introduction</a></li>
+								<li><a href="#importance" class="scroll">Importance</a></li>
+								<li><a href="#aims" class="scroll">Aims</a></li>
+								<li><a href="#methods" class="scroll">Methods</a></li>
+								<li><a href="#dataprocessing" class="scroll">Data Processing</a></li>
+								<li><a href="#results" class="scroll">Results</a></li>
+								<li><a href="#discussion" class="scroll">Discussion</a></li>
+								<li><a href="#futurework" class="scroll">Future Work</a></li>
+								<li><a href="#references" class="scroll">References</a></li>
 							</ul>
 						</li>
 
@@ -58,7 +66,7 @@
 
 				<p>Small angle X-ray scattering is an analytical technique used to investigate the solution structure of a macromolecule by measuring the elastic collision of X-rays with macromolecules in solution. A homogenous solution of macromolecules is exposed to a highly collimated X-ray beam. Collision of X-rays with electrons/atoms of the macromolecule scatters the X-rays (Thomson scattering), which constructively or destructively interfere on a detector screen. The interference pattern that is produced can then be processed to produce a one-dimensional scattering curve. Three-dimensional properties of the molecules, such as size, shape and flexibility, can be drawn from the one-dimensional scattering data. Interpretation of scattering data obtained from SAXS can provide information about the sample including its radius of gyration and maximum linear dimension. High quality data enables the generation of an <em>ab initio </em>low resolution model of the sample.</p>
 
-				<img class="img-fluid" src="/images/saxs-1.5.gif" />
+				<img class="img-fluid span" src="/images/saxs-1.5.gif" />
 
 				<p class="caption">Figure 1. Ab initio reconstruction of HIV-1 CA hexamer overlayed with PDB ID 3H47<sup>1</sup>.</p>
 
@@ -88,7 +96,7 @@
 				<p class="caption">Figure 2. Schematic explaining SEC-SAXS.</p>
 
 				<p>SAXS was performed on the wild-type HIV-1 CA protein at 2.3 mg/mL at two buffer conditions: 20 mM Tris-HCl (pH 8.0), 40 mM NaCl, 0.5% NaAzide, 1.5% glycerol, with and without 4 mM dithiothreitol (DTT). These samples consisted of CA proteins in a predominantly dimer form, as C-terminal domain interactions cause dimerisation across the hexamer-hexamer or hexamer-pentamer interface
-					<sup>2</sup>. The wild-type CA protein was tested in the presence of DTT to prevent cysteine mediated aggregation, as during its protein purification process we were having significant issues with aggregation. However, as a reducing agent, DTT would reduce the disulfide bond between C198 and C218 of the protein, which could have unexpected effects on the tertiary structure and flexibility of the protein.</p>
+				<sup>2</sup>. The wild-type CA protein was tested in the presence of DTT to prevent cysteine mediated aggregation, as during its protein purification process we were having significant issues with aggregation. However, as a reducing agent, DTT would reduce the disulfide bond between C198 and C218 of the protein, which could have unexpected effects on the tertiary structure and flexibility of the protein.</p>
 
 				<p>A discrete hexamer cross-linked mutant<sup>1</sup> (A14C/E45C/W184A/M185A) was kindly gifted by Dr David Jacques, and was tested under the same buffer conditions – with and without 4 mM DTT. Under non-reducing conditions, i.e. without DTT, this protein mutant forms discrete CA hexamers. Ideally, to investigate the solution structure of the CA protein in its monomeric form, one would use the W184A/M185A mutant, as the A14C/E45C mutations may impact on CA tertiary structure. However, we had not produced this mutant before travelling to the synchrotron due to time constraints, and instead we used the discrete hexamer cross-linked mutant in the presence of DTT. In the presence of DTT, this protein mutant forms discrete CA monomers, as the A14C-E45C disulfide bond between adjacent CA monomers is reduced. The W184A/M185A mutation disrupts hydrophobic C-terminal interactions and prevents dimerisation and latticing of hexamers. The discrete cross-linked hexamer was tested without DTT at 10.5 mg/mL, and with DTT (in monomeric form) at 9.5 mg/mL. </p>
 
@@ -98,7 +106,7 @@
 					<h2>Data Processing Methods</h2>
 				</div>
 
-				<img class="img-fluid" src="/images/saxs-3.png" />
+				<img class="img-fluid span" src="/images/saxs-3.png" />
 
 				<p class="caption">Figure 3. Analysis processes employed for interpretation of SAXS scattering data. Software used for the data analysis process is underlined and in italics.</p>
 
@@ -109,7 +117,7 @@
 				<p>A Guinier plot<sup>5</sup> can be performed on the reciprocal space data, which is a plot of the `log` of intensity against `q`. From a Guinier plot, we can extrapolate the radius of gyration (R<sub>g</sub>) and intensity at the 0 scattering angle (I<sub>0</sub>) for the sample. Rg is the root mean square distance to the centre of mass of a particle, describing the average distance from the centre of mass to the surface of a globular molecule. I0 can be used to calculate the molecular weight of the protein based on the concentration of the sample tested. A Guinier plot should be linear for small values of q, where `qR_g` &lt; 1.3, for data collected from a monodisperse sample. We can also determine if the sample is monodisperse by the closeness of the residual plot to 0. The Guinier plot was performed using the ‘Autorg’ function in PRIMUS<sup>4</sup>.</p>
 
 				<p>Real space information can be drawn from the reciprocal space scattering data by performing an inverse Fourier transform of the scattering data, giving a pairwise distance distribution function, or P(r) curve. An indirect inverse Fourier transform is performed with many reiterations to smooth the noisy scattering data. The degree of smoothing is determined by the ‘alpha’ value. The P(r) curve describes the probability of two randomly selected atoms within a molecule being a certain distance apart. The maximum linear dimension (D<sub>max</sub>) of the molecule can be extrapolated from the P(r) curve, which approaches 0 at the D<sub>max</sub>. A more accurate R
-					<sub>g</sub> and I(0) can be obtained from the P(r) curve than the Guinier plot, as it analyses data from real space, instead of reciprocal space. Additionally, the R<sub>g</sub> and I(0) generated by the P(r) curve can be used to estimate the volume of the protein. Generation of the P(r) curve was performed using the ‘Autognom’ function in PRIMUS<sup>4,6</sup>, with manual adjustment of the data range to exclude noisy data (qualitatively assessed). The volume of the protein was estimated to 3 significant figures using the program DATPOROD. </p>
+				<sub>g</sub> and I(0) can be obtained from the P(r) curve than the Guinier plot, as it analyses data from real space, instead of reciprocal space. Additionally, the R<sub>g</sub> and I(0) generated by the P(r) curve can be used to estimate the volume of the protein. Generation of the P(r) curve was performed using the ‘Autognom’ function in PRIMUS<sup>4,6</sup>, with manual adjustment of the data range to exclude noisy data (qualitatively assessed). The volume of the protein was estimated to 3 significant figures using the program DATPOROD. </p>
 
 				<p>To compare the experimental results with CA protein structures obtained by X-ray diffraction, crystal structures from the Protein Data Base (PDB) were analysed using CRYSOL<sub>7</sub>. Structures of the hexamer and dimer were generated from the symmetry data of the .pdb file using the ‘symexp’ command in PyMOL. CRYSOL produces hypothetical scattering data from a crystal structure, which can be analysed in a similar method to analysis of the experimental data. The P(r) curves for experimental and crystal structures were then compared. Unlike solution scattering data, scattering data generated by CRYSOL, and subsequent transformations of this data, is not noisy. PDB IDs 3H47<sup>1</sup>, 4XFX<sup>8</sup> and 5MCX<sup>9</sup> were analysed with CRYSOL.</p>
 
@@ -448,21 +456,15 @@
 
 				<p class="caption">Table 1. Summary of data collection and processing parameters; and results of the data analysis.</p>
 
-				<img class="img-fluid" src="/images/saxs-4.png" />
+				<img class="img-fluid span" src="/images/saxs-4.png" />
 
 				<p class="caption">Figure 4. Experimental scattering data (log (I<sub>q</sub>) vs q), Guinier plots (log (Iq) vs q2) and P(r) curves for each data set, with a crystal structure of each construct generated from PDB ID 4XFX. For the Guinier plots, the data values used to generate I<sub>0</sub> and R<sub>g</sub> values are highlighted in yellow. P(r) curves have been scaled to have an area under the curve equal to 1.</p>
 
-				<img class="img-fluid" src="/images/saxs-5.png" />
+				<img class="img-fluid span" src="/images/saxs-5.png" />
 
 				<p class="caption">Figure 5. Experimental scattering data (grey) overlayed with hypothetical scattering data generated from crystal structures PDB IDs 3H47 (red), 4XFX (orange) and 5MCX (yellow) using CRYSOL; and P(r) curves generated from experimental data (red) overlayed with P(r) curves generated from crystal structures PDB IDs 3H47 (blue), 4XFX (black) and 5MCX (green) using CRYSOL. P(r) curves have been scaled to have an area under the curve equal to 1.</p>
 
 				<table class="center">
-					<tr>
-						<td>
-							<p><b>Chi-squared values
-  for scattering data comparisons</b></p>
-						</td>
-					</tr>
 					<tr>
 						<td>
 							<p><b></b></p>
@@ -540,7 +542,7 @@
 
 				<p class="caption">Table 2. Chi-squared values for comparison of experimental scattering data and theoretical CRYSOL scattering data generated from a PDB structure with an appropriate number of chains (generated from crystal structure symmetry).</p>
 
-				<img class="img-fluid" src="/images/saxs-6.png" />
+				<img class="img-fluid span" src="/images/saxs-6.png" />
 
 				<p class="caption">Figure 6. Comparison of R<sub>g</sub> values generated from the experimental and CRYSOL P(r) (in real space). </p>
 
@@ -552,7 +554,7 @@
 
 				<p class="caption">Figure 8. <em>Ab initio </em>reconstructions of hexameric CA with crystal structures overlayed, and also shown with both models rotated 90 and 180 degrees forward around the x plane. Volumetric reconstructions are overlayed with PDB IDs (A) 3H47, (B) 4XFX, (C) 5MCX.</p>
 
-				<table>
+				<table class="center">
 					<tr>
 						<td>
 							<p><b></b></p>
@@ -635,11 +637,11 @@
 
 				<p>Comparison of the scattering and P(r) curves between experimental and CRYSOL hypothetical data (Figure 5) yields the most valuable information about the structure of CA proteins in solution. The experimental density distribution of the discrete cross-linked hexamer occurs over a wider area than that of all CRYSOL P(r), with a high chi-squared value. This suggests that the CA hexamer is more tightly packed when as a crystal than in solution. The CA monomer P(r) is overlayed well by the reconstructed P(r) curves with a low chi-squared value, suggesting a similar conformation of the CA monomer in solution to its assembled form. There are some discrepancies between the graphs which may be explained by some level of flexibility of the CA protein. The two CA dimer analyses show similar features, and their consistency indicates a high quality of data analysis. There are apparent differences between the experimental and crystal structures, and also between each crystal structure. The 3H47 dimer was the most different to the experimental dimers, which was expected due to the dimer disrupting W184A/M185A substitutions. Comparison of the radii of gyration (Figure 6) between experimental and crystal structures reveals differences in structures, but it is not clear if these differences are statistically significant and requires further analysis to determine.</p>
 
-				<p>8 of the 20<em>ab initio</em>reconstructions of the monomeric CA were unable to be successfully aligned bydamsupdue to the presence of an extended chain in all damsel output files (Figure 9). We hypothesise that this is the last 10 amino acids of the CA protein, which have been previously unresolved in X-ray diffraction of crystal structures. After conversion to volume, the chain becomes represented as a disconnected mass (Figure 7). To confirm this hypothesis, similar experiments and analysis could be performed on a CA mutant with the residues 1-221 only, without the unresolved final chain.</p>
+				<p>8 of the 20<em>ab initio</em> reconstructions of the monomeric CA were unable to be successfully aligned bydamsupdue to the presence of an extended chain in all damsel output files (Figure 9). We hypothesise that this is the last 10 amino acids of the CA protein, which have been previously unresolved in X-ray diffraction of crystal structures. After conversion to volume, the chain becomes represented as a disconnected mass (Figure 7). To confirm this hypothesis, similar experiments and analysis could be performed on a CA mutant with the residues 1-221 only, without the unresolved final chain.</p>
 				
-				<img class="img-fluid" src="/images/saxs-9" />
+				<img class="img-fluid" src="/images/saxs-9.png" />
 
-				<p><u>Figure 9.</u>Example of an<em>ab initio</em>bead reconstruction of monomeric CA, displaying the extended chain.</p>
+				<p><u>Figure 9.</u>Example of an<em>ab initio</em> bead reconstruction of monomeric CA, displaying the extended chain.</p>
 
 				<p>The remaining 12 models were aligned, averaged and overlayed with crystal structures. Due to the low resolution of the<em>ab initio</em>model, the crystal structure was able to be rotated 180 degrees around the y-plane and retain a similar proportion of atoms within the model. We propose that the structures with the CTD proximal to the disconnected mass (bottom, Figure 7) are a more accurate representation of the solution structure, however this is to be verified with further analysis.<em>Ab initio</em>reconstructions of the discrete cross-linked hexamer qualitatively show a good quality fit, with a high proportion of crystal structure atoms within the volumetric contour.</p>
 
@@ -647,7 +649,7 @@
 					<h2>Future work</h2>
 				</div>
 
-				<p>Further<em>ab initio</em>reconstructions are required for the CA dimer due to similar difficulties with the extended chain alignment. Previous experiments on the CA dimer suggest flexibility of the NTD with up to 30&deg;of freedom<sup>12</sup>, however the mechanism of its freedom could be investigated further with more robust analysis. Future SAXS experiments and analysis of the CA protein could include molecular dynamics, and investigation of the structure with other programs from the ATSAS suite, such as GASBOR<sup>13</sup>for an alternate method of shape reconstruction, and SASREF<sup>14</sup>for rigid body modelling of the NTD and CTD of the CA proteins relative to each other.</p>
+				<p>Further<em>ab initio</em> reconstructions are required for the CA dimer due to similar difficulties with the extended chain alignment. Previous experiments on the CA dimer suggest flexibility of the NTD with up to 30&deg; of freedom<sup>12</sup>, however the mechanism of its freedom could be investigated further with more robust analysis. Future SAXS experiments and analysis of the CA protein could include molecular dynamics, and investigation of the structure with other programs from the ATSAS suite, such as GASBOR<sup>13</sup>for an alternate method of shape reconstruction, and SASREF<sup>14</sup>for rigid body modelling of the NTD and CTD of the CA proteins relative to each other.</p>
 
 
 				<div id="references">
