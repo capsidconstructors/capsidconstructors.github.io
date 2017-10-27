@@ -189,6 +189,10 @@ img.span {
 	max-height: 100vh;
 }
 
+img.protcon {
+	height: auto;
+	width: 30%;
+}
 
 /* Tables next to gels */
 
