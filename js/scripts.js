@@ -42,8 +42,8 @@ $(window).scroll(function() {
 	$('.scroll').each(function() {
 		var offset = $(this.hash).offset().top;
 			
-		//If scrollbar passes scroll point, fudge factor of 0.5 accounts for padding etc
-		if ( offset - 0.5 <= scrollbarLocation ) {
+		//If scrollbar passes scroll point, accounting for padding
+		if ( offset - 106 <= scrollbarLocation ) {
 			//Remove active class from already active links
 			$('.scroll.active').removeClass('active');
 			//Add active class to newly activated link
