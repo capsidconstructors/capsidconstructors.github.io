@@ -18,8 +18,6 @@ if (!root.endsWith(".html")) {
 	root = root + ".html";
 }
 
-console.log(root);
-
 //Remove active class from previously active links
 $('a.active').removeClass('active');
 	
@@ -31,7 +29,7 @@ $target.addClass('active');
 //Smooth scrolling for page jumps
 $('.scroll').click(function (e) {
 	e.preventDefault();
-	$('body,html').animate({scrollTop: $(this.hash).offset().top}, 500);
+	$('body,html').animate({scrollTop: $(this.hash).offset().top - 105}, 500);
 });
 	
 //Active link scrolling in sidenav
